@@ -92,3 +92,5 @@ alias mkdir='mkdir -p'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #Display Pokemon
+
+export PATH=$PATH:/home/pox/.spicetify

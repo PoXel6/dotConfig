@@ -75,6 +75,8 @@
     # Push to the current branch
     pushu = push -u origin $(git rev-parse --abbrev-ref HEAD)
     
+    # Push command for the first time
+    fpush = push -u origin main
     # Pull rebase
     pullr = pull --rebase
     
