@@ -96,6 +96,9 @@ alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 
+# aliases for changing system configuration
+alias keybindings='nvim ~/.config/hypr/keybindings.conf'
+alias hyprsetting='nvim ~/.config/hypr/hyprland.conf'
 alias zshconfig='nvim ~/.zshrc'                                           # Opens zsh's configs
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
