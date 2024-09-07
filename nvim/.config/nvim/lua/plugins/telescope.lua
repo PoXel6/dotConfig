@@ -1,21 +1,12 @@
 return {
 	{
 		"nvim-telescope/telescope.nvim",
+		event = "BufReadPre",
 		tag = "0.1.8",
 		dependencies = {
+			"andrew-george/telescope-themes",
 			"nvim-lua/plenary.nvim",
-			{
-				"nvim-telescope/telescope-ui-select.nvim",
-				config = function()
-					require("telescope").setup({
-						extensions = {
-							["ui-select"] = { require("telescope.themes").get_dropdown({}) },
-						},
-					})
-					require("telescope").load_extension("fzf")
-					require("telescope").load_extension("ui-select")
-				end,
-			},
+			"nvim-telescope/telescope-ui-select.nvim",
 			{
 				"nvim-telescope/telescope-fzf-native.nvim",
 				build = "make",
@@ -24,5 +15,8 @@ return {
 				end,
 			},
 		},
+		config = function()
+			require("config.telescope")
+		end,
 	},
 }

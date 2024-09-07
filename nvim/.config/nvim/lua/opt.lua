@@ -1,29 +1,39 @@
+local opt = vim.opt
+local o = vim.o
+local g = vim.g
+
+g.mapleader = " "
+g.toggle_theme_icon = "   "
+g.netrw_banner = 0
 -- vim setting
-vim.opt.relativenumber = true
-vim.opt.termguicolors = true
-vim.opt.incsearch = true
-vim.opt.nu = true
-vim.opt.wrap = false
+opt.relativenumber = true
+opt.termguicolors = true
+opt.incsearch = true
+opt.nu = true
+opt.wrap = false
 
-vim.opt.colorcolumn = "100"
-vim.opt.updatetime = 50
-vim.opt.scrolloff = 10
+opt.showbreak = "↪ "
+opt.backspace = { "indent", "eol", "start" }
+
+opt.colorcolumn = "100"
+opt.updatetime = 500
+opt.scrolloff = 10
 -------------------------------------------
 
-vim.opt.expandtab = true
-vim.opt.autoindent = true
-vim.opt.smartindent = true
-vim.opt.copyindent = true
+o.ignorecase = true
+o.smartcase = true
+o.mouse = "a"
 
-vim.opt.showbreak = "↪ "
-vim.opt.backspace = { "indent", "eol", "start" }
+-- Indenting
+o.expandtab = true
+o.shiftwidth = 2
+o.smartindent = true
+o.tabstop = 2
+o.softtabstop = 2
 
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
 -------------------------------------------
 
-vim.o.termguicolors = true
+o.termguicolors = true
 -------------------------------------------
 
 vim.api.nvim_create_autocmd("TextYankPost", {
