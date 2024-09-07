@@ -1,14 +1,11 @@
 return {
-	{
-		"hrsh7th/nvim-cmp",
-		config = function()
-			require("config.cmp")
-		end,
-	},
-	{ "hrsh7th/cmp-nvim-lsp" },
 	{ "VonHeikemen/lsp-zero.nvim", branch = "v4.x" },
 	{
 		"williamboman/mason.nvim",
+		dependencies = {
+			"williamboman/mason-lspconfig.nvim",
+		},
+
 		config = function()
 			require("mason").setup({
 				ui = {
@@ -19,13 +16,6 @@ return {
 					},
 				},
 			})
-		end,
-	},
-
-	{
-		"williamboman/mason-lspconfig.nvim",
-		dependencies = { "williamboman/mason.nvim" },
-		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = { "lua_ls", "clangd" },
 				PATH = "skip",

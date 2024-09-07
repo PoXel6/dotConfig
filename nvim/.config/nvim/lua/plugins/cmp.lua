@@ -10,4 +10,13 @@ return {
 			require("config.luasnip")
 		end,
 	},
+  {
+  "hrsh7th/cmp-nvim-lsp",
+		dependencies = {
+    "hrsh7th/nvim-cmp"
+    },
+    config = function()
+      require("config.cmp")
+    end
+  }
 }
