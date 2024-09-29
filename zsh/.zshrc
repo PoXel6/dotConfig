@@ -1,13 +1,9 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
+GITSTATUS_LOG_LEVEL=DEBUG
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Path to your oh-my-zsh installation.
-ZSH=/home/pox/.oh-my-zsh
-
+ZSH=/home/pox/.oh-my-zsh # Path to your oh-my-zsh installation.
 # Path to powerlevel10k theme
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
@@ -16,7 +12,6 @@ plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting )
 source $ZSH/oh-my-zsh.sh
 
 # Helpful aliases
-alias  c='clear'                                                        # clear terminal
 alias du='du -h'                                                        # du is always human-readable
 alias ii='dolphin .'                                                    # Opens dolphin in current dir
 alias  l='eza -lh  --icons=auto'                                        # long list
@@ -25,8 +20,6 @@ alias ll='eza -lha --icons=auto --sort=name --group-directories-first'  # long l
 alias ld='eza -lhD --icons=auto'                                        # long list dirs
 alias lt='eza --icons=auto --tree'                                      # list folder as tree
 
-alias update='sudo apt update && sudo apt upgrade'
-
 # Vim aliases
 alias vi='nvim'
 alias vim='nvim'
@@ -34,6 +27,7 @@ alias neovim='nvim'
 alias code='nvim'
 
 # Handy change dir shortcuts
+alias mkdir='mkdir -p'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias .3='cd ../../..'
@@ -46,12 +40,11 @@ alias hyprsetting='nvim ~/.config/hypr/hyprland.conf'
 alias zshconfig='nvim ~/.zshrc'                                           # Opens zsh's configs
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
-alias mkdir='mkdir -p'
+bindkey -v
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-bindkey -v
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

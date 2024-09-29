@@ -21,14 +21,13 @@ telescope.setup({
 			layout_config = {
 				vertical = { width = 0.5 },
 				horizontal = {
+					prompt_position = "top",
 					width = 0.5,
 					height = 0.5,
 				},
 			},
-			enable_previewer = false,
-			enable_live_preview = false,
 
-			ignore = { "default", "desert", "elflord", "habamax" },
+			ignore = { "default", "desert", "elflord", "habamax", "blue" },
 
 			light_themes = {
 				ignore = true,
