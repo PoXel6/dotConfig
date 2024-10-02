@@ -75,6 +75,11 @@ lspconfig.clangd.setup({
 		fallback_flags = { "-std=c++17" },
 	},
 })
+
 lspconfig.bashls.setup({
+	capabilities = capabilities,
+})
+
+lspconfig.cssls.setup({
 	capabilities = capabilities,
 })
