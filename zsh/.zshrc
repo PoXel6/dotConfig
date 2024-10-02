@@ -1,3 +1,4 @@
+fastfetch
 GITSTATUS_LOG_LEVEL=DEBUG
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -5,7 +6,7 @@ fi
 
 ZSH=/home/pox/.oh-my-zsh # Path to your oh-my-zsh installation.
 # Path to powerlevel10k theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source $ZSH/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # List of plugins used
 plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting )
