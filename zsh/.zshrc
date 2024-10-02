@@ -14,7 +14,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Helpful aliases
 alias du='du -h'                                                        # du is always human-readable
-alias ii='dolphin .'                                                    # Opens dolphin in current dir
+alias ping='ping -c 3'
+
 alias  l='eza -lh  --icons=auto'                                        # long list
 alias ls='eza -1   --icons=auto'                                        # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first'  # long list all
@@ -26,6 +27,7 @@ alias vi='nvim'
 alias vim='nvim'
 alias neovim='nvim'
 alias code='nvim'
+alias ffn='nvim $(fzf -m --preview="bat --color=always {}")'
 
 # Handy change dir shortcuts
 alias mkdir='mkdir -p'
@@ -40,8 +42,9 @@ alias keybindings='nvim ~/.config/hypr/keybindings.conf'
 alias hyprsetting='nvim ~/.config/hypr/hyprland.conf'
 alias zshconfig='nvim ~/.zshrc'                                           # Opens zsh's configs
 
-# Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 bindkey -v
+
+source <(fzf --zsh)
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
