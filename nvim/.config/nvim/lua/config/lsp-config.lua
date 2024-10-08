@@ -78,6 +78,7 @@ lspconfig.clangd.setup({
 
 lspconfig.bashls.setup({
 	capabilities = capabilities,
+	cmd = { "bash-language-server", "start" }, -- Ensure this path is correct
 })
 
 lspconfig.cssls.setup({
