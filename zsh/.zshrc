@@ -13,14 +13,17 @@ plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting )
 source $ZSH/oh-my-zsh.sh
 
 # Helpful aliases
-alias du='du -h'                                                        # du is always human-readable
+alias du='du -h'    
 alias ping='ping -c 3'
+alias swappy='swappy -f'
 
+# Better Substitution
 alias  l='eza -lh  --icons=auto'                                        # long list
 alias ls='eza -1   --icons=auto'                                        # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first'  # long list all
 alias ld='eza -lhD --icons=auto'                                        # long list dirs
 alias lt='eza --icons=auto --tree'                                      # list folder as tree
+alias cd='z'
 
 # Vim aliases
 alias vi='nvim'
@@ -45,6 +48,7 @@ alias zshconfig='nvim ~/.zshrc'                                           # Open
 bindkey -v
 
 source <(fzf --zsh)
+eval "$(zoxide init zsh)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

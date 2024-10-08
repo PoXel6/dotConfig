@@ -13,7 +13,7 @@
   // positions generated based on config.ctl //
   "modules-left": ["custom/padd","custom/l_end","hyprland/workspaces","custom/r_end","custom/padd",],
   "modules-center": ["custom/padd","custom/l_end","hyprland/window","custom/r_end","custom/padd"],
-  "modules-right": ["custom/padd","custom/l_end","network","pulseaudio","custom/r_end","custom/l_end","custom/power","tray","custom/r_end"],
+  "modules-right": ["custom/padd","custom/l_end","network","pulseaudio","custom/r_end","custom/l_end","clock","custom/power","tray","custom/r_end"],
 
 
   // sourced from modules based on config.ctl //
@@ -66,7 +66,6 @@
 
   "hyprland/window": {
     "format": "{}",
-    //"format": "  {}",
     "rotate": 0,
     "separate-outputs": true,
     "rewrite": {
@@ -80,11 +79,12 @@
       "(.*)Steam": "Steam 󰓓 ",
       "(.*)WebCord": "WebCord  ",
 
-      "(.*) - (YouTube) - Brave": "$1 <big> </big>",
+      "(.*) - Brave Search.*": "$1 <big> </big>",
+      "(.*) - (YouTube - Brave)": "$1 | <span color='#ff6699'><big> </big></span>",
       "(.*) (GitHub - Brave)": "$1 <big> </big>",
       "ChatGPT (.*)": "ChatGPT <big>󱚝 </big>",
-      "(.*) - Brave": "$1  ",
-      "(.*)Private Tab - Brave": "Nightly Brave  ",
+      "(.*) - Brave": "$1 <span color='#f45d22'><big> </big></span>",
+
     },
     "max-length": 1000
   },
@@ -108,11 +108,10 @@
     "rotate": 0,
     "format-muted": "<big>󰝟 </big>",
     "icon-size": 32,
-    //"on-click": "~/.local/share/bin/volumecontrol.sh toggle",
-    "on-click": "pwvucontrol",
+    "on-click": "~/.local/share/bin/volumecontrol.sh toggle",
     "on-scroll-up": "~/.local/share/bin/volumecontrol.sh scroll_up",
     "on-scroll-down": "~/.local/share/bin/volumecontrol.sh scroll_down",
-    "tooltip-format": "{icon} {desc} // {volume}%",
+    "tooltip-format": "{icon}: {volume}% {desc}",
     "scroll-step": 1,
     "format-icons": {
       "headphone": "",
