@@ -38,7 +38,6 @@ vim.keymap.set(
 	{ desc = "Make this File Excutable AKA: chmod+x $thisFile" }
 )
 -------------------------------------------
-
 -- telescope
 local builtin = require("telescope.builtin")
 -- vim.keymap.set("n", "<leader>sg", builtin.live_grep, { noremap = true, silent = true }, { desc = "[S]earch by [G]rep" })
