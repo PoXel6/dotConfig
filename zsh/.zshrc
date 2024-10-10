@@ -15,6 +15,7 @@ source $ZSH/oh-my-zsh.sh
 # Helpful aliases
 alias du='du -h'                                                        # du is always human-readable
 alias ping='ping -c 3'
+alias ff='fastfetch'
 
 alias  l='eza -lh  --icons=auto'                                        # long list
 alias ls='eza -1   --icons=auto'                                        # short list
