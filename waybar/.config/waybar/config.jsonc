@@ -42,6 +42,7 @@
     "custom/l_end",
     "network",
     "pulseaudio",
+    "custom/updates",
     "custom/r_end",
     "custom/l_end",
     "clock",

@@ -40,22 +40,16 @@ vim.keymap.set(
 -------------------------------------------
 -- telescope
 local builtin = require("telescope.builtin")
--- vim.keymap.set("n", "<leader>sg", builtin.live_grep, { noremap = true, silent = true }, { desc = "[S]earch by [G]rep" })
-vim.keymap.set("n", "<leader>sg", builtin.git_files, { noremap = true, silent = true }, { desc = "[S]earch by [G]rep" })
+vim.keymap.set("n", "<leader>sg", builtin.live_grep, { noremap = true, silent = true }, { desc = "[S]earch by [G]rep" })
+-- vim.keymap.set("n", "<leader>sg", builtin.git_files, { noremap = true, silent = true }, { desc = "[S]earch by [G]rep" })
 vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
 vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
 vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
+vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elps" })
 vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
 
-vim.keymap.set(
-	"n",
-	"<leader>th",
-	":Telescope themes<CR>",
-	{ noremap = true, silent = true, desc = "[S]earch [T]hemes" }
-)
-
 vim.keymap.set("n", "<leader>sa", function()
-	builtin.find_files({ follow = true, no_ignore = true, hidden = true })
+	builtin.find_files({ follow = true, hidden = true })
 end, { desc = "[S]earch [A]ll Files" })
 
 vim.keymap.set("n", "<leader>sn", function()
@@ -75,4 +69,11 @@ vim.keymap.set("n", "<leader>so", function()
 		prompt_title = "Live Grep in Open Files",
 	})
 end, { desc = "[S]earch [/] in Open Files" })
+
+vim.keymap.set(
+	"n",
+	"<leader>th",
+	":Telescope themes<CR>",
+	{ noremap = true, silent = true, desc = "[S]earch [T]hemes" }
+)
 ----------------------------------------

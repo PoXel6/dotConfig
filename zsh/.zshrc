@@ -16,6 +16,7 @@ source $ZSH/oh-my-zsh.sh
 alias du='du -h'    
 alias ping='ping -c 3'
 alias swappy='swappy -f'
+alias ff='fastfetch'
 
 # Better Substitution
 alias  l='eza -lh  --icons=auto'                                        # long list
@@ -56,3 +57,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export PATH="$HOME/.local/share/bin:$PATH"
