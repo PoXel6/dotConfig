@@ -2,20 +2,7 @@ local telescope = require("telescope")
 telescope.setup({
 	defaults = {
 		prompt_prefix = "  >  ",
-		file_ignore_patterns = {
-			".git/",
-			".ssh/",
-			".npm/",
-			".tmux/",
-			".cache/",
-			".oh-my-zsh/plugins",
-			".local/state/",
-			".local/share/nvim/",
-			"Notes/",
-			"Pictures/",
-			"node_modules",
-			"tmux/.config/tmux/plugins/",
-		},
+		file_ignore_patterns = { "node_modules", ".git/" },
 		horizontal = { width = 0.5, height = 0.5 },
 		vertical = { width = 0.5 },
 	},

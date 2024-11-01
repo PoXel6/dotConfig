@@ -1,8 +1,6 @@
 {
     "diagnostics.globals": [
         "vim",
-        "opts",
-        "tmux",
-        "plugins"
+        "opts"
     ]
 }

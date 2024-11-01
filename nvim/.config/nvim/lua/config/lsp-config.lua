@@ -62,25 +62,34 @@ lsp_zero.extend_lspconfig({
 
 local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local lsp_flags = {
+	allow_incremental_sync = true,
+	debounce_text_changes = 150,
+}
 
 -- LSP Servers
-lspconfig.lua_ls.setup({
-	capabilities = capabilities,
-})
-
 lspconfig.clangd.setup({
 	capabilities = capabilities,
 	cmd = { "clangd", "--background-index", "--clang-tidy", "--log=verbose" },
 	init_options = {
 		fallback_flags = { "-std=c++17" },
 	},
+	flag = lsp_flags,
 })
 
-lspconfig.bashls.setup({
-	capabilities = capabilities,
-	cmd = { "bash-language-server", "start" }, -- Ensure this path is correct
-})
+local servers = {
+	"lua_ls",
+	"bashls",
+	"cssls",
+	"ts_ls",
+	"emmet_language_server",
+}
 
-lspconfig.cssls.setup({
-	capabilities = capabilities,
-})
+-- Loop through each server and configure
+for _, server in ipairs(servers) do
+	local config = {
+		capabilities = capabilities,
+		flags = lsp_flags,
+	}
+	lspconfig[server].setup(config)
+end

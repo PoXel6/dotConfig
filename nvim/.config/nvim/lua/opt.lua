@@ -18,6 +18,8 @@ opt.backspace = { "indent", "eol", "start" }
 opt.colorcolumn = "100"
 opt.updatetime = 500
 opt.scrolloff = 10
+
+opt.clipboard = "unnamedplus"
 -------------------------------------------
 
 o.ignorecase = true
