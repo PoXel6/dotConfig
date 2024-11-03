@@ -83,6 +83,7 @@ local servers = {
 	"cssls",
 	"ts_ls",
 	"emmet_language_server",
+	"taplo",
 }
 
 -- Loop through each server and configure
