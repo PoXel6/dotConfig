@@ -83,3 +83,6 @@
     
     # Show detailed information about the remote repository
     rinfo = remote show origin
+[http]
+	version = HTTP/1.1
+	postBuffer = 524288000

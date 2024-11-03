@@ -12,13 +12,18 @@ source $ZSH/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting )
 source $ZSH/oh-my-zsh.sh
 
+EDITOR=/usr/bin/nvim
+VISUAL=/usr/bin/nvim
+SUDO_EDITOR=/usr/bin/nvim
+
 # Helpful aliases
 alias du='du -h'    
 alias ping='ping -c 3'
 alias swappy='swappy -f'
 alias ff='fastfetch'
+alias pupu='git pull && git push'
 
-# Better Substitution
+# Better Alters
 alias  l='eza -lh  --icons=auto'                                        # long list
 alias ls='eza -1   --icons=auto'                                        # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first'  # long list all

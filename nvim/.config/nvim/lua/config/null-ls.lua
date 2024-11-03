@@ -7,6 +7,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.clang_format,
 		null_ls.builtins.formatting.shfmt,
 		null_ls.builtins.formatting.prettier,
+    --	null_ls.builtins.formatting.nixpkgs-fmt,
 	},
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then
