@@ -1,6 +1,7 @@
 {
     "diagnostics.globals": [
         "vim",
-        "opts"
+        "opts",
+        "local"
     ]
 }
