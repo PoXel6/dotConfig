@@ -6,6 +6,21 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			mode = mode or "n"
 			vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
 		end
+		vim.cmd([[
+      highlight NormalFloat guibg=NONE
+      highlight FloatBorder guifg=#f5c2e7 guibg=NONE
+    ]])
+		vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+			border = "rounded",
+			width = 60,
+			height = 15,
+		})
+		vim.diagnostic.config({
+			float = {
+				border = "rounded",
+				background = "NONE",
+			},
+		})
 
 		map("K", vim.lsp.buf.hover, "Show Hover Information")
 		map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
@@ -76,9 +91,31 @@ lspconfig.clangd.setup({
 	},
 	flag = lsp_flags,
 })
+lspconfig.lua_ls.setup({
+	settings = {
+		Lua = {
+			runtime = {
+				version = "LuaJIT",
+				path = vim.split(package.path, ";"),
+			},
+			diagnostics = {
+				globals = { "vim" },
+			},
+			workspace = {
+				library = vim.api.nvim_get_runtime_file("", true),
+				checkThirdParty = false,
+				[vim.fn.stdpath("config") .. "/lua"] = true,
+				[vim.fn.stdpath("data") .. "/site/pack/packer/start/"] = true, -- Adjust path if using Lazy
+				maxPreload = 1000,
+				preloadFileSize = 1024,
+			},
+			telemetry = { enable = false },
+		},
+	},
+})
 
 local servers = {
-	"lua_ls",
+	--	"lua_ls",
 	"bashls",
 	"cssls",
 	"ts_ls",
