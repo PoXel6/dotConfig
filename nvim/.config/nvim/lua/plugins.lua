@@ -30,11 +30,24 @@ return {
 			alpha.setup(dashboard.opts)
 		end,
 	},
+	-- ======== THEMES ======== --
 
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
+	},
+	{
+		"ellisonleao/gruvbox.nvim",
+		priority = 1000,
+		config = true,
+		opts = ...,
+	},
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
 	},
 
 	{
@@ -116,7 +129,7 @@ return {
 	{
 		{
 			"nvim-telescope/telescope.nvim",
-			event = "BufReadPre",
+			--event = "BufReadPre",
 			tag = "0.1.8",
 			dependencies = {
 				"andrew-george/telescope-themes",
@@ -156,27 +169,21 @@ return {
 	},
 	{
 		"windwp/nvim-ts-autotag",
+		ft = {
+			"html",
+			"htmx",
+			"css",
+			"js",
+			"jsx",
+			"ts",
+			"tsx",
+			"vue",
+			"xml",
+			"svelte",
+			"markdown",
+		},
 		config = function()
 			require("config.autotag")
 		end,
-	},
-	{
-		"folke/which-key.nvim",
-		event = "VeryLazy",
-
-		opts = {
-			-- your configuration comes here
-			-- or leave it empty to use the default settings
-			-- refer to the configuration section below
-		},
-		keys = {
-			{
-				"<leader>?",
-				function()
-					require("which-key").show({ global = false })
-				end,
-				desc = "Buffer Local Keymaps (which-key)",
-			},
-		},
 	},
 }
