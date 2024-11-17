@@ -186,4 +186,19 @@ return {
 			require("config.autotag")
 		end,
 	},
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = true,
+		-- use opts = {} for passing setup options
+	},
+	{
+		"stevearc/oil.nvim",
+		---@module 'oil'
+		---@type oil.SetupOpts
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("config.oil")
+		end,
+	},
 }

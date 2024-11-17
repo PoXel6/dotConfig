@@ -12,9 +12,10 @@ source $ZSH/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting )
 source $ZSH/oh-my-zsh.sh
 
-EDITOR=/usr/bin/nvim
-VISUAL=/usr/bin/nvim
-SUDO_EDITOR=/usr/bin/nvim
+EDITOR=/usr/sbin/nvim
+VISUAL=/usr/sbin/nvim
+SUDO_EDITOR=/usr/sbin/nvim
+
 
 # Helpful aliases
 alias du='du -h'    
@@ -50,6 +51,7 @@ alias .5='cd ../../../../..'
 alias keybindings='nvim ~/.config/hypr/keybindings.conf'
 alias hyprsetting='nvim ~/.config/hypr/hyprland.conf'
 alias zshconfig='nvim ~/.zshrc'                                           # Opens zsh's configs
+
 
 bindkey -v
 

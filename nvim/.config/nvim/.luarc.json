@@ -2,6 +2,8 @@
     "diagnostics.globals": [
         "vim",
         "opts",
-        "local"
+        "local",
+        "on_attach",
+        "oil"
     ]
 }

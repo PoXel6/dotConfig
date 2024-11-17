@@ -7,7 +7,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("", "<C-e>", "$")
 
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 vim.keymap.set("x", "<leader>p", '"_dP')
@@ -31,10 +31,10 @@ vim.keymap.set("i", "<C-k>", "<Up>", { desc = "move up" })
 -------------------------------------------
 
 vim.keymap.set(
-	"n",
-	"<leader>x",
-	"<cmd>!chmod +x %<CR>",
-	{ silent = true },
-	{ desc = "Make this File Excutable AKA: chmod+x $thisFile" }
+  "n",
+  "<leader>x",
+  "<cmd>!chmod +x %<CR>",
+  { silent = true },
+  { desc = "Make this File Excutable AKA: chmod+x $thisFile" }
 )
 -------------------------------------------
