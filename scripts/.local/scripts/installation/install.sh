@@ -30,11 +30,11 @@ else
 fi
 
 # Install additional packages
-sudo pacman -S --needed neovim eza tmux fzf bat man-db zsh stow fastfetch bash-completion zoxide
+yay -S --noconfirm --needed man-db zsh stow bash-completion eza tmux fzf bat fastfetch zoxide
 
 # Clone the dotConfig repository and stow configuration files
 if [ -d "$HOME/dotconfig/" ]; then
-	echo "dotFiles are already clones"
+	echo "dotFiles are cloned already"
 else
 	git clone https://github.com/PoXel6/dotConfig.git
 fi

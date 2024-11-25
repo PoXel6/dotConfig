@@ -1,4 +1,7 @@
 require("oil").setup({
+  view_options = {
+    show_hidden = true,
+  },
   float = {
     padding = 6,
     max_width = 75,
