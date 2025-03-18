@@ -201,4 +201,24 @@ return {
 			require("config.oil")
 		end,
 	},
+	{ "wakatime/vim-wakatime", lazy = false },
+	{
+		"olimorris/onedarkpro.nvim",
+		priority = 1000,
+	},
+	{
+		"folke/noice.nvim",
+		event = "VeryLazy",
+		opts = {
+			-- require("config.noice"),
+		},
+		dependencies = {
+			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+			"MunifTanjim/nui.nvim",
+			-- OPTIONAL:
+			--   `nvim-notify` is only needed, if you want to use the notification view.
+			--   If not available, we use `mini` as the fallback
+			"rcarriga/nvim-notify",
+		},
+	},
 }

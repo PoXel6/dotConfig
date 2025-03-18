@@ -1,7 +1,7 @@
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
-		theme = "catppuccin",
+		theme = "onedark",
 		section_separators = { left = "", right = "" },
 		component_separators = { left = "", right = "" },
 		disabled_filetypes = {
@@ -23,7 +23,7 @@ require("lualine").setup({
 		lualine_c = { "filename" },
 		lualine_x = { "fileformat", "filetype" },
 		lualine_y = { "progress" },
-		lualine_z = { "location" },
+		lualine_z = { "lsp_status" },
 	},
 	inactive_sections = {
 		lualine_a = {},

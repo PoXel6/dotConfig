@@ -1,6 +1,6 @@
 -- colorscheme
 function ColorScheme(color)
-	color = color or "catppuccin-mocha"
+	color = color or "onedark_vivid"
 	vim.cmd.colorscheme(color)
 end
 

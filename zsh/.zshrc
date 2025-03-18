@@ -36,7 +36,7 @@ alias cd='z'
 alias vi='nvim'
 alias vim='nvim'
 alias neovim='nvim'
-alias code='nvim'
+# alias code='nvim'
 alias ffn='nvim $(fzf -m --preview="bat --color=always {}")'
 
 # Handy change dir shortcuts
