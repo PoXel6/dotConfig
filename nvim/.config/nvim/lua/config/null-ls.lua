@@ -8,9 +8,9 @@ null_ls.setup({
     fmt.clang_format,
     fmt.shfmt,
     fmt.prettier,
-  eslint = {
+    eslint = {
       command = "eslint",
-      filetypes = {"javascript", "typescript","javascriptreact","typescriptreact"},
+      filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact", "vue" },
     },
   },
 

@@ -3,6 +3,14 @@ telescope.setup({
 	defaults = {
 		prompt_prefix = "  >  ",
 		file_ignore_patterns = { "node_modules", ".git/" },
+		layout_config = {
+			vertical = { width = 0.5 },
+			horizontal = {
+				prompt_position = "top",
+				width = 0.5,
+				height = 0.5,
+			},
+		},
 		horizontal = { width = 0.5, height = 0.5 },
 		vertical = { width = 0.5 },
 	},

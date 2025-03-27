@@ -1,0 +1,8 @@
+require("mini.surround").setup()
+require("mini.pairs").setup()
+require("mini.diff").setup()
+require("mini.splitjoin").setup()
+require("mini.git").setup()
+require("mini.icons").setup()
+require("mini.notify").setup()
+-- require("mini.animate").setup()

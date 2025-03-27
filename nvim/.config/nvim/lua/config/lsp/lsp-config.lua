@@ -1,4 +1,3 @@
-local lsp_zero = require("lsp-zero")
 -- Setup LSP mappings and configuration
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(event)
