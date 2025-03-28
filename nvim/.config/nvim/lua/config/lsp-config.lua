@@ -1,4 +1,5 @@
 local lsp_zero = require("lsp-zero")
+local lsp_highlight_augroup = vim.api.nvim_create_augroup("LspDocumentHighlight", { clear = false })
 -- Setup LSP mappings and configuration
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(event)
@@ -34,17 +35,16 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
 
 		local client = vim.lsp.get_client_by_id(event.data.client_id)
-		if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight) then
-			local highlight_augroup = vim.api.nvim_create_augroup("kickstart-lsp-highlight", { clear = false })
+		if client and client.supports_method("textDocument/documentHighlight") then
+			-- Use the persistent augroup for document highlighting in this buffer
 			vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
 				buffer = event.buf,
-				group = highlight_augroup,
+				group = lsp_highlight_augroup,
 				callback = vim.lsp.buf.document_highlight,
 			})
-
 			vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
 				buffer = event.buf,
-				group = highlight_augroup,
+				group = lsp_highlight_augroup,
 				callback = vim.lsp.buf.clear_references,
 			})
 
@@ -78,12 +78,13 @@ local lsp_flags = {
 -- LSP Servers
 lspconfig.clangd.setup({
 	capabilities = capabilities,
-	cmd = { "clangd", "--background-index", "--clang-tidy", "--log=verbose" },
+	cmd = { "clangd", "--background-index", "--clang-tidy" },
 	init_options = {
 		fallback_flags = { "-std=c++17" },
 	},
 	flag = lsp_flags,
 })
+
 lspconfig.lua_ls.setup({
 	settings = {
 		Lua = {

@@ -1,7 +1,7 @@
 return {
 	{
 		"L3MON4D3/LuaSnip",
-		event = { "BufRead", "BufNewFile" },
+		event = { "LspAttach", "BufRead", "BufNewFile" },
 		dependencies = {
 			"saadparwaiz1/cmp_luasnip",
 			"rafamadriz/friendly-snippets",
@@ -12,7 +12,7 @@ return {
 	},
 	{
 		"hrsh7th/cmp-nvim-lsp",
-		event = "InsertEnter",
+		event = { "LspAttach", "InsertEnter" },
 		dependencies = {
 			"hrsh7th/nvim-cmp",
 			"hrsh7th/cmp-path",

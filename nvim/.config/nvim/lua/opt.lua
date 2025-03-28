@@ -2,6 +2,7 @@ local opt = vim.opt
 local o = vim.o
 local g = vim.g
 
+vim.loader.enable()
 g.mapleader = " "
 g.toggle_theme_icon = "   "
 g.netrw_banner = 0
@@ -11,6 +12,9 @@ opt.termguicolors = true
 opt.incsearch = true
 opt.nu = true
 opt.wrap = false
+
+opt.foldmethod = "expr"
+-- opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 opt.showbreak = "↪ "
 opt.backspace = { "indent", "eol", "start" }
@@ -40,9 +44,9 @@ vim.o.guifont = "JetBrains Mono Nerd Font:h15"
 -------------------------------------------
 
 vim.api.nvim_create_autocmd("TextYankPost", {
-  desc = "Highlight when yanking (copying) text",
-  group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
+	desc = "Highlight when yanking (copying) text",
+	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+	callback = function()
+		vim.highlight.on_yank()
+	end,
 })

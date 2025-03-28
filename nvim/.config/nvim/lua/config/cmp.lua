@@ -5,6 +5,34 @@ vim.api.nvim_set_hl(0, "CmpSel", { bg = "#7287fd", fg = "#ffffff", bold = true }
 
 require("luasnip.loaders.from_vscode").lazy_load()
 
+local kind_icons = {
+	Text = "",
+	Method = "󰆧",
+	Function = "󰊕",
+	Constructor = "",
+	Field = "󰇽",
+	Variable = "󰂡",
+	Class = "󰠱",
+	Interface = "",
+	Module = "",
+	Property = "󰜢",
+	Unit = "",
+	Value = "󰎠",
+	Enum = "",
+	Keyword = "󰌋",
+	Snippet = "",
+	Color = "󰏘",
+	File = "󰈙",
+	Reference = "",
+	Folder = "󰉋",
+	EnumMember = "",
+	Constant = "󰏿",
+	Struct = "",
+	Event = "",
+	Operator = "󰆕",
+	TypeParameter = "󰅲",
+}
+
 local nerd_icons = {
 	Text = "",
 	Method = "λ",
@@ -58,11 +86,15 @@ local options = {
 
 	window = {
 		completion = {
+			max_view_entries = 10,
 			side_padding = 1,
+			col_offset = 1,
+			scrolloff = 3,
 			border = border("CmpBorder"),
 			winhighlight = "Normal:CmpPmenu,CursorLine:CmpSel,Search:None",
 			scrollbar = false,
 			max_width = 100,
+			max_height = 10, -- maximum height (change as needed)
 		},
 		documentation = {
 			border = border("CmpDocBorder"),
@@ -72,9 +104,12 @@ local options = {
 	},
 
 	formatting = {
-		fields = { "kind", "abbr", "menu" },
+		fields = { "abbr", "kind", "menu" },
 		format = function(entry, item)
-			item.kind = string.format("%s", nerd_icons[item.kind])
+			local icon = kind_icons[item.kind] or " "
+			local kind = item.kind
+			item.kind = string.format("%s %s", icon, kind)
+			-- item.kind = string.format("%s", nerd_icons[item.kind])
 			item.menu = ({
 				path = "[Path]",
 				luasnip = "[Snippet]",
@@ -87,16 +122,16 @@ local options = {
 				item.abbr = string.sub(item.abbr, 1, 37) .. "..."
 			end
 
-			-- Add snippet preview (replace the preview mechanism)
-			if entry.source.name == "luasnip" then
-				local doc = entry:get_documentation()
-				if doc then
-					item.documentation = {
-						kind = "markdown",
-						value = table.concat(doc, "\n"),
-					}
-				end
-			end
+			-- -- Add snippet preview (replace the preview mechanism)
+			-- if entry.source.name == "luasnip" then
+			-- 	local doc = entry:get_documentation()
+			-- 	if doc then
+			-- 		item.documentation = {
+			-- 			kind = "markdown",
+			-- 			value = table.concat(doc, "\n"),
+			-- 		}
+			-- 	end
+			-- end
 			return item
 		end,
 	},
