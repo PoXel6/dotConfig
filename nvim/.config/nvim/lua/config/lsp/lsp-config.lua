@@ -77,12 +77,13 @@ local lsp_flags = {
 -- LSP Servers
 lspconfig.clangd.setup({
 	capabilities = capabilities,
-	cmd = { "clangd", "--background-index", "--clang-tidy", "--log=verbose" },
+	cmd = { "clangd", "--background-index", "--clang-tidy" },
 	init_options = {
 		fallback_flags = { "-std=c++17" },
 	},
 	flag = lsp_flags,
 })
+
 lspconfig.lua_ls.setup({
 	settings = {
 		Lua = {
@@ -98,8 +99,8 @@ lspconfig.lua_ls.setup({
 				checkThirdParty = false,
 				[vim.fn.stdpath("config") .. "/lua"] = true,
 				[vim.fn.stdpath("data") .. "/site/pack/packer/start/"] = true, -- Adjust path if using Lazy
-				maxPreload = 1000,
-				preloadFileSize = 1024,
+				maxPreload = 256,
+				preloadFileSize = 512,
 			},
 			telemetry = { enable = false },
 		},
@@ -116,7 +117,9 @@ local servers = {
 	"html",
 	"css_variables",
 	"jsonls",
+	"tailwindcss",
 	"volar",
+	"vls",
 }
 
 -- Loop through each server and configure

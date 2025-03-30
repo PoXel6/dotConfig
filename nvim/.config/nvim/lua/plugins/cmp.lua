@@ -17,6 +17,7 @@ return {
 			"hrsh7th/nvim-cmp",
 			"hrsh7th/cmp-path",
 			"hrsh7th/cmp-buffer",
+			"onsails/lspkind.nvim",
 		},
 		config = function()
 			require("config.cmp")
