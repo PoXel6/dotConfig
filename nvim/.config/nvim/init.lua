@@ -1,7 +1,6 @@
-require("opt")
+require("custom.options")
 require("lazy_setup")
-require("remap")
-require("cmd")
-require("function")
+require("custom.keymaps")
+require("custom.auto_commands")
 require("lazy").setup("plugins")
 -------------------------------------------

@@ -1,18 +1,11 @@
 local telescope = require("telescope")
 telescope.setup({
 	defaults = {
+		previewer = false,
+		layout_strategy = "vertical",
 		prompt_prefix = "  >  ",
 		file_ignore_patterns = { "node_modules", ".git/" },
-		layout_config = {
-			vertical = { width = 0.5 },
-			horizontal = {
-				prompt_position = "top",
-				width = 0.5,
-				height = 0.5,
-			},
-		},
-		horizontal = { width = 0.5, height = 0.5 },
-		vertical = { width = 0.5 },
+		layout_config = {},
 	},
 
 	extensions = {
@@ -23,28 +16,20 @@ telescope.setup({
 			case_mode = "smart_case", -- Case-insensitive search
 		},
 
-		["ui-select"] = { require("telescope.themes").get_dropdown({}) },
+		["ui-select"] = { require("telescope.themes").get_ivy({}) },
 
 		themes = {
-			layout_config = {
-				vertical = { width = 0.5 },
-				horizontal = {
-					prompt_position = "top",
-					width = 0.5,
-					height = 0.5,
-				},
-			},
 
 			ignore = { "default", "desert", "elflord", "habamax", "blue" },
 
 			light_themes = {
 				ignore = true,
-				keywords = { "light", "day", "white" },
+				keywords = { "light", "day", "white", "onelight" },
 			},
 
 			dark_themes = {
 				ignore = false,
-				keywords = { "dark", "night", "black" },
+				keywords = { "dark", "night", "black", "onedark", "onedark_vivid" },
 			},
 
 			persist = {

@@ -13,7 +13,7 @@ opt.incsearch = true
 opt.nu = true
 opt.wrap = false
 
-opt.foldmethod = "expr"
+-- opt.foldmethod = "expr"
 -- opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 opt.showbreak = "↪ "

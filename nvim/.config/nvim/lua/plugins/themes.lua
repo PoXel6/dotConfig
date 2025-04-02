@@ -1,30 +1,16 @@
 return {
-
-	{
-		"olimorris/onedarkpro.nvim",
-		lazy = true,
-		priority = 1000,
-	},
-
-	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		lazy = true,
-		priority = 1000,
-	},
-
-	{
-		"ellisonleao/gruvbox.nvim",
-		lazy = true,
-		priority = 1000,
-		config = true,
-		opts = ...,
-	},
-
-	{
-		"folke/tokyonight.nvim",
-		lazy = true,
-		priority = 1000,
-		opts = {},
-	},
+  {
+    "olimorris/onedarkpro.nvim",
+    priority = 1000,
+    config = function()
+      require("config.ui.theme")
+      vim.cmd("colorscheme onedark_vivid")
+    end,
+  },
+  {
+    "folke/tokyonight.nvim",
+    lazy = true,
+    priority = 1000,
+    opts = {},
+  },
 }

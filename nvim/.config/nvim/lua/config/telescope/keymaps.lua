@@ -1,10 +1,11 @@
 local M = {}
 
 M.setup = function()
+	local themes = require("telescope.themes")
 	local builtin = require("telescope.builtin")
 
 	vim.keymap.set("n", "<C-p>", function()
-		builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+		builtin.current_buffer_fuzzy_find(themes.get_dropdown({
 			winblend = 10,
 			previewer = false,
 		}))
@@ -13,12 +14,21 @@ M.setup = function()
 	vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
 
 	vim.keymap.set("n", "<leader>sa", function()
-		builtin.find_files({ follow = true, no_ignore = true, hidden = true })
+		builtin.find_files(
+			themes.get_ivy({
+				previewer = false,
+			}),
+			{
+				follow = true,
+				no_ignore = true,
+				hidden = true,
+			}
+		)
 	end, { desc = "[S]earch [A]ll Files" })
 
-	vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
-
 	vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
+
+	vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
 
 	vim.keymap.set("n", "<leader>sg", builtin.git_files, { desc = "[S]earch [G]it" })
 

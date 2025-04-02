@@ -7,16 +7,10 @@ return {
       require("config.ui.noice"),
     },
     dependencies = {
-      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
       "MunifTanjim/nui.nvim",
+      -- TODO: add notify.nvim
     },
   },
-
-  { -- wakatime
-    "wakatime/vim-wakatime",
-    lazy = false,
-  },
-
   { -- auto-tag
     "windwp/nvim-ts-autotag",
     event = { "BufReadPre", "InsertEnter" },
@@ -25,34 +19,10 @@ return {
       require("config.autotag.options")
     end,
   },
-
-  { -- tailwind-tools.lua
-    "luckasRanarison/tailwind-tools.nvim",
-    name = "tailwind-tools",
-    build = ":UpdateRemotePlugins",
-    -- lazy = true,
-    -- ft = {
-    --   "html",
-    --   "css",
-    --   "vue",
-    --   "js",
-    --   "ts",
-    --   "jsx",
-    --   "tsx",
-    --   "svelte",
-    -- },
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-telescope/telescope.nvim", -- optional
-      "neovim/nvim-lspconfig",      -- optional
-    },
-    -- function()
-    -- 	require("config.tailwind")
-    -- end,
-  },
   {
     "stevearc/dressing.nvim",
-    opts = {},
-    -- 	require("config.ui.dressing"),
+    -- opts = {
+    --   require("config.ui.dressing"),
+    -- },
   },
 }
