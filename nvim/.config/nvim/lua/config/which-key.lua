@@ -2,7 +2,7 @@
 ---@class wk.Opts
 local defaults = {
 	---@type false | "classic" | "modern" | "helix"
-	preset = "classic",
+	preset = "helix",
 	-- Delay before showing the popup. Can be a number or a function that returns a number.
 	---@type number | fun(ctx: { keys: string, mode: string, plugin?: string }):number
 	delay = function(ctx)
@@ -59,7 +59,7 @@ local defaults = {
 		-- height = { min = 4, max = 25 },
 		-- col = 0,
 		-- row = math.huge,
-		-- border = "none",
+		-- border = "rounded",
 		padding = { 1, 2 }, -- extra window padding [top/bottom, right/left]
 		title = true,
 		title_pos = "center",

@@ -1,0 +1,3 @@
+MiniStatusline.config = {
+  content = {},
+}

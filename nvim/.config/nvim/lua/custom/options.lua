@@ -19,7 +19,7 @@ opt.wrap = false
 opt.showbreak = "↪ "
 opt.backspace = { "indent", "eol", "start" }
 
-opt.colorcolumn = "100"
+-- opt.colorcolumn = "100"
 opt.updatetime = 500
 opt.scrolloff = 10
 
