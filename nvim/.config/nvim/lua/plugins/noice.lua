@@ -1,11 +1,9 @@
 return { -- noice.nvim
-	"folke/noice.nvim",
-	event = "VeryLazy",
-	opts = {
-		require("config.ui.noice"),
-	},
-	dependencies = {
-		"MunifTanjim/nui.nvim",
-		-- TODO: add notify.nvim
-	},
+  "folke/noice.nvim",
+  opts = require("config.ui.noice"),
+  event = "VeryLazy",
+  dependencies = {
+    "MunifTanjim/nui.nvim",
+    "rcarriga/nvim-notify",
+  },
 }

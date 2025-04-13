@@ -4,6 +4,7 @@
         "opts",
         "local",
         "on_attach",
-        "oil"
+        "oil",
+        "M"
     ]
 }

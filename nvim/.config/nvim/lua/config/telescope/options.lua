@@ -41,4 +41,5 @@ telescope.setup({
 telescope.load_extension("fzf")
 telescope.load_extension("ui-select")
 telescope.load_extension("themes")
-require("custom.keymaps.telescope")
+telescope.load_extension("noice")
+require("custom.keymaps.which-key.telescope")

@@ -1,55 +1,19 @@
 return {
-	{
-		"williamboman/mason.nvim",
-		dependencies = { "williamboman/mason-lspconfig.nvim" },
-		event = {
-			"FileType",
-			"VeryLazy",
-		},
-		lazy = true,
-		config = function()
-			require("config.lsp.mason")
-		end,
+	"neovim/nvim-lspconfig",
+	-- lazy = true,
+	event = "VeryLazy",
+	dependencies = {
+		"mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
 	},
-	{
-		"neovim/nvim-lspconfig",
-		lazy = true,
-		event = "VeryLazy",
-		opts = {
-			servers = {
-				bashls = {},
-				cssls = {},
-				ts_ls = {},
-				emmet_language_server = {},
-				taplo = {},
-				html = {},
-				css_variables = {},
-				jsonls = {},
-				tailwindcss = {},
-				volar = {},
-				vls = {},
-				clangd = {
-					cmd = {
-						"clangd",
-						"--background-index",
-						"--clang-tidy",
-					},
-					init_options = {
-						fallback_flags = { "-std=c++17" },
-					},
-					flag = lsp_flags,
-				},
-				lua_ls = {},
-			},
-		},
-		config = function(_, opts)
-			local lspconfig = require("lspconfig")
-			for server, config in pairs(opts.servers) do
-				config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
-				lspconfig[server].setup(config)
-			end
-		end,
-	},
+	opts = require("config.lsp.options"),
+	config = function(_, opts)
+		local lspconfig = require("lspconfig")
+		for server, config in pairs(opts.servers) do
+			config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
+			lspconfig[server].setup(config)
+		end
+	end,
 	-- vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show Hover Information" })
 	-- vim.keymap.set("n", "gd", require("telescope.builtin").lsp_definitions,{ desc = "[G]oto [D]efinition" })
 	-- vim.keymap.set("n", "gr", require("telescope.builtin").lsp_references,{ desc = "[G]oto [R]eferences" })

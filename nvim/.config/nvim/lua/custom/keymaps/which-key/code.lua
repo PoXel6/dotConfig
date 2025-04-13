@@ -14,7 +14,16 @@ wk.add({
 	},
 	{
 		"<leader>cf",
-		vim.lsp.buf.code_action(),
+		function()
+			vim.lsp.buf.format()
+		end,
 		desc = "[C]ode [F]ormat",
+	},
+	{
+		"<leader>rn",
+		function()
+			vim.lsp.buf.rename()
+		end,
+		desc = "[R]e[N]ame",
 	},
 })

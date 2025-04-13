@@ -2,6 +2,7 @@
 require("custom.keymaps.visual")
 require("custom.keymaps.split")
 require("custom.keymaps.which-key.init")
+
 -- vim bindings
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")

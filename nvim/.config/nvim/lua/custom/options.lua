@@ -2,7 +2,7 @@ local opt = vim.opt
 local o = vim.o
 local g = vim.g
 
-vim.loader.enable()
+vim.loader.enable(true)
 g.mapleader = " "
 g.toggle_theme_icon = "   "
 g.netrw_banner = 0
@@ -13,8 +13,11 @@ opt.incsearch = true
 opt.nu = true
 opt.wrap = false
 
--- opt.foldmethod = "expr"
--- opt.foldexpr = "nvim_treesitter#foldexpr()"
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- opt.nofoldenable = true
+opt.foldlevelstart = 99
+opt.foldcolumn = "1"
 
 opt.showbreak = "↪ "
 opt.backspace = { "indent", "eol", "start" }

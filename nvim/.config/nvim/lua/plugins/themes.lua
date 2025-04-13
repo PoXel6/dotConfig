@@ -1,16 +1,29 @@
 return {
-  {
-    "olimorris/onedarkpro.nvim",
-    priority = 1000,
-    config = function()
-      require("config.ui.theme")
-      vim.cmd("colorscheme onedark_vivid")
-    end,
-  },
-  {
-    "folke/tokyonight.nvim",
-    lazy = true,
-    priority = 1000,
-    opts = {},
-  },
+	{
+		"olimorris/onedarkpro.nvim",
+		priority = 1000,
+		event = "VeryLazy",
+		config = function()
+			require("config.ui.themes.onedarkpro")
+			vim.cmd("colorscheme onedark_vivid")
+		end,
+	},
+	{
+		"folke/tokyonight.nvim",
+		priority = 1000,
+		event = "VeryLazy",
+		opts = {},
+	},
+	{
+		"nobbmaestro/nvim-andromeda",
+		priority = 1000,
+		event = "VeryLazy",
+		dependencies = {
+			"tjdevries/colorbuddy.nvim",
+			branch = "dev",
+		},
+		config = function()
+			require("config.ui.themes.andromeda")
+		end,
+	},
 }

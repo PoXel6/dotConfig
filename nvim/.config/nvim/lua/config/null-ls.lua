@@ -33,5 +33,3 @@ null_ls.setup({
 		end
 	end,
 })
-
-vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { desc = "[C]ode [F]ormat" })
