@@ -1,16 +1,11 @@
 require("dressing").setup({
 	input = {
 		default_prompt = "Input", -- Default prompt string
-
 		trim_prompt = true, -- Trim trailing `:` from prompt
-
 		title_pos = "center", -- 'left', 'right', 'center'
-
 		start_mode = "insert", -- The initial mode when the window opens (insert|normal|visual|select).
-
 		border = "rounded",
-
-		prefer_width = 40, -- These can be integers or a float between 0 and 1 (e.g. 0.4 for 40%)
+		prefer_width = 0.4, -- These can be integers or a float between 0 and 1 (e.g. 0.4 for 40%)
 		width = nil,
 		-- min_width and max_width can be a list of mixed types.
 		max_width = { 140, 0.9 },

@@ -4,7 +4,11 @@ telescope.setup({
 		previewer = false,
 		layout_strategy = "vertical",
 		prompt_prefix = "  >  ",
-		file_ignore_patterns = { "node_modules", ".git/" },
+		file_ignore_patterns = {
+			".gradle/",
+			"node_modules/",
+			".git/",
+		},
 		layout_config = {},
 	},
 
@@ -16,22 +20,20 @@ telescope.setup({
 			case_mode = "smart_case", -- Case-insensitive search
 		},
 
-		["ui-select"] = { require("telescope.themes").get_ivy({}) },
+		["ui-select"] = {
+			require("telescope.themes").get_ivy({}),
+		},
 
 		themes = {
-
 			ignore = { "default", "desert", "elflord", "habamax", "blue" },
-
 			light_themes = {
 				ignore = true,
 				keywords = { "light", "day", "white", "onelight" },
 			},
-
 			dark_themes = {
 				ignore = false,
 				keywords = { "dark", "night", "black", "onedark", "onedark_vivid" },
 			},
-
 			persist = {
 				enabled = true,
 			},
@@ -41,5 +43,4 @@ telescope.setup({
 telescope.load_extension("fzf")
 telescope.load_extension("ui-select")
 telescope.load_extension("themes")
-telescope.load_extension("noice")
 require("custom.keymaps.which-key.telescope")

@@ -10,7 +10,7 @@ require("oil").setup({
     max_height = 20,
     border = "rounded",
     win_options = {
-      winblend = 0.9,
+      winblend = 0,
     },
   },
 })
