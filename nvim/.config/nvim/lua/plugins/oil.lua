@@ -9,7 +9,9 @@ return {
 	keys = {
 		{
 			"-",
-			"<CMD>Oil<CR>",
+			function()
+				require("oil").open()
+			end,
 			desc = "Open parent directory",
 		},
 		{

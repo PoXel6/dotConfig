@@ -1,7 +1,8 @@
+local path = "custom.keymaps."
 -- other modules
-require("custom.keymaps.visual")
-require("custom.keymaps.split")
-require("custom.keymaps.which-key.init")
+require(path .. "visual")
+require(path .. "split")
+require(path .. "which-key.init")
 
 -- vim bindings
 vim.keymap.set("n", "J", "mzJ`z")
