@@ -1,5 +1,4 @@
 local opts = {
-
 	diagnostics = {
 		underline = true,
 		update_in_insert = false,
@@ -14,7 +13,7 @@ local opts = {
 
 	inlay_hints = {
 		enabled = true,
-		exclude = { "vue" },
+		-- exclude = { "vue" },
 	},
 
 	codelens = {

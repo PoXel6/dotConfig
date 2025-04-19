@@ -18,41 +18,25 @@ require("dressing").setup({
 			listchars = "precedes:…,extends:…",
 			sidescrolloff = 10, -- Increase this for more context when text scrolls off the window
 		},
-
-		-- Set to `false` to disable
-		mappings = {
-			n = {
-				["<Esc>"] = "Close",
-				["<CR>"] = "Confirm",
-			},
-			i = {
-				["<C-c>"] = "Close",
-				["<CR>"] = "Confirm",
-				["<Up>"] = "HistoryPrev",
-				["<Down>"] = "HistoryNext",
-			},
-		},
-
-		override = function(conf)
-			-- This is the config that will be passed to nvim_open_win.
-			-- Change values here to customize the layout
-			return conf
-		end,
-
-		get_config = nil, -- see :help dressing_get_config
 	},
 	select = {
-		enabled = true, -- Set to false to disable the vim.ui.select implementation
-
+		get_config = function(opts)
+			if opts.kind == "codeaction" then
+				return {
+					backend = "nui",
+					nui = {
+						relative = "cursor",
+						max_width = 40,
+					},
+				}
+			end
+		end,
+		enabled = true,
 		backend = { "telescope", "fzf_lua", "fzf", "builtin", "nui" }, -- Priority list of preferred vim.select implementations
+		trim_prompt = true,
 
-		trim_prompt = true, -- Trim trailing `:` from prompt
-
-		-- Options for telescope selector
-		-- These are passed into the telescope picker directly. Can be used like:
 		telescope = nil,
 
-		-- Options for nui Menu
 		nui = {
 			position = "50%",
 			size = nil,
@@ -87,28 +71,12 @@ require("dressing").setup({
 				statuscolumn = " ", -- adds padding at the left border
 			},
 
-			-- These can be integers or a float between 0 and 1 (e.g. 0.4 for 40%)
-			-- the min_ and max_ options can be a list of mixed types.
-			-- max_width = {140, 0.8} means "the lesser of 140 columns or 80% of total"
 			width = nil,
 			max_width = { 140, 0.8 },
 			min_width = { 40, 0.2 },
 			height = nil,
 			max_height = 0.9,
 			min_height = { 10, 0.2 },
-
-			-- Set to `false` to disable
-			mappings = {
-				["<Esc>"] = "Close",
-				["<C-c>"] = "Close",
-				["<CR>"] = "Confirm",
-			},
-
-			override = function(conf)
-				-- This is the config that will be passed to nvim_open_win.
-				-- Change values here to customize the layout
-				return conf
-			end,
 		},
 
 		-- Used to override format_item. See :help dressing-format

@@ -26,4 +26,14 @@ return {
 			require("config.ui.themes.andromeda")
 		end,
 	},
+	{
+		"Mofiqul/vscode.nvim",
+		event = "VeryLazy",
+		opts = {
+			transparent = true,
+			italic_comments = true,
+			underline_links = true,
+			terminal_colors = true,
+		},
+	},
 }

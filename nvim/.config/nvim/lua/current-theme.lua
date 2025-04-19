@@ -1,1 +1,1 @@
-vim.cmd("colorscheme andromeda")
+vim.cmd("colorscheme onedark_vivid")

@@ -8,6 +8,7 @@ null_ls.setup({
 		builtin.clang_format,
 		builtin.shfmt,
 		builtin.prettier,
+		builtin.google_java_format,
 		eslint = {
 			command = "eslint",
 			filetypes = {

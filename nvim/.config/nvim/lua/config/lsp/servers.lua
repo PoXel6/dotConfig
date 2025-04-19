@@ -1,14 +1,20 @@
 return {
-  bashls = {},
-  cssls = {},
-  ts_ls = {},
-  emmet_language_server = {},
-  taplo = {},
   html = {},
+  emmet_language_server = {},
+  cssls = {},
   css_variables = {},
-  jsonls = {},
   tailwindcss = {},
+  ts_ls = {},
+  eslint = {
+    settings = {
+      workingDirectories = { mode = "auto" },
+      format = auto_format,
+    },
+  },
   volar = {},
+  jsonls = {},
+  bashls = {},
+  taplo = {},
   jdtls = {},
   clangd = {
     cmd = {

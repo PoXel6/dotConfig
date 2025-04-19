@@ -15,9 +15,9 @@ opt.wrap = false
 
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
--- opt.nofoldenable = true
 opt.foldlevelstart = 99
 opt.foldcolumn = "1"
+o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 
 opt.showbreak = "↪ "
 opt.backspace = { "indent", "eol", "start" }
