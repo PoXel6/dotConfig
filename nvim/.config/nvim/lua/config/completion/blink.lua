@@ -1,10 +1,7 @@
 return {
   keymap = {
     preset = "super-tab",
-<<<<<<< HEAD
-=======
     ["<C-e>"] = {},
->>>>>>> 5e05cb0 (added new plugins to nvim)
   },
 
   completion = {
@@ -37,11 +34,7 @@ return {
       "lazydev",
       "lsp",
       "path",
-<<<<<<< HEAD
-      -- "snippets",
-=======
       "snippets",
->>>>>>> 5e05cb0 (added new plugins to nvim)
       "buffer",
     },
     providers = {

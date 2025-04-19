@@ -15,11 +15,7 @@ return {
   jsonls = {},
   bashls = {},
   taplo = {},
-<<<<<<< HEAD
-  jdtls = {},
-=======
   -- jdtls = {},
->>>>>>> 5e05cb0 (added new plugins to nvim)
   clangd = {
     cmd = {
       "clangd",
