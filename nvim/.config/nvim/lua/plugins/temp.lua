@@ -1,5 +1,6 @@
 return {
 	{
+<<<<<<< HEAD
 		"nvim-orgmode/orgmode",
 		event = "VeryLazy",
 		ft = { "org" },
@@ -9,6 +10,8 @@ return {
 		},
 	},
 	{
+=======
+>>>>>>> 5e05cb0 (added new plugins to nvim)
 		"ecthelionvi/NeoComposer.nvim",
 		dependencies = {
 			"kkharji/sqlite.lua",

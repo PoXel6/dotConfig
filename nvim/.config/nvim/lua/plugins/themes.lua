@@ -1,4 +1,5 @@
 return {
+<<<<<<< HEAD
 	{
 		"olimorris/onedarkpro.nvim",
 		priority = 1000,
@@ -36,4 +37,42 @@ return {
 			terminal_colors = true,
 		},
 	},
+=======
+  {
+    "olimorris/onedarkpro.nvim",
+    priority = 1000,
+    event = "VeryLazy",
+    config = function()
+      require("config.ui.themes.onedarkpro")
+    end,
+  },
+  {
+    "folke/tokyonight.nvim",
+    priority = 1000,
+    event = "VeryLazy",
+    opts = {},
+  },
+  {
+    "nobbmaestro/nvim-andromeda",
+    priority = 1000,
+    event = "VeryLazy",
+    dependencies = {
+      "tjdevries/colorbuddy.nvim",
+      branch = "dev",
+    },
+    config = function()
+      require("config.ui.themes.andromeda")
+    end,
+  },
+  {
+    "Mofiqul/vscode.nvim",
+    event = "VeryLazy",
+    opts = {
+      transparent = true,
+      italic_comments = true,
+      underline_links = true,
+      terminal_colors = true,
+    },
+  },
+>>>>>>> 5e05cb0 (added new plugins to nvim)
 }

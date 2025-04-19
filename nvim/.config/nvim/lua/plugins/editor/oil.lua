@@ -2,7 +2,7 @@ return {
 	"stevearc/oil.nvim",
 	---@module 'oil'
 	dependencies = { "echasnovski/mini.icons", opts = {} },
-	-- event = { "BufReadPre", "VeryLazy" },
+	lazy = true,
 	config = function()
 		require("config.ui.oil")
 	end,
