@@ -1,7 +1,8 @@
 require("custom.options")
 require("lazy_setup")
-require("custom.keymaps.init")
+require("custom.keymaps")
 require("custom.auto_commands")
 require("lazy").setup("plugins")
-require("custom.snippets.all")
+require("custom.snippets.init")
+require("current-theme")
 -------------------------------------------

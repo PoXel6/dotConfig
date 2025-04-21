@@ -23,12 +23,6 @@ require("lazy").setup({
 		},
 	},
 
-	install = {
-		colorscheme = {
-			"onedark_vivid",
-		},
-	},
-
 	ui = {
 		backdrop = 80,
 		pills = true,

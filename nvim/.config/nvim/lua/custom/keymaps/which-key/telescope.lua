@@ -90,4 +90,9 @@ wk.add({
 		end,
 		desc = "Document [S]ymbols",
 	},
+	{
+		"<leader>si",
+		":Telescope import<CR>",
+		desc = "[I]mport",
+	},
 })
