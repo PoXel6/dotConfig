@@ -1,4 +1,4 @@
-MiniNotify.config = {
+require("mini.notify").config = {
 	-- No need to copy this inside `setup()`. Will be used automatically.
 	-- Content management
 	content = {

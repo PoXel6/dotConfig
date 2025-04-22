@@ -1,46 +1,51 @@
--- No need to copy this inside `setup()`. Will be used automatically.
-MiniDiff.config = {
-	-- Each entry configures one operator.
-	-- `prefix` defines keys mapped during `setup()`: in Normal mode
-	-- to operate on textobject and line, in Visual - on selection.
+require("mini.diff").config = {
+	-- Options for how hunks are visualized
+	view = {
+		-- Visualization style. Possible values are 'sign' and 'number'.
+		-- Default: 'number' if line numbers are enabled, 'sign' otherwise.
+		style = vim.go.number and "number" or "sign",
 
-	-- Evaluate text and replace with output
-	evaluate = {
-		prefix = "g=",
+		-- Signs used for hunks with 'sign' view
+		signs = { add = "▒", change = "▒", delete = "▒" },
 
-		-- Function which does the evaluation
-		func = nil,
+		-- Priority of used visualization extmarks
+		priority = 199,
 	},
 
-	-- Exchange text regions
-	exchange = {
-		prefix = "gx",
+	-- Source(s) for how reference text is computed/updated/etc
+	-- Uses content from Git index by default
+	source = nil,
 
-		-- Whether to reindent new text to match previous indent
-		reindent_linewise = true,
+	-- Delays (in ms) defining asynchronous processes
+	delay = {
+		-- How much to wait before update following every text change
+		text_change = 200,
 	},
 
-	-- Multiply (duplicate) text
-	multiply = {
-		prefix = "gm",
+	-- Module mappings. Use `''` (empty string) to disable one.
+	mappings = {
+		-- Apply hunks inside a visual/operator region
+		apply = "gh",
 
-		-- Function which can modify text before multiplying
-		func = nil,
+		-- Reset hunks inside a visual/operator region
+		reset = "gH",
+
+		-- Hunk range textobject to be used inside operator
+		-- Works also in Visual mode if mapping differs from apply and reset
+		textobject = "gh",
+
+		-- Go to hunk range in corresponding direction
+		goto_first = "[H",
+		goto_prev = "[h",
+		goto_next = "]h",
+		goto_last = "]H",
 	},
 
-	-- Replace text with register
-	replace = {
-		prefix = "gr",
-
-		-- Whether to reindent new text to match previous indent
-		reindent_linewise = true,
-	},
-
-	-- Sort text
-	sort = {
-		prefix = "gs",
-
-		-- Function which does the sort
-		func = nil,
+	-- Various options
+	options = {
+		algorithm = "histogram",
+		indent_heuristic = true,
+		linematch = 60,
+		wrap_goto = false,
 	},
 }
