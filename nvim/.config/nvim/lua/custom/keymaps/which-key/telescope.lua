@@ -1,3 +1,4 @@
+rg: No files were searched, which means ripgrep probably applied a filter you didn't expect.
 local builtin = require("telescope.builtin")
 local themes = require("telescope.themes")
 local wk = require("which-key")
@@ -79,7 +80,11 @@ wk.add({
 	{
 		"<leader>ss",
 		function()
-			builtin.lsp_document_symbols()
+			builtin.lsp_document_symbols(themes.get_dropdown({
+				layout_strategy = "horizontal",
+				sorting_strategy = "descending",
+				previewer = true,
+			}))
 		end,
 		desc = "Document [S]ymbols",
 	},
