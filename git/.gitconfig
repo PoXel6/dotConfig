@@ -1,6 +1,6 @@
 [core]
 	editor = nvim
-	autocrlf = true
+	autocrlf = false
 
 [user]
 	email = iampoxel6@gmail.com

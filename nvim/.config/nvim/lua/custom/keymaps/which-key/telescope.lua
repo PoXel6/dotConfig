@@ -1,4 +1,3 @@
-rg: No files were searched, which means ripgrep probably applied a filter you didn't expect.
 local builtin = require("telescope.builtin")
 local themes = require("telescope.themes")
 local wk = require("which-key")

@@ -4,7 +4,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-ZSH=/home/pox/.oh-my-zsh # Path to your oh-my-zsh installation.
+ZSH=/home/$USER/.oh-my-zsh # Path to your oh-my-zsh installation.
 # Path to powerlevel10k theme
 source $ZSH/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
@@ -78,3 +78,5 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.local/share/bin:$PATH"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 export PATH=$HOME/.local/bin:$PATH
+ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="powerlevel10k/powerlevel10k"

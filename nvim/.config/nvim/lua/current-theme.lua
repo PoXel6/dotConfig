@@ -1,1 +1,1 @@
-vim.cmd("colorscheme vscode")
+vim.cmd("colorscheme onedark_vivid")
