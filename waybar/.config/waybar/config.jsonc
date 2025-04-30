@@ -17,34 +17,43 @@
   "gtk-layer-shell": true,
   "reload_style_on_change": true,
   "include": [
-    //   "~/.config/waybar/modules.jsonc",
-    "~/.config/waybar/pad-modules.jsonc"
+    "~/.config/waybar/modules/*.jsonc",
+    "~/.config/waybar/pad-modules.jsonc",
   ],
   "modules-left": [
     "custom/padd",
     "custom/l_end",
     "hyprland/workspaces",
     "custom/r_end",
-    "custom/padd"
+    "custom/padd",
   ],
   "modules-center": [
     "custom/padd",
     "custom/l_end",
     "hyprland/window",
     "custom/r_end",
-    "custom/padd"
+    "custom/padd",
   ],
   "modules-right": [
     "custom/padd",
     "custom/l_end",
     "network",
-    "pulseaudio",
+    "wireplumber",
     //"custom/updates",
     "custom/r_end",
     "custom/l_end",
     "clock",
+    "custom/r_end",
+    "custom/padd",
     "tray",
     "custom/power",
-    "custom/r_end"
-  ]
+    "custom/l_end",
+    "custom/notification",
+    "custom/r_end",
+  ],
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal",
+  },
 }

@@ -1,7 +1,7 @@
 * {
   border: none;
   border-radius: 0px;
-  font-family: "InterVariable";
+  font-family: "InterVariable", "Jetbrains Mono Nerd Font";
   font-weight: 600;
   font-size: 13px;
   min-height: 10px;
@@ -39,14 +39,14 @@ tooltip {
   margin-right: 2px;
   padding: 2px 5px 2px 5px;
   animation: ws_active 20s ease-in-out 1;
-  transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
+  transition: all 0.4s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #workspaces button:hover {
   background: @wb-hvr-bg;
   color: @wb-hvr-fg;
   animation: ws_hover 20s ease-in-out 1;
-  transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #taskbar button {
@@ -72,22 +72,22 @@ tooltip {
   padding-right: 11px;
   margin-right: 2px;
   animation: tb_active 20s ease-in-out 1;
-  transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
+  transition: all 0.4s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #taskbar button:hover {
   background: @wb-hvr-bg;
   color: @wb-hvr-color;
   animation: tb_hover 20s ease-in-out 1;
-  transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #tray menu * {
-  min-height: 16px
+  min-height: 16px;
 }
 
 #tray menu separator {
-  min-height: 10px
+  min-height: 10px;
 }
 
 #backlight,
@@ -107,6 +107,8 @@ tooltip {
 #custom-notifications,
 #custom-power,
 #pulseaudio,
+#wireplumber,
+#wireplumber.muted,
 #custom-spotify,
 #taskbar,
 #custom-theme,
@@ -121,18 +123,27 @@ tooltip {
 #custom-sl_end,
 #custom-sr_end,
 #custom-rl_end,
-#custom-rr_end {
+#custom-rr_end,
+#custom-notification {
   color: @main-fg;
   background: @main-bg;
   opacity: 1;
   margin: 3px 0px 3px 0px;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding: 4px;
 }
 
 #workspaces,
 #taskbar {
   padding: 0px;
+}
+
+#custom-notification {
+  font-family: "Jetbrains Mono Nerd Font";
+  font-size: 16px;
+}
+
+#wireplumber.muted {
+  color: red;
 }
 
 #custom-r_end {

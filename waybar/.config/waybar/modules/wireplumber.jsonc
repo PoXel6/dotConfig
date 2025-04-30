@@ -1,0 +1,13 @@
+{
+  "wireplumber": {
+    "format": "{volume}% {icon} ",
+    "format-muted": "0% <big>󰝟</big>",
+    "on-click": "pwvucontrol",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ],
+  },
+}
