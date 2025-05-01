@@ -17,12 +17,18 @@
 ### 🖼 **Screenshot tool**: [Swappy](https://github.com/jtheoof/swappy)  
 ### 🖋️ **Font**: Jetbrains Mono Nerd Font & Inter-font
 
+
+
 ## 🖥️ Setup
 ---
+
+
+
 ## INSTALLATION (Arch)
 
 **All**
 ---
+
 ```sh
 yay -S hyprland-git hyprpicker  hypridle hyprlock hyprsunset \
 swaync nwg-look  swww waybar neovim tmux nodejs npm go \
