@@ -19,6 +19,7 @@
   "include": [
     "~/.config/waybar/modules/*.jsonc",
     "~/.config/waybar/pad-modules.jsonc",
+    "~/.config/waybar/random-pad-modules.jsonc",
   ],
   "modules-left": [
     "custom/padd",
@@ -29,9 +30,9 @@
   ],
   "modules-center": [
     "custom/padd",
-    "custom/l_end",
+    "custom/left",
     "hyprland/window",
-    "custom/r_end",
+    "custom/right",
     "custom/padd",
   ],
   "modules-right": [
@@ -51,9 +52,4 @@
     "custom/notification",
     "custom/r_end",
   ],
-  "pulseaudio/slider": {
-    "min": 0,
-    "max": 100,
-    "orientation": "horizontal",
-  },
 }

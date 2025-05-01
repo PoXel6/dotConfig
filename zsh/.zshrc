@@ -65,6 +65,7 @@ alias hyprsetting='nvim ~/.config/hypr/hyprland.conf'
 alias zshconfig='nvim ~/.zshrc'                                           # Opens zsh's configs
 
 bindkey -v
+bindkey -s ^f "tmux-sessionizer\n"
 
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
@@ -77,6 +78,5 @@ export NVM_DIR="$HOME/.nvm"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH="$HOME/.local/share/bin:$PATH"
 ZSH_THEME="powerlevel10k/powerlevel10k"
-export PATH=$HOME/.local/bin:$PATH
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ZSH_THEME="powerlevel10k/powerlevel10k"

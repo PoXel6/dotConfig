@@ -10,7 +10,7 @@
 @import "theme.css";
 
 window#waybar {
-  background: transparent;
+  background: @bar-bg;
 }
 
 tooltip {
@@ -24,7 +24,6 @@ tooltip {
   box-shadow: none;
   text-shadow: none;
   padding: 4px;
-  border-radius: 10px;
   margin: 2px 0px 2px 0px;
   padding-left: 2px;
   padding-right: 2px;
@@ -120,13 +119,10 @@ tooltip {
 #workspaces,
 #custom-l_end,
 #custom-r_end,
-#custom-sl_end,
-#custom-sr_end,
-#custom-rl_end,
-#custom-rr_end,
 #custom-notification {
   color: @main-fg;
   background: @main-bg;
+  border: none;
   opacity: 1;
   margin: 3px 0px 3px 0px;
   padding: 4px;
@@ -158,26 +154,19 @@ tooltip {
   padding-left: 0px;
 }
 
-#custom-sr_end {
-  border-radius: 0px;
-  margin-right: 8px;
-  padding-right: 0px;
+#custom-left {
+  font-size: 24px;
+  color: @main-bg;
+  font-family: "Jetbrains Mono Nerd Font";
+  margin-bottom: 0;
+  text-shadow: -2px 0 2px rgba(0, 0, 0, 0.5);
 }
 
-#custom-sl_end {
-  border-radius: 0px;
-  margin-left: 8px;
-  padding-left: 0px;
-}
-
-#custom-rr_end {
-  border-radius: 0px 7px 7px 0px;
-  margin-right: 8px;
-  padding-right: 0px;
-}
-
-#custom-rl_end {
-  border-radius: 7px 0px 0px 7px;
-  margin-left: 8px;
-  padding-left: 0px;
+#custom-right {
+  color: @main-bg;
+  font-family: "Jetbrains Mono Nerd Font";
+  font-size: 24px;
+  margin-bottom: 0;
+  padding-right: 3px;
+  text-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
 }

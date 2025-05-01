@@ -6,8 +6,8 @@
   "control-center-layer": "top",
   "layer-shell": true,
   "cssPriority": "application",
-  "control-center-margin-top": 0,
-  "control-center-margin-bottom": 0,
+  "control-center-margin-top": 10,
+  "control-center-margin-bottom": 10,
   "control-center-margin-right": 0,
   "control-center-margin-left": 0,
   "notification-2fa-action": true,
@@ -30,6 +30,13 @@
   "hide-on-action": true,
   "script-fail-notify": true,
   "scripts": {
+    "update": {
+      "exec": "yay -Qu | wc -l",
+      "app-name": "Notification Pacman",
+      "summary": "Updates Available",
+      "body": "Notification body Regex",
+      "urgency": "Normal"
+    },
     "example-script": {
       "exec": "echo 'Do something...'",
       "urgency": "Normal"
@@ -47,7 +54,12 @@
       "app-name": "Spotify"
     }
   },
-  "widgets": ["inhibitors", "title", "dnd", "notifications"],
+  "widgets": [
+    "inhibitors",
+    "title",
+    "dnd",
+    "notifications"
+  ],
   "widget-config": {
     "inhibitors": {
       "text": "Inhibitors",
