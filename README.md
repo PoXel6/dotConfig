@@ -1,5 +1,4 @@
 # My Linux Configurations
----
 
 ### 🖥️ **WM**: [Hyprland](https://github.com/hyprwm/Hyprland)  
 ### 🐚 **Shell**: [Zsh](https://www.zsh.org/)  
@@ -17,25 +16,24 @@
 ### 🖼 **Screenshot tool**: [Swappy](https://github.com/jtheoof/swappy)  
 ### 🖋️ **Font**: Jetbrains Mono Nerd Font & Inter-font
 
-
-
 ## 🖥️ Setup
----
-
-
 
 ## INSTALLATION (Arch)
 
-**All**
----
+<div align="left">
 
+<details>
+<summary><h3>All required packages</h3></summary>
+  
 ```sh
 yay -S hyprland-git hyprpicker  hypridle hyprlock hyprsunset \
 swaync nwg-look  swww waybar neovim tmux nodejs npm go \
 btop eza stow zoxide zen-browser thunar \
 noto-fonts-emoji ttf-jetbrains-mono-nerd inter-font
 ```
-<div align="left">
+
+</details>
+
 
 <details>
 <summary><h3>Hyprland Stuff</h3></summary>
