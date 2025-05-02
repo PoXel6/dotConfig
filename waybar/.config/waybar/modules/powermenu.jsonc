@@ -1,0 +1,7 @@
+{
+  "custom/powermenu": {
+    "format": "<big>󰐥</big>",
+    "on-click": "$HOME/.config/rofi/powermenu/powermenu.sh",
+    "tooltip": false,
+  },
+}

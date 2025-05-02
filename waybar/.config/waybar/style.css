@@ -117,8 +117,10 @@ tooltip {
 #custom-wbar,
 #window,
 #workspaces,
+#custom-powermenu,
 #custom-l_end,
 #custom-r_end,
+#custom-sep,
 #custom-notification {
   color: @main-fg;
   background: @main-bg;
@@ -133,9 +135,15 @@ tooltip {
   padding: 0px;
 }
 
-#custom-notification {
+#custom-sep {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#custom-notification,
+#custom-powermenu {
   font-family: "Jetbrains Mono Nerd Font";
-  font-size: 16px;
+  font-size: 13px;
 }
 
 #wireplumber.muted {
@@ -159,7 +167,6 @@ tooltip {
   color: @main-bg;
   font-family: "Jetbrains Mono Nerd Font";
   margin-bottom: 0;
-  text-shadow: -2px 0 2px rgba(0, 0, 0, 0.5);
 }
 
 #custom-right {
@@ -168,5 +175,4 @@ tooltip {
   font-size: 24px;
   margin-bottom: 0;
   padding-right: 3px;
-  text-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
 }

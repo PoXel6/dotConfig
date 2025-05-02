@@ -44,13 +44,21 @@ EOF
 
 case $1 in
 p) # print all outputs
-	grimblast copysave screen $temp_screenshot && restore_shader && swappy -f $temp_screenshot ;;
+	notify-send "Screenshot of Screens" "Screenshot has been copies to your clipboard" -a grimblast -u low
+	grimblast copysave screen $temp_screenshot && restore_shader && swappy -f $temp_screenshot
+	;;
 s) # drag to manually snip an area / click on a window to print it
-	grimblast copysave area $temp_screenshot && restore_shader && swappy -f $temp_screenshot ;;
+	notify-send "Screenshot of Area" "Screenshot has been copies to your clipboard" -a grimblast -u low
+	grimblast copysave area $temp_screenshot && restore_shader && swappy -f $temp_screenshot
+	;;
 sf) # frozen screen, drag to manually snip an area / click on a window to print it
-	grimblast --freeze copysave area $temp_screenshot && restore_shader && swappy -f $temp_screenshot ;;
+	notify-send "Screenshot of frozen Area" "Screenshot has been copies to your clipboard" -a grimblast -u low
+	grimblast --freeze copysave area $temp_screenshot && restore_shader && swappy -f $temp_screenshot
+	;;
 m) # print focused monitor
-	grimblast copysave output $temp_screenshot && restore_shader && swappy -f $temp_screenshot ;;
+	notify-send "Screenshot of Screen" "Screenshot has been copies to your clipboard" -a grimblast -u low
+	grimblast copysave output $temp_screenshot && restore_shader && swappy -f $temp_screenshot
+	;;
 *) # invalid option
 	print_error ;;
 esac

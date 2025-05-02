@@ -1,4 +1,9 @@
 {
+  "custom/sep": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false,
+  },
   "custom/l_end": {
     "format": " ",
     "interval": "once",

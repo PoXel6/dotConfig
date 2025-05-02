@@ -39,6 +39,7 @@
     "custom/padd",
     "custom/l_end",
     "network",
+    "custom/sep",
     "wireplumber",
     //"custom/updates",
     "custom/r_end",
@@ -50,6 +51,8 @@
     "custom/power",
     "custom/l_end",
     "custom/notification",
+    "custom/sep",
+    "custom/powermenu",
     "custom/r_end",
   ],
 }
