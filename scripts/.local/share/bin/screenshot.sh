@@ -21,8 +21,8 @@ if [ -z "$XDG_PICTURES_DIR" ]; then
 fi
 
 scrDir=$(dirname "$(realpath "$0")")
-swpy_dir="$XDG_PICTURES_DIR/screenshots/"
-save_dir="${2:-$XDG_PICTURES_DIR/Screenshots}"
+swpy_dir="$XDG_PICTURES_DIR/screenshots/.swappy"
+save_dir="${2:-$XDG_PICTURES_DIR/screenshots}"
 save_file=$(date +'%y%m%d_%Hh%Mm%Ss_screenshot.png')
 temp_screenshot="/tmp/screenshot.png"
 

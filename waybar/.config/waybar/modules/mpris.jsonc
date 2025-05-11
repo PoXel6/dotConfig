@@ -1,0 +1,19 @@
+{
+  "mpris": {
+    "format": "{status_icon}<span font_weight=\"bold\">{title}</span> <big>-</big> <span color=\"#333333\">{artist}</span>",
+    "format-paused": "{status_icon} <i>{title}</i>",
+    "tooltips": false,
+    "title-len": 20,
+    "artist-len": 20,
+    "player-icons": {
+      "default": "▶",
+      // "mpv": "🎵",
+    },
+    "status-icons": {
+      "paused": "⏸",
+    },
+    "ignored-players": [
+      "firefox"
+    ],
+  },
+}

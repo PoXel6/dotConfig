@@ -1,7 +1,7 @@
 {
   "custom/notification": {
     "tooltip": false,
-    "format": "<big>{} {icon}</big>",
+    "format": "<big>{} {icon} </big>",
     "format-icons": {
       "notification": "<span foreground='red'><sup></sup></span>",
       "none": "",

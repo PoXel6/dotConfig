@@ -1,0 +1,10 @@
+{
+  "idle_inhibitor": {
+    "format": "<big>{icon}</big>  ",
+    "format-icons": {
+      "on-click": {},
+      "activated": "",
+      "deactivated": "<span color=\"red\"></span>",
+    },
+  },
+}

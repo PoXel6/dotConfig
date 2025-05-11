@@ -1,12 +1,12 @@
 {
   "network": {
     "on-click": "nm-connection-editor",
-    "format": "{ipaddr}",
+    "format": "{icon}{ifname}",
     "format-wifi": "     {ifname}",
     "format-ethernet": "     {ifname}",
-    "format-disconnected": "     {ifname}",
-    "tooltip-format-disconnected": "Error",
-    "tooltip-format-wifi": "{name} ",
+    "format-disconnected": "<span color=\"red\">     {ifname}</span>",
+    "tooltip-format-disconnected": "<span color=\"red\">Error</span>",
+    "tooltip-format-wifi": "{ifname} ",
     "tooltip-format-ethernet": "{ifname}  ",
   },
 }

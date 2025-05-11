@@ -114,6 +114,7 @@ tooltip {
 #tray,
 #custom-updates,
 #custom-wallchange,
+#mpris,
 #custom-wbar,
 #window,
 #workspaces,
@@ -121,6 +122,7 @@ tooltip {
 #custom-l_end,
 #custom-r_end,
 #custom-sep,
+#custom-update,
 #custom-notification {
   color: @main-fg;
   background: @main-bg;

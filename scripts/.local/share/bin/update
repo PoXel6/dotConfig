@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-yay -Sy --noconfirm &
+checkupdates | wc -l >/dev/null
 official_updates=$(pacman -Qu | wc -l)
 aur_updates=$(yay -Qua | wc -l)
 if ((official_updates + aur_updates > 0)); then
+	echo $((official_updates + aur_updates))
 	notify-send "Updates available" \
-		"Official: ${official_updates}, AUR: ${aur_updates}"
+		"Official: ${official_updates}, AUR: ${aur_updates}" -a Pacman
 fi
