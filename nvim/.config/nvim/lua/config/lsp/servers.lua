@@ -1,5 +1,13 @@
 return {
-  html = {},
+
+  biome = {},
+  ts_ls = {
+    init_options = {
+      preferences = {
+        disableSuggestions = true,
+      },
+    },
+  },
   emmet_language_server = {
     filetypes = {
       "css",
@@ -39,15 +47,7 @@ return {
       variables = {},
     },
   },
-  cssls = {},
-  tailwindcss = {},
-  ts_ls = {},
-  eslint = {
-    settings = {
-      workingDirectories = { mode = "auto" },
-      format = auto_format,
-    },
-  },
+  -- tailwindcss = {},
   volar = {
     init_options = {
       vue = {
@@ -55,10 +55,6 @@ return {
       },
     },
   },
-  jsonls = {},
-  bashls = {},
-  taplo = {},
-  -- jdtls = {},
   clangd = {
     cmd = {
       "clangd",

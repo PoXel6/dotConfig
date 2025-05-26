@@ -2,8 +2,8 @@
   "clock": {
     "interval": 60,
     "tooltip": true,
-    "format": "{:%H:%M}  <big></big> ",
-    "format-alt": "{:%A, %B %d, %Y - %R}  <big></big> ",
+    "format": "<big> </big> {:%H:%M}",
+    "format-alt": "<big></big>   {:%A, %B %d, %Y - %R}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode": "year",

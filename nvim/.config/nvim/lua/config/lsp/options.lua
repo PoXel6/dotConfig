@@ -1,25 +1,24 @@
 local opts = {
-	diagnostics = {
-		underline = true,
-		update_in_insert = false,
+  diagnostics = {
+    underline = true,
+    update_in_insert = false,
 
-		virtual_text = {
-			spacing = 4,
-			source = "if_many",
-			prefix = "icons",
-		},
-		severity_sort = true,
-	},
+    virtual_text = {
+      spacing = 4,
+      source = "if_many",
+      prefix = "icons",
+    },
+    severity_sort = true,
+  },
 
-	inlay_hints = {
-		enabled = true,
-		-- exclude = { "vue" },
-	},
+  inlay_hints = {
+    enabled = true,
+  },
 
-	codelens = {
-		enabled = false,
-	},
+  codelens = {
+    enabled = false,
+  },
 
-	servers = require("config.lsp.servers"),
+  servers = require('config.lsp.servers')
 }
 return opts

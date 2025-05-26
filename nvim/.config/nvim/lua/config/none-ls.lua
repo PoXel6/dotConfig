@@ -1,26 +1,21 @@
 local augoup = vim.api.nvim_create_augroup("LspFormatting", {})
 local null_ls = require("null-ls")
-local builtin = null_ls.builtins.formatting
+local formatter = null_ls.builtins.formatting
+local linter = null_ls.builtins.diagnostics
 
 null_ls.setup({
 	sources = {
-		builtin.stylua,
-		builtin.clang_format,
-		builtin.shfmt,
-		builtin.prettier,
-		builtin.google_java_format,
-		eslint = {
-			command = "eslint",
-			filetypes = {
-				"javascript",
-				"typescript",
-				"javascriptreact",
-				"typescriptreact",
-				"vue",
-				"html",
-				"css",
-			},
-		},
+		null_ls.builtins.code_actions.impl,
+		null_ls.builtins.code_actions.refactoring,
+
+		formatter.stylua,
+		formatter.clang_format,
+		formatter.shfmt,
+		formatter.prettierd,
+		formatter.black,
+		formatter.isort,
+
+		linter.mypy,
 	},
 
 	on_attach = function(client, bufnr)

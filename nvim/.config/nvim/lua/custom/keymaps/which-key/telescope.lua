@@ -35,7 +35,8 @@ wk.add({
   },
   {
     "<leader>sd",
-    builtin.diagnostics,
+    "<CMD>lua require('telescope.builtin').diagnostics(require('telescope.themes').get_ivy({previewer = false, layout_config = {height = 0.3}}))<CR>",
+    -- builtin.diagnostics(themes.get_ivy({ previewer = false, layout_config = { height = 0.3 } })),
     desc = "[D]iagnostics",
   },
   {
