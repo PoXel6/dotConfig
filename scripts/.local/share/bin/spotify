@@ -1,1 +1,7 @@
-chromium --app=https://open.spotify.com
+chromium \
+  --ozone-platform=wayland \
+  --app=https://open.spotify.com \
+  --enable-features=OverlayScrollbar \
+  --enable-features=UseOzonePlatform \
+  --force-device-scale-factor=1 \
+  --disable-features=TranslateUI

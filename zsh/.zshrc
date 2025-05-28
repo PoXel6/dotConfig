@@ -16,15 +16,7 @@ EDITOR=/usr/sbin/nvim
 VISUAL=/usr/sbin/nvim
 SUDO_EDITOR=/usr/sbin/nvim
 
-
-# Helpful aliases
-alias du='du -h'    
-alias c='clear'
-alias ping='ping -c 3'
-alias swappy='swappy -f'
 alias ff='fastfetch'
-
-# Better Alters
 alias  l='eza -lh  --icons=auto'                                        # long list
 alias ls='eza -1   --icons=auto'                                        # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first'  # long list all
@@ -33,23 +25,24 @@ alias lt='eza --icons=auto --tree'                                      # list f
 alias cd='z'
 
 # Vim aliases
+alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
-alias neovim='nvim'
-# alias code='nvim'
-alias ffn='nvim $(fzf -m --preview="bat --color=always {}")'
 
 # Git aliases
 alias gs='git status -s'
 alias ga='git add -A'
-alias gc='git commit -m'
-alias greb='git pull --rebase'
-alias gcon='git rebase --continue'
-alias gski='git rebase --skip'
-alias gpull='git pull'
-alias gpush='git push'
-alias game='git commit --amend'
-alias gpupu='git pull && git push'
+alias gc='git commit -v -t ~/dotconfig/git/.config/git/template'
+alias gp='git pull'
+alias gu='git push'
+alias gm='git commit --amend'
+alias gl="git log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an %ar%C(auto) %D%n%s%n'"
+alias gcl='git clone'
+alias gre='git pull --rebase'
+alias grc='git rebase --continue'
+alias grs='git rebase --skip'
+alias gpu='git pull && git push'
+alias gsync='git add -A && git commit -m "automaic commit" && git pull && git push'
 
 # Handy change dir shortcuts
 alias mkdir='mkdir -p'
@@ -58,11 +51,6 @@ alias ...='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
-
-# aliases for changing system configuration
-alias keybindings='nvim ~/.config/hypr/keybindings.conf'
-alias hyprsetting='nvim ~/.config/hypr/hyprland.conf'
-alias zshconfig='nvim ~/.zshrc'                                           # Opens zsh's configs
 
 bindkey -v
 bindkey -s ^f "tmux-sessionizer\n"

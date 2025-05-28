@@ -1,0 +1,75 @@
+[core]
+	editor = nvim
+	autocrlf = input
+  compression = 9
+  preloadindex = true
+
+[user]
+  name = pox
+	email = iampoxel6@gmail.com
+
+[init]
+	defaultBranch = main
+
+[advice]
+  addEmptyPathspec = false
+  pushNonFastForward = false
+  statusHints = false
+
+[status]
+  branch = true
+  showStash = true
+  showUntrackedFiles = all
+
+[diff]
+  context = 3
+  tool = diff-so-fancy
+  renames = copies
+
+[pager]
+  diff = diff-so-fancy | $PAGER
+
+[interactive]
+  diffFilter = diff-so-fancy --patch
+  singleKey = true
+
+[diff-so-fancy]
+  markEmptyLines = false
+
+[url "git@github.com:PoXel6/"]
+  insteadOf = "pox:"
+
+[url "git@github.com:"]
+  insteadOf = "gh:"
+
+[push]
+  autoSetupRemote = true
+  default = current
+  followTags = true
+
+[pull]
+  default = current
+  rebase = true
+
+[rebase]
+  autoStash = true
+  missingCommitCheck = true
+
+[log]
+  abbrevCommit = true
+  graphColors = blue,yellow,cyan,magenta,green,red
+
+[color]
+    ui = auto
+
+[color "decorate"]
+  HEAD = red
+  branch = yellow
+  tag = red
+  remoteBranch = blue
+
+[branch]
+  sort = -committerdate
+
+[tag]
+  sort = -taggerdate
