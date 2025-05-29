@@ -42,7 +42,7 @@ alias gre='git pull --rebase'
 alias grc='git rebase --continue'
 alias grs='git rebase --skip'
 alias gpu='git pull && git push'
-alias gsync='git add -A && git commit -m "automaic commit" && git pull && git push'
+alias gsync='git add -A && git commit -m "automatic commit" && git pull && git push'
 
 # Handy change dir shortcuts
 alias mkdir='mkdir -p'
