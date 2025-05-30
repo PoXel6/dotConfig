@@ -27,8 +27,8 @@
   
 ```sh
 yay -S hyprland-git hyprpicker  hypridle hyprlock hyprsunset \
-swaync nwg-look  swww waybar neovim tmux nodejs npm go \
-btop eza stow zoxide zen-browser thunar \
+swaync nwg-look  swww waybar neovim nodejs npm go rust \
+btop eza stow zoxide fd rg tmux zen-browser thunar \
 noto-fonts-emoji ttf-jetbrains-mono-nerd inter-font
 ```
 
@@ -61,12 +61,12 @@ pacman -S <>
   
 ```sh
 ## Code
-yay -S neovim tmux nodejs npm go 
+yay -S neovim nodejs npm go rust
 ```
   
 ```sh
 ## CLI & Tools
-yay -S btop eza stow zoxide 
+yay -S btop eza stow zoxide fd rg fzf tmux
 ```
 
 ```sh
