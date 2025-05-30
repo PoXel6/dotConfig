@@ -1,20 +1,20 @@
 # My Linux Configurations
 
-### 🖥️ **WM**: [Hyprland](https://github.com/hyprwm/Hyprland)  
-### 🐚 **Shell**: [Zsh](https://www.zsh.org/)  
-### ⏳ **Prompt**: [OMZ](https://github.com/ohmyzsh/ohmyzsh)  
-### 🖥️ **Terminal**: [Kitty](https://github.com/ohmyzsh/ohmyzsh)  
-### 📊 **Bar**: [Waybar](https://github.com/Alexays/Waybar)  
-### 🛎️ **Notification Daemon**: [Swaync](https://github.com/ErikReider/SwayNotificationCenter)  
-### 🚀 **Launcher**: [Rofi-wayland](https://github.com/in0ni/rofi-wayland)  
-### 🗂️ **File Manager**: [Thunar](https://docs.xfce.org/xfce/thunar/start)  
-### 🎨 **ColourScheme Gen**: [Hellwal](https://github.com/danihek/hellwal)
-### 🔐 **Lockscreen**: [Hyprlock](https://github.com/hyprwm/hyprlock)  
-### 💻 **Display manager**: [Ly](https://docs.xfce.org/xfce/thunar/start)  
-### 🖼️ **Wallpaper switcher**: [Waypaper](https://github.com/anufrievroman/waypaper)  
-### 🖼️ **Wallpaper setter**: [Swww](https://github.com/LGFae/swww)
-### 🖼 **Screenshot tool**: [Swappy](https://github.com/jtheoof/swappy)  
-### 🖋️ **Font**: Jetbrains Mono Nerd Font & Inter-font
+### **WM**: [Hyprland](https://github.com/hyprwm/Hyprland)  
+### **Shell**: [Zsh](https://www.zsh.org/)  
+### **Prompt**: [OMZ](https://github.com/ohmyzsh/ohmyzsh)  
+### **Terminal**: [Kitty](https://github.com/ohmyzsh/ohmyzsh)  
+### **Bar**: [Waybar](https://github.com/Alexays/Waybar)  
+### **Notification Daemon**: [Swaync](https://github.com/ErikReider/SwayNotificationCenter)  
+### **Launcher**: [Rofi-wayland](https://github.com/in0ni/rofi-wayland)  
+### **File Manager**: [Thunar](https://docs.xfce.org/xfce/thunar/start)  
+<!-- ### **ColourScheme Gen**: [Hellwal](https://github.com/danihek/hellwal) -->
+### **Lockscreen**: [Hyprlock](https://github.com/hyprwm/hyprlock)  
+### **Display manager**: [Ly](https://docs.xfce.org/xfce/thunar/start)  
+### **Wallpaper switcher**: [Waypaper](https://github.com/anufrievroman/waypaper)  
+### **Wallpaper setter**: [Swww](https://github.com/LGFae/swww)
+### **Screenshot tool**: [Swappy](https://github.com/jtheoof/swappy)  
+### **Font**: Jetbrains Mono Nerd Font & Inter
 
 ## 🖥️ Setup
 
@@ -78,10 +78,3 @@ noto-fonts-emoji ttf-jetbrains-mono-nerd
 </details>
 
 </div>
-
-
-## Credits
-
-I stole his README : [SherLock707](https://github.com/SherLock707/hyprland_dot_yadm/blob/main/README.md)
-
----
