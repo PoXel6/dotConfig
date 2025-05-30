@@ -16,6 +16,7 @@ EDITOR=/usr/sbin/nvim
 VISUAL=/usr/sbin/nvim
 SUDO_EDITOR=/usr/sbin/nvim
 
+alias vpn='sudo openvpn --config /etc/openvpn/client/free.ovpn'
 alias ff='fastfetch'
 alias  l='eza -lh  --icons=auto'                                        # long list
 alias ls='eza -1   --icons=auto'                                        # short list
