@@ -1,0 +1,12 @@
+game-cache/
+jre/
+launcher-cache/
+licenses/
+logs/
+mx-cache
+offline/
+!offline/multiver/config/
+profiles/
+textures/
+ui/
+

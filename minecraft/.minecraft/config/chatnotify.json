@@ -1,0 +1,810 @@
+{
+  "version": 9,
+  "detectionMode": "HUD_KNOWN_TAGS",
+  "debugMode": "NONE",
+  "notifMode": "ALL_SINGLE_SOUND",
+  "restyleMode": "ALL_INSTANCES",
+  "sendMode": "PACKET",
+  "senderDetectionMode": "COMBINED",
+  "checkOwnMessages": true,
+  "soundSource": "PLAYERS",
+  "defaultColor": 16761856,
+  "defaultSound": {
+    "version": 1,
+    "enabled": true,
+    "id": "block.note_block.bell",
+    "volume": 1.0,
+    "pitch": 1.0
+  },
+  "prefixes": [
+    "/shout",
+    "/me",
+    "!"
+  ],
+  "notifications": [
+    {
+      "version": 5,
+      "enabled": true,
+      "checkOwnMode": "ON",
+      "exclusionEnabled": true,
+      "responseEnabled": false,
+      "sound": {
+        "version": 1,
+        "enabled": true,
+        "id": "block.note_block.bell",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "textStyle": {
+        "version": 2,
+        "doColor": true,
+        "color": 10420479,
+        "bold": "DISABLED",
+        "italic": "DISABLED",
+        "underlined": "DISABLED",
+        "strikethrough": "DISABLED",
+        "obfuscated": "DISABLED"
+      },
+      "replacementMsg": "",
+      "replacementMsgEnabled": false,
+      "statusBarMsg": "",
+      "statusBarMsgEnabled": false,
+      "titleMsg": "You have been Mentioned!!!",
+      "titleMsgEnabled": true,
+      "triggers": [
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "PoXel6",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "PoXel6",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "pox",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "pxel",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "poxl",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "poxi",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "poxy",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "poxel",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "pxel",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "poxl",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "پوکسل",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "poxcel",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "poxel",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        }
+      ],
+      "exclusionTriggers": [
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "By: PoXel6 (Silent)",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "^ ●.*\\bPoXel6\\b.*",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "REGEX"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "[S] PoXel6 joined",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "Viewing staff history of PoXel6...",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "PoXel6:",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        }
+      ],
+      "responseMessages": []
+    },
+    {
+      "version": 5,
+      "enabled": true,
+      "checkOwnMode": "DEFER",
+      "exclusionEnabled": false,
+      "responseEnabled": false,
+      "sound": {
+        "version": 1,
+        "enabled": true,
+        "id": "entity.tnt.primed",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "textStyle": {
+        "version": 2,
+        "doColor": true,
+        "color": 15270143,
+        "bold": "DISABLED",
+        "italic": "DISABLED",
+        "underlined": "DISABLED",
+        "strikethrough": "DISABLED",
+        "obfuscated": "DISABLED"
+      },
+      "replacementMsg": "",
+      "replacementMsgEnabled": false,
+      "statusBarMsg": "",
+      "statusBarMsgEnabled": false,
+      "titleMsg": "",
+      "titleMsgEnabled": false,
+      "triggers": [
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "Fighting suspiciously",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "Clicking suspiciously",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "Loot items suspiciously",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "Suspicious game protocol",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "Bridging suspiciously",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        }
+      ],
+      "exclusionTriggers": [],
+      "responseMessages": []
+    },
+    {
+      "version": 5,
+      "enabled": true,
+      "checkOwnMode": "DEFER",
+      "exclusionEnabled": false,
+      "responseEnabled": false,
+      "sound": {
+        "version": 1,
+        "enabled": true,
+        "id": "entity.enderman.teleport",
+        "volume": 1.0,
+        "pitch": 1.5
+      },
+      "textStyle": {
+        "version": 2,
+        "doColor": true,
+        "color": 4194048,
+        "bold": "ON",
+        "italic": "DISABLED",
+        "underlined": "DISABLED",
+        "strikethrough": "DISABLED",
+        "obfuscated": "DISABLED"
+      },
+      "replacementMsg": "",
+      "replacementMsgEnabled": false,
+      "statusBarMsg": "",
+      "statusBarMsgEnabled": false,
+      "titleMsg": "",
+      "titleMsgEnabled": false,
+      "triggers": [
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "game up",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "gameup",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "gamup",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "luna",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "luna mc",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "lunamc",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "pika",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "jartex",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "aternos",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "gun max",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "gunmax",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "لونا",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "لو-نا",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "گیم اپ",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "گیم آپ",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "گیماپ",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "گان مکس",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "پیکا",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "جارتکس",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        }
+      ],
+      "exclusionTriggers": [],
+      "responseMessages": []
+    },
+    {
+      "version": 5,
+      "enabled": true,
+      "checkOwnMode": "DEFER",
+      "exclusionEnabled": true,
+      "responseEnabled": false,
+      "sound": {
+        "version": 1,
+        "enabled": true,
+        "id": "block.note_block.flute",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "textStyle": {
+        "version": 2,
+        "doColor": true,
+        "color": 65407,
+        "bold": "DISABLED",
+        "italic": "DISABLED",
+        "underlined": "DISABLED",
+        "strikethrough": "DISABLED",
+        "obfuscated": "DISABLED"
+      },
+      "replacementMsg": "",
+      "replacementMsgEnabled": false,
+      "statusBarMsg": "",
+      "statusBarMsgEnabled": false,
+      "titleMsg": "",
+      "titleMsgEnabled": false,
+      "triggers": [
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "trex",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "tirex",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "teerex",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "trx",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "trexmine",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "teerexmine",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        },
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "tirexmine",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        }
+      ],
+      "exclusionTriggers": [
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "[Trex]",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        }
+      ],
+      "responseMessages": []
+    },
+    {
+      "version": 5,
+      "enabled": true,
+      "checkOwnMode": "DEFER",
+      "exclusionEnabled": false,
+      "responseEnabled": false,
+      "sound": {
+        "version": 1,
+        "enabled": true,
+        "id": "block.note_block.bit",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "textStyle": {
+        "version": 2,
+        "doColor": true,
+        "color": 16711680,
+        "bold": "DISABLED",
+        "italic": "DISABLED",
+        "underlined": "DISABLED",
+        "strikethrough": "DISABLED",
+        "obfuscated": "DISABLED"
+      },
+      "replacementMsg": "",
+      "replacementMsgEnabled": false,
+      "statusBarMsg": "",
+      "statusBarMsgEnabled": false,
+      "titleMsg": "",
+      "titleMsgEnabled": false,
+      "triggers": [
+        {
+          "version": 4,
+          "enabled": true,
+          "string": "reach",
+          "styleTarget": {
+            "version": 2,
+            "enabled": false,
+            "string": "",
+            "type": "NORMAL"
+          },
+          "type": "NORMAL"
+        }
+      ],
+      "exclusionTriggers": [],
+      "responseMessages": []
+    }
+  ]
+}

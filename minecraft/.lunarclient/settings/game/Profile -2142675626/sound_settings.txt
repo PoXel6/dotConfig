@@ -1,0 +1,5 @@
+{
+  "version": 8,
+  "Item": "true",
+  "Item.Bone Meal": "true"
+}
