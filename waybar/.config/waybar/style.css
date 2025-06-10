@@ -42,12 +42,6 @@ tooltip {
   padding: 2px 5px 2px 5px;
 }
 
-#workspaces button.empty {
-  background: @wb-act-bg;
-  color: #40e0d0;
-  opacity: 0.85;
-}
-
 #workspaces button.urgent {
   background: red;
   color: black;
