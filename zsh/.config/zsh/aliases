@@ -7,12 +7,18 @@ alias ld='eza -lhD --icons=auto'                                        # long l
 alias lt='eza --icons=auto --tree'                                      # list folder as tree
 alias cd='z'
 
+# ctl aliases 
+alias hctl='hyprctl'
+alias sctl='systemctl'
+alias sysctl='systemctl'
+
 # Vim aliases
 alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
 
 # Git aliases
+alias g='git'
 alias gs='git status -s'
 alias ga='git add -A'
 alias gc='git commit -v -t ~/dotconfig/git/.config/git/template'
