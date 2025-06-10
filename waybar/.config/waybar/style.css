@@ -5,6 +5,8 @@
   font-weight: 600;
   font-size: 13px;
   min-height: 10px;
+  padding: 0;
+  margin: 0;
 }
 
 @import "theme.css";
@@ -16,29 +18,40 @@ window#waybar {
 tooltip {
   background: @main-bg;
   color: @main-fg;
-  border-radius: 7px;
-  border-width: 0px;
+  border-radius: 9px;
+}
+
+#workspaces {
+  padding: 4px;
 }
 
 #workspaces button {
   box-shadow: none;
   text-shadow: none;
-  padding: 4px;
-  margin: 2px 0px 2px 0px;
   padding-left: 2px;
   padding-right: 2px;
   color: @main-fg;
-  animation: ws_normal 20s ease-in-out 1;
 }
 
 #workspaces button.active {
   background: @wb-act-bg;
   color: @wb-act-fg;
-  margin-left: 2px;
-  margin-right: 2px;
+  text-shadow: @wb-act-fg-glow 0px 0 5px;
+  margin-left: 3px;
+  margin-right: 3px;
   padding: 2px 5px 2px 5px;
-  animation: ws_active 20s ease-in-out 1;
-  transition: all 0.4s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#workspaces button.empty {
+  background: @wb-act-bg;
+  color: #40e0d0;
+  opacity: 0.85;
+}
+
+#workspaces button.urgent {
+  background: red;
+  color: black;
+  opacity: 0.9;
 }
 
 #workspaces button:hover {
@@ -48,45 +61,13 @@ tooltip {
   transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
-#taskbar button {
-  box-shadow: none;
-  text-shadow: none;
-  padding: 0px;
-  border-radius: 8px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-left: 0px;
-  padding-left: 2px;
-  padding-right: 2px;
-  margin-right: 0px;
-  color: @wb-color;
-  animation: tb_normal 20s ease-in-out 1;
-}
-
-#taskbar button.active {
-  background: @wb-act-bg;
-  color: @wb-act-color;
-  margin-left: 2px;
-  padding-left: 11px;
-  padding-right: 11px;
-  margin-right: 2px;
-  animation: tb_active 20s ease-in-out 1;
-  transition: all 0.4s cubic-bezier(0.55, -0.68, 0.48, 1.682);
-}
-
-#taskbar button:hover {
-  background: @wb-hvr-bg;
-  color: @wb-hvr-color;
-  animation: tb_hover 20s ease-in-out 1;
-  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
-}
-
 #tray menu * {
   min-height: 16px;
 }
 
 #tray menu separator {
   min-height: 10px;
+  padding: 10px;
 }
 
 #backlight,
@@ -126,15 +107,9 @@ tooltip {
 #custom-notification {
   color: @main-fg;
   background: @main-bg;
-  border: none;
   opacity: 1;
   margin: 3px 0px 3px 0px;
   padding: 4px;
-}
-
-#workspaces,
-#taskbar {
-  padding: 0px;
 }
 
 #custom-sep {
@@ -152,6 +127,7 @@ tooltip {
   color: red;
 }
 
+/* hacks */
 #custom-r_end {
   border-radius: 0px 19px 19px 0px;
   margin-right: 8px;

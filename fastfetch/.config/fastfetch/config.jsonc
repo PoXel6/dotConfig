@@ -1,0 +1,37 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "kitty-icat",
+    "source": "~/Pictures/arch-uwux.png",
+    "width": 30,
+    "position": "left",
+    "preserveAspectRatio": true
+  },
+  "modules": [
+    {
+      "type": "title",
+      // "key": "",
+      "format": "Hello, {user-name}",
+      "keyWidth": 10,
+      "keyColor": "red"
+
+    },
+    "separator",
+    "os",
+    "packages",
+    "shell",
+    "de",
+    "wm",
+    "terminal",
+    "terminalfont",
+    "uptime",
+    {
+      "type":"disk",
+      "format": "{1} / {2} ({3})"
+    },
+    "battery",
+    "separator",
+    "break",
+    "colors"
+  ]
+}
