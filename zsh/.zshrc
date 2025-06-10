@@ -16,7 +16,7 @@ SAVEHIST=1000000
 setopt autocd beep extendedglob notify
 bindkey -e
 
-source $XDG_CONFIG_HOME/zsh/aliases
+source $XDG_CONFIG_HOME/zsh/aliases.zsh
 source $XDG_CONFIG_HOME/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $XDG_CONFIG_HOME/zsh/plugins/zsh-completions/zsh-completions.plugin.zsh
 source $XDG_CONFIG_HOME/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme

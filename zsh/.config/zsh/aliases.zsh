@@ -17,6 +17,11 @@ alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
 
+# Tmux aliases
+alias t='tmux'
+alias tk='tmux kill-session'
+alias ts='tmux kill-server'
+
 # Git aliases
 alias g='git'
 alias gs='git status -s'
