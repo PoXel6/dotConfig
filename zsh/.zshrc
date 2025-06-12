@@ -57,7 +57,7 @@ eval "$(zoxide init zsh)"
 
 export PATH="$XDG_DATA_HOME/bin:$PATH"
 
-bindkey -s "^e" "tmux-sessionizer\n"
+# bindkey -s "^e" "tmux-sessionizer\n"
 
 # ----------- END OF EXPORTS -----------
 
