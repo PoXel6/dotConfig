@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
 	selected=$1
 else
-	selected=$(find ~/CodeezNutz/*/ ~/CodeezNutz/java/Minecraft/ ~/.config/ ~/dotconfig/ -mindepth 1 -maxdepth 1 -type d,l | fzf-tmux)
+	selected=$(find ~/CodeezNutz/*/ ~/CodeezNutz/java/Minecraft/ ~/.config/ ~/dotconfig/ -mindepth 1 -maxdepth 1 -type d,l | fzf --tmux=center)
 fi
 
 if [[ -z $selected ]]; then
@@ -14,15 +14,15 @@ selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-	tmux new-session -s "$selected_name" -c "$selected" \; \
+	tmux new-session -s "$selected_name" -c "$selected" "nvim"\; \
 		new-window -c "$selected" \; \
 		select-window -t 1
 	exit 0
 fi
 
 if ! tmux has-session -t=$selected_name 2>/dev/null; then
-	tmux new-session -ds $selected_name -c $selected -n "editor" 'nvim'\; \
-		new-window -c "$selected" -n "shell" \; \
+	tmux new-session -ds $selected_name -c $selected "nvim"\; \
+		new-window -c "$selected" \; \
 		select-window -t 1
 
 fi
