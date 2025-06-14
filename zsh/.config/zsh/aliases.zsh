@@ -25,7 +25,7 @@ alias ts='tmux kill-server'
 # Git aliases
 alias g='git'
 alias gs='git status -s'
-alias ga='git add -A'
+alias ga='git add'
 alias gc='git commit -v -t ~/dotconfig/git/.config/git/template'
 alias gp='git pull'
 alias gu='git push'
