@@ -47,7 +47,6 @@ return {
 			variables = {},
 		},
 	},
-	-- tailwindcss = {},
 	volar = {
 		init_options = {
 			vue = {
@@ -99,4 +98,6 @@ return {
 
 	pyright = {},
 	ruff = {},
+
+	rust_analyzer = {},
 }
