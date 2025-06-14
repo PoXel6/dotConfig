@@ -48,7 +48,6 @@ export HISTFILE="$XDG_CACHE_HOME"/bash/history
 echo hsts-file \= "$XDG_CACHE_HOME"/wget-hsts >> "$XDG_CONFIG_HOME/wgetrc"
 
 export MANPAGER='nvim +Man!'
-export PAGER='nvim'
 export EDITOR='nvim'
 export TERM='kitty'
 export TERMINAL='kitty'
