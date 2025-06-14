@@ -28,7 +28,7 @@ alias gs='git status -s'
 alias ga='git add'
 alias gc='git commit -v -t ~/dotconfig/git/.config/git/template'
 alias gm='git commit --amend'
-alias gl="git log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an %ar%C(auto) %D%n%s%n'"
+alias gl="git log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an %ar%C(auto) %D%n%s%n%n'"
 alias gu='git push'
 alias gp='git pull'
 alias gpr='git pull --rebase'
