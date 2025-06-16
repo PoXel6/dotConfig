@@ -20,6 +20,8 @@ wk.add({
 		function()
 			vim.lsp.buf.hover({
 				border = "rounded",
+				width = 60,
+				height = 10,
 			})
 		end,
 		desc = "[G]oto [I]mplementation",
