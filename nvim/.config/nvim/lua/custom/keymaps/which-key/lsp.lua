@@ -15,4 +15,13 @@ wk.add({
 		end,
 		desc = "[G]oto [I]mplementation",
 	},
+	{
+		"K",
+		function()
+			vim.lsp.buf.hover({
+				border = "rounded",
+			})
+		end,
+		desc = "[G]oto [I]mplementation",
+	},
 })
