@@ -47,4 +47,4 @@ telescope.setup({
 	telescope.load_extension("themes"),
 	telescope.load_extension("import"),
 })
-require("custom.keymaps.which-key.telescope")
+-- require("custom.keymaps.telescope")

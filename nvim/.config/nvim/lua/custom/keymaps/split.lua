@@ -5,5 +5,5 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { silent = true, desc = "Move to up p
 
 vim.keymap.set("n", "<A-k>", ":resize +2<CR>", { silent = true, desc = "Resize left pane", noremap = true })
 vim.keymap.set("n", "<A-j>", ":resize -2<CR>", { silent = true, desc = "Resize right pane", noremap = true })
-vim.keymap.set("n", "<A-h>", ":vertical resize +2<CR>", { silent = true, desc = "Resize down pane", noremap = true })
-vim.keymap.set("n", "<A-l>", ":vertical resize -2<CR>", { silent = true, desc = "Resize up pane", noremap = true })
+vim.keymap.set("n", "<A-h>", ":vertical resize -2<CR>", { silent = true, desc = "Resize down pane", noremap = true })
+vim.keymap.set("n", "<A-l>", ":vertical resize +2<CR>", { silent = true, desc = "Resize up pane", noremap = true })
