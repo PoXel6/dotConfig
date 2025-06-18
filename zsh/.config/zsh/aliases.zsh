@@ -34,6 +34,7 @@ alias tkw='tmux kill-window'
 alias g='git'
 alias ga='git add'
 alias gc='git commit -v -t ~/dotconfig/git/.config/git/template'
+alias gd='git diff'
 alias gf='git fetch'
 alias gl="git log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an %ar%C(auto) %D%n%s%n%n'"
 alias gm='git commit --amend'
