@@ -32,14 +32,14 @@ alias tkw='tmux kill-window'
 
 # Git aliases
 alias g='git'
-alias gs='git status -s'
 alias ga='git add'
 alias gc='git commit -v -t ~/dotconfig/git/.config/git/template'
-alias gm='git commit --amend'
-alias gl="git log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an %ar%C(auto) %D%n%s%n%n'"
-alias gu='git push'
 alias gf='git fetch'
+alias gl="git log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an %ar%C(auto) %D%n%s%n%n'"
+alias gm='git commit --amend'
 alias gp='git pull'
+alias gs='git status -s'
+alias gu='git push'
 alias gpr='git pull --rebase'
 alias grc='git rebase --continue'
 alias grs='git rebase --skip'
