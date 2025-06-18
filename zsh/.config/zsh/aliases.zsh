@@ -8,9 +8,10 @@ alias lt='eza --icons=auto --tree'                                      # list f
 alias cd='z'
 
 # ctl aliases 
+alias ctl='systemctl'
+alias sctl='sudo systemctl'
 alias hctl='hyprctl'
-alias sctl='systemctl'
-alias sysctl='systemctl'
+alias jctl='journalctl'
 
 # Vim aliases
 alias v='nvim'
@@ -19,8 +20,15 @@ alias vim='nvim'
 
 # Tmux aliases
 alias t='tmux'
-alias tk='tmux kill-session'
-alias ts='tmux kill-server'
+alias ta='tmux attach'
+alias tsk='tmux send-keys'
+alias tsh='tmux run-shell'
+alias tns='tmux new-session'
+alias tnw='tmux new-window'
+alias tka='tmux kill-server'
+alias tks='tmux kill-session'
+alias tkp='tmux kill-pane'
+alias tkw='tmux kill-window'
 
 # Git aliases
 alias g='git'
