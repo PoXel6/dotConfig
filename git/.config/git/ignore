@@ -3,6 +3,14 @@ node_modules/
 
 # Java
 build/
+target/
+lib/
+.gradle/
+.idea/
+
+# Python
+.mypy_cache/
+.venv/
 
 # Rust
 target/
