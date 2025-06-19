@@ -46,6 +46,7 @@ alias gpr='git pull --rebase'
 alias grc='git rebase --continue'
 alias grs='git rebase --skip'
 alias gcl='git clone'
+alias gco='git checkout'
 alias gpu='git pull && git push'
 alias gsync='git add -A && git commit -m "automatic commit" && git pull && git push'
 
