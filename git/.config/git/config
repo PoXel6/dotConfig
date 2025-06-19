@@ -1,5 +1,5 @@
 [core]
-	editor = nvim
+	editor = $EDITOR
 	autocrlf = input
   compression = 9
   preloadindex = true
