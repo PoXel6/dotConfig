@@ -36,7 +36,7 @@ alias ga='git add'
 alias gc='git commit -t ~/dotconfig/git/.config/git/template'
 alias gd='git diff'
 alias gf='git fetch'
-alias gl="git log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an %ar%C(auto) %D%n%s%n%n'"
+alias gl="git log --all --graph --pretty=format:'%C(magenta)%h %C(white)%an@%C(auto)%ar %C(auto)%D%n%s%n%n'"
 alias gm='git commit --amend'
 alias gp='git pull'
 alias gs='git status -s'
