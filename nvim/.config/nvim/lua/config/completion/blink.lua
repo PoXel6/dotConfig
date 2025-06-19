@@ -1,4 +1,3 @@
-local max_width = 35
 return {
 	keymap = {
 		preset = "super-tab",
@@ -10,7 +9,7 @@ return {
 			auto_show = false,
 			auto_show_delay_ms = 0,
 			window = {
-				max_width = max_width,
+				max_width = 35,
 				border = "rounded",
 			},
 		},
@@ -26,9 +25,9 @@ return {
 					label = {
 						ellipsis = true,
 						width = {
-							fill = true,
+							fill = false,
 							min = 30,
-							max = max_width,
+							max = 35,
 						},
 					},
 				},
