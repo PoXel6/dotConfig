@@ -1,3 +1,4 @@
+local max_width = 35
 return {
 	keymap = {
 		preset = "super-tab",
@@ -6,9 +7,10 @@ return {
 
 	completion = {
 		documentation = {
-			auto_show = true,
+			auto_show = false,
 			auto_show_delay_ms = 0,
 			window = {
+				max_width = max_width,
 				border = "rounded",
 			},
 		},
@@ -23,10 +25,15 @@ return {
 				components = {
 					label = {
 						ellipsis = true,
-						width = { fill = true, min = 40, max = 50 },
+						width = {
+							fill = true,
+							min = 30,
+							max = max_width,
+						},
 					},
 				},
 			},
+			max_height = 7,
 		},
 		ghost_text = { enabled = false },
 	},
