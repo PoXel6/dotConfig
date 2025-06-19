@@ -33,6 +33,7 @@ alias tkw='tmux kill-window'
 # Git aliases
 alias g='git'
 alias ga='git add'
+alias gb='git branch'
 alias gc='git commit -t ~/dotconfig/git/.config/git/template'
 alias gd='git diff'
 alias gf='git fetch'
