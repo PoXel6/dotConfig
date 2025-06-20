@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
 	selected=$1
 else
-	selected=$(find ~/CodeezNutz/*/ ~/CodeezNutz/java/Minecraft/ ~/.config/ ~/dotconfig/ -mindepth 1 -maxdepth 1 -type d,l | fzf --tmux=center)
+	selected=$(find ~/CodeezNutz/*/ ~/CodeezNutz/java/Minecraft/ ~/dotconfig/ -mindepth 1 -maxdepth 1 -type d,l | fzf --tmux=center)
 fi
 
 if [[ -z $selected ]]; then
