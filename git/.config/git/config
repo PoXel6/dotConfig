@@ -73,3 +73,6 @@
 
 [tag]
   sort = -taggerdate
+
+[rerere]
+  enabled = true
