@@ -17,12 +17,23 @@ source $XDG_CONFIG_HOME/zsh/aliases
 source $XDG_CONFIG_HOME/zsh/xdg_export
 source $XDG_CONFIG_HOME/zsh/defaults
 
+
 # Plugins
-[ -d $XDG_CONFIG_HOME/zsh/plugins/zsh-syntax-highlighting/ ] || git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $XDG_CONFIG_HOME/zsh/plugins/
-[ -d $XDG_CONFIG_HOME/zsh/plugins/zsh-completions/ ] || git clone https://github.com/zsh-users/zsh-completions.git $XDG_CONFIG_HOME/zsh/plugins/
+plug() {
+  [ -d $XDG_CONFIG_HOME/zsh/plugins/"$1"/ ] \
+  || git clone https://github.com/zsh-users/"$1".git \
+  $XDG_CONFIG_HOME/zsh/plugins/"$1"
+}
+
+[ -d $XDG_CONFIG_HOME/zsh/plugins/ ] || mkdir -p $XDG_CONFIG_HOME/zsh/plugins/
+
+plug "zsh-syntax-highlighting"
+plug "zsh-completions"
+plug "zsh-autosuggestions"
 
 source $XDG_CONFIG_HOME/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $XDG_CONFIG_HOME/zsh/plugins/zsh-completions/zsh-completions.plugin.zsh
+source $XDG_CONFIG_HOME/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $XDG_CONFIG_HOME/zsh/.zshrc.zni
 
 fpath=($XDG_CONFIG_HOME/zsh/plugins/zsh-completions/src $fpath)
