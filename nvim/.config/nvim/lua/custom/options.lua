@@ -3,6 +3,7 @@ local o = vim.o
 local g = vim.g
 
 vim.loader.enable(true)
+vim.diagnostic.config({ virtual_text = true })
 
 g.mapleader = " "
 g.toggle_theme_icon = "   "
