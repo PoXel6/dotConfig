@@ -1,3 +1,6 @@
+alias srczsh='source $XDG_CONFIG_HOME/zsh/.zshrc'
+alias srcbash='source $XDG_CONFIG_HOME/bash/bashrc'
+
 alias vpn='sudo openvpn --config /etc/openvpn/client/free.ovpn'
 alias ff='fastfetch'
 alias  l='eza -lh  --icons=auto'                                        # long list
