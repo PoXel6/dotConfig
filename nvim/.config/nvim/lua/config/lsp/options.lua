@@ -1,24 +1,50 @@
 local opts = {
-  diagnostics = {
-    underline = true,
-    update_in_insert = false,
+	diagnostics = {
+		underline = true,
+		update_in_insert = false,
 
-    virtual_text = {
-      spacing = 4,
-      source = "if_many",
-      prefix = "icons",
-    },
-    severity_sort = true,
-  },
+		virtual_text = {
+			spacing = 4,
+			source = "always",
+			prefix = "icons",
+		},
 
-  inlay_hints = {
-    enabled = true,
-  },
+		float = {
+			border = "rounded",
+			source = "always",
+		},
+		severity_sort = true,
+	},
 
-  codelens = {
-    enabled = false,
-  },
+	inlay_hints = {
+		enabled = true,
+	},
 
-  servers = require('config.lsp.servers')
+	codelens = {
+		enabled = false,
+	},
+
+	signs = {
+		text = {
+			[vim.diagnostic.severity.ERROR] = "", -- or other icon of your choice here, this is just what my config has:
+			[vim.diagnostic.severity.WARN] = "",
+			[vim.diagnostic.severity.INFO] = "",
+			[vim.diagnostic.severity.HINT] = "󰌵",
+		},
+		numhl = {
+			[vim.diagnostic.severity.WARN] = "WarningMsg",
+			[vim.diagnostic.severity.ERROR] = "ErrorMsg",
+			[vim.diagnostic.severity.INFO] = "DiagnosticInfo",
+			[vim.diagnostic.severity.HINT] = "DiagnosticHint",
+		},
+	},
+
+	showMessage = {
+		messageActionItem = {
+			additionalPropertiesSupport = true,
+		},
+	},
+
+	servers = require("config.lsp.servers"),
 }
 return opts

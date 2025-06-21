@@ -1,11 +1,36 @@
 return {
 
-	biome = {},
+	biome = {
+		single_file_support = true,
+		filetypes = {
+			"astro",
+			"css",
+			"graphql",
+			"html",
+			"javascript",
+			"javascriptreact",
+			"json",
+			"jsonc",
+			"svelte",
+			"typescript",
+			"typescript.tsx",
+			"typescriptreact",
+			"vue",
+		},
+	},
 	ts_ls = {
 		init_options = {
 			preferences = {
 				disableSuggestions = true,
 			},
+			-- Vue support
+			-- plugins = {
+			-- 	{
+			-- 		name = "@vue/typescript-plugin",
+			-- 		location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
+			-- 		languages = { "javascript", "typescript", "vue" },
+			-- 	},
+			-- },
 		},
 	},
 	emmet_language_server = {
