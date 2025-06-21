@@ -1,0 +1,6 @@
+export PAGER='less'
+export MANPAGER='nvim +Man!'
+export EDITOR='nvim'
+export TERM='kitty'
+export TERMINAL='kitty'
+

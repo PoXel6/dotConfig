@@ -17,6 +17,7 @@ export PATH="$XDG_DATA_HOME/bin:$PATH"
 # Plugins
 source $XDG_CONFIG_HOME/zsh/aliases
 source $XDG_CONFIG_HOME/zsh/xdg_export
+source $XDG_CONFIG_HOME/zsh/defaults
 source $XDG_CONFIG_HOME/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $XDG_CONFIG_HOME/zsh/plugins/zsh-completions/zsh-completions.plugin.zsh
 source $XDG_CONFIG_HOME/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
@@ -25,12 +26,6 @@ source $XDG_CONFIG_HOME/zsh/.zshrc.zni
 fpath=($XDG_CONFIG_HOME/zsh/plugins/zsh-completions/src $fpath)
 
 # Defaults
-export PAGER='less'
-export MANPAGER='nvim +Man!'
-export EDITOR='nvim'
-export TERM='kitty'
-export TERMINAL='kitty'
-
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 
