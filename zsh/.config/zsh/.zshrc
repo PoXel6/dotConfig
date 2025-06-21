@@ -2,7 +2,7 @@ fastfetch
 # Create zsh directories if they don't exist
 [ -d "$XDG_CONFIG_HOME"/zsh ] || mkdir -p "$XDG_CONFIG_HOME"/zsh
 [ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
-[[ ! -f $XDG_CONFIG_HOME/zsh/.p10k.zsh ]] || source $HOME/.config/zsh/.p10k.zsh
+# [[ ! -f $XDG_CONFIG_HOME/zsh/.p10k.zsh ]] || source $HOME/.config/zsh/.p10k.zsh
 
 # Customization
 HISTFILE="$XDG_CACHE_HOME"/zsh/history
@@ -18,9 +18,10 @@ export PATH="$XDG_DATA_HOME/bin:$PATH"
 source $XDG_CONFIG_HOME/zsh/aliases
 source $XDG_CONFIG_HOME/zsh/xdg_export
 source $XDG_CONFIG_HOME/zsh/defaults
+
 source $XDG_CONFIG_HOME/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $XDG_CONFIG_HOME/zsh/plugins/zsh-completions/zsh-completions.plugin.zsh
-source $XDG_CONFIG_HOME/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
+# source $XDG_CONFIG_HOME/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
 source $XDG_CONFIG_HOME/zsh/.zshrc.zni
 
 fpath=($XDG_CONFIG_HOME/zsh/plugins/zsh-completions/src $fpath)
@@ -28,6 +29,7 @@ fpath=($XDG_CONFIG_HOME/zsh/plugins/zsh-completions/src $fpath)
 # Defaults
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"
 
 # I don't know what is this
 . "$HOME/.local/share/../bin/env"
