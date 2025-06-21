@@ -12,10 +12,13 @@ g.netrw_banner = 0
 -- vim setting
 opt.relativenumber = true
 opt.termguicolors = true
-o.termguicolors = true
 opt.incsearch = true
 opt.nu = true
 opt.wrap = false
+
+o.termguicolors = true
+o.showmode = false
+o.undofile = true
 
 -- Fold
 opt.foldmethod = "expr"
@@ -27,7 +30,8 @@ o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 opt.showbreak = "↪ "
 opt.backspace = { "indent", "eol", "start" }
 
-opt.updatetime = 500
+opt.updatetime = 250
+o.timeoutlen = 300
 opt.scrolloff = 10
 
 -- Case
