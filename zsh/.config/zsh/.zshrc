@@ -2,7 +2,6 @@ fastfetch
 # Create zsh directories if they don't exist
 [ -d "$XDG_CONFIG_HOME"/zsh ] || mkdir -p "$XDG_CONFIG_HOME"/zsh
 [ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
-# [[ ! -f $XDG_CONFIG_HOME/zsh/.p10k.zsh ]] || source $HOME/.config/zsh/.p10k.zsh
 
 # Customization
 HISTFILE="$XDG_CACHE_HOME"/zsh/history
@@ -14,14 +13,16 @@ bindkey -e
 # Scripts
 export PATH="$XDG_DATA_HOME/bin:$PATH"
 
-# Plugins
 source $XDG_CONFIG_HOME/zsh/aliases
 source $XDG_CONFIG_HOME/zsh/xdg_export
 source $XDG_CONFIG_HOME/zsh/defaults
 
+# Plugins
+[ -d $XDG_CONFIG_HOME/zsh/plugins/zsh-syntax-highlighting/ ] || git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $XDG_CONFIG_HOME/zsh/plugins/
+[ -d $XDG_CONFIG_HOME/zsh/plugins/zsh-completions/ ] || git clone https://github.com/zsh-users/zsh-completions.git $XDG_CONFIG_HOME/zsh/plugins/
+
 source $XDG_CONFIG_HOME/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $XDG_CONFIG_HOME/zsh/plugins/zsh-completions/zsh-completions.plugin.zsh
-# source $XDG_CONFIG_HOME/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
 source $XDG_CONFIG_HOME/zsh/.zshrc.zni
 
 fpath=($XDG_CONFIG_HOME/zsh/plugins/zsh-completions/src $fpath)
