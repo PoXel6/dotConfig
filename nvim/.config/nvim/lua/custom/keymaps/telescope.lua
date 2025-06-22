@@ -33,7 +33,7 @@ vim.keymap.set(
 
 -- builtin.diagnostics(themes.get_ivy({ previewer = false, layout_config = { height = 0.3 } })), ),
 vim.keymap.set("n", "<leader>sh", function()
-	builtin.help_tags(themes.get_ivy({ previewer = false }), {
+	builtin.help_tags(themes.get_dropdown({ previewer = false }), {
 		hidden = true,
 	})
 end, { desc = "[S]earch [H]elp Pages" })
@@ -43,13 +43,9 @@ vim.keymap.set("n", "<leader>sn", function()
 end, { desc = "[S]earch [N]eovim Config Files" })
 
 vim.keymap.set("n", "<leader>ss", function()
-	builtin.lsp_document_symbols(themes.get_ivy({
-		-- layout_strategy = "horizontal",
-		-- sorting_strategy = "descending",
-		previewer = true,
-	}))
+	builtin.lsp_document_symbols()
 end, { desc = "[S]earch Document [S]ymbols" })
 
 vim.keymap.set("n", "<leader>sj", function()
-	builtin.jumplist()
+	builtin.jumplist({ previewer = false })
 end, { desc = "[S]earch [J]umplist" })
