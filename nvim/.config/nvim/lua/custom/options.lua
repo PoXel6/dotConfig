@@ -7,6 +7,7 @@ vim.diagnostic.config({
 	virtual_lines = true,
 })
 g.mapleader = " "
+g.netrw_altfile = 1
 g.toggle_theme_icon = "   "
 g.netrw_banner = 0
 
