@@ -12,6 +12,8 @@ bindkey -e
 
 # Scripts
 export PATH="$XDG_DATA_HOME/bin:$PATH"
+export PATH="$HOME/Personal/dev:$PATH"
+
 
 source $XDG_CONFIG_HOME/zsh/aliases
 source $XDG_CONFIG_HOME/zsh/xdg_export
