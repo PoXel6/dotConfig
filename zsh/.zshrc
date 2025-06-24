@@ -1,4 +1,11 @@
 fastfetch
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share/"
+export PATH="$XDG_DATA_HOME/bin:$PATH"
+export PATH="$HOME/Personal/dev:$PATH"
+
 # Create zsh directories if they don't exist
 [ -d "$XDG_CONFIG_HOME"/zsh ] || mkdir -p "$XDG_CONFIG_HOME"/zsh
 [ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
@@ -11,14 +18,9 @@ setopt autocd beep extendedglob notify
 bindkey -e
 
 # Scripts
-export PATH="$XDG_DATA_HOME/bin:$PATH"
-export PATH="$HOME/Personal/dev:$PATH"
-
-
 source $XDG_CONFIG_HOME/zsh/aliases
 source $XDG_CONFIG_HOME/zsh/xdg_export
 source $XDG_CONFIG_HOME/zsh/defaults
-
 
 # Plugins
 plug() {
@@ -44,6 +46,3 @@ fpath=($XDG_CONFIG_HOME/zsh/plugins/zsh-completions/src $fpath)
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
-
-# I don't know what is this
-. "$HOME/.local/share/../bin/env"
