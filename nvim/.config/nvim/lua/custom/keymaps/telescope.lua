@@ -6,10 +6,8 @@ local half = {
 	},
 }
 
-vim.keymap.set("n", "<leader>sg", builtin.git_files, { desc = "[S]earch [G]it" })
-vim.keymap.set("n", "<leader>sl", builtin.live_grep, { desc = "[S]earch [L]ive Grep" })
+vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[S]earch [G]rep" })
 vim.keymap.set("n", "<leader>sb", builtin.buffers, { desc = "[S]earch [B]uffers" })
-vim.keymap.set("n", "<leader>si", ":Telescope import<CR>", { desc = "[S]earch [I]mports" })
 vim.keymap.set("n", "<leader>st", ":Telescope themes<CR>", { desc = "[S]earch [T]hemes" })
 
 vim.keymap.set("n", "<leader>sf", function()
