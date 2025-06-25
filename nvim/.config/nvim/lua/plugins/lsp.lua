@@ -1,6 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
-	evnet = { "VeryLazy", "UIEnter" },
+	evnet = "BufWinEnter",
 	dependencies = {
 		"mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
