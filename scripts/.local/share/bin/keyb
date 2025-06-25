@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-dotLoc="$HOME/dotconfig"
+dotLoc="$HOME/dotConfig"
 
 if [ "$1" = "homerow" ]; then
 	cd $dotLoc
