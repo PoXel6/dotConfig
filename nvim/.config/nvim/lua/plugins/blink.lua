@@ -1,6 +1,6 @@
 return {
 	lazy = true,
-	event = { "BufWinEnter", "VeryLazy" },
+	event = "InsertEnter",
 	"saghen/blink.cmp",
 	dependencies = {
 		"L3MON4D3/LuaSnip",
