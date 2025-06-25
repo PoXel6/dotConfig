@@ -1,6 +1,11 @@
 return {
 	lazy = true,
-	event = { "BufWinEnter", "VeryLazy" },
+	ft = {
+		"lua",
+		"python",
+		"bash",
+		"sh",
+	},
 	"nvimtools/none-ls.nvim",
 	config = function()
 		require("config.none-ls")

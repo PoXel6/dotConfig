@@ -12,7 +12,6 @@ null_ls.setup({
 
 		fmt.stylua,
 		fmt.shfmt,
-		fmt.prettierd,
 		fmt.black,
 		fmt.isort,
 
