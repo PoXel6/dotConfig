@@ -2,7 +2,7 @@
 require("mini.diff").setup()
 require("mini.surround").setup()
 require("mini.ai").setup()
-require("mini.operators").setup()
+-- require("mini.operators").setup()
 
 -- config modules
 require("mini.icons").setup(require("config.mini.icons"))

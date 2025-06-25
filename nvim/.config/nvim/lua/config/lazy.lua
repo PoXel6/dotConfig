@@ -9,6 +9,7 @@ return {
 	ui = {
 		backdrop = 80,
 		pills = true,
+		border = "rounded",
 		icons = {
 			favorite = " ",
 			import = " ",
@@ -34,6 +35,10 @@ return {
 				"‒",
 			},
 		},
+	},
+	change_detection = {
+		enabled = true,
+		notify = false,
 	},
 	performance = {
 		rtp = {

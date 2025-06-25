@@ -1,13 +1,12 @@
 return {
-  "saghen/blink.cmp",
-  dependencies = {
-    "L3MON4D3/LuaSnip",
-  },
-  version = "1.*",
-  event = { "BufReadPre", "VeryLazy" },
+	lazy = true,
+	event = { "BufWinEnter", "VeryLazy" },
+	"saghen/blink.cmp",
+	dependencies = {
+		"L3MON4D3/LuaSnip",
+	},
+	version = "1.*",
 
-  ---@module 'blink.cmp'
-  ---@type blink.cmp.Config
-  opts = require("config.completion.blink"),
-  opts_extend = { "sources.default" },
+	opts = require("config.completion.blink"),
+	opts_extend = { "sources.default" },
 }

@@ -21,30 +21,9 @@ telescope.setup({
 		case_mode = "smart_case", -- Case-insensitive search
 	},
 
-	["ui-select"] = {
-		require("telescope.themes").get_ivy({}),
-	},
-
-	themes = {
-		ignore = { "default", "desert", "elflord", "habamax", "blue" },
-		light_themes = {
-			ignore = true,
-			keywords = { "light", "day", "white", "onelight" },
-		},
-		dark_themes = {
-			ignore = false,
-			keywords = { "andromeda", "vscode", "dark", "night", "black", "onedark", "onedark_vivid" },
-		},
-		persist = {
-			enabled = true,
-		},
-	},
-
 	import = {},
 
 	telescope.load_extension("fzf"),
-	telescope.load_extension("ui-select"),
-	telescope.load_extension("themes"),
 	telescope.load_extension("import"),
 })
 -- require("custom.keymaps.telescope")

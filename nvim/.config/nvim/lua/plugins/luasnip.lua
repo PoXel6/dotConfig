@@ -2,7 +2,8 @@ return {
 	"L3MON4D3/LuaSnip",
 	version = "v2.*",
 	build = "make install_jsregexp",
-	event = { "BufReadPre", "VeryLazy" },
+	lazy = true,
+	event = { "BufWinEnter", "VeryLazy" },
 	config = function()
 		require("luasnip.loaders.from_vscode").lazy_load({
 			"~/.config/nvim/lua/custom/snippets/",

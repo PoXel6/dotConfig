@@ -1,7 +1,8 @@
 return {
-  "nvimtools/none-ls.nvim",
-  event = "VeryLazy",
-  config = function()
-    require("config.none-ls")
-  end,
+	lazy = true,
+	event = { "BufWinEnter", "VeryLazy" },
+	"nvimtools/none-ls.nvim",
+	config = function()
+		require("config.none-ls")
+	end,
 }

@@ -1,4 +1,6 @@
 return {
+	lazy = true,
+	event = "BufEnter",
 	"nvim-lualine/lualine.nvim",
 	dependencies = {
 		"echasnovski/mini.icons",

@@ -1,11 +1,11 @@
 return {
 	"neovim/nvim-lspconfig",
-	evnet = "VeryLazy",
+	evnet = { "VeryLazy", "UIEnter" },
 	dependencies = {
 		"mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
 	},
-  opts = require('config.lsp.options'),
+	opts = require("config.lsp.options"),
 
 	config = function(_, opts)
 		for server, config in pairs(opts.servers) do
