@@ -18,8 +18,5 @@ telescope.setup({
 		case_mode = "smart_case",
 	},
 
-	import = {},
-
 	telescope.load_extension("fzf"),
-	telescope.load_extension("import"),
 })

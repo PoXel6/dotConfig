@@ -4,7 +4,6 @@ return {
 		event = { "UIEnter", "BufWinEnter" },
 		tag = "0.1.8",
 		dependencies = {
-			"piersolenski/telescope-import.nvim",
 			"nvim-lua/plenary.nvim",
 			"echasnovski/mini.icons",
 			{
