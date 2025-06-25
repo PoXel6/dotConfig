@@ -1,7 +1,8 @@
 return {
 	"nvim-lualine/lualine.nvim",
-	-- event = "VeryLazy",
-	dependencies = { "echasnovski/mini.icons", opts = {} },
+	dependencies = {
+		"echasnovski/mini.icons",
+	},
 	config = function()
 		require("config.ui.lualine")
 	end,
