@@ -3,9 +3,7 @@ return {
 	lazy = true,
 	cmd = "Mason",
 	build = ":MasonUpdate",
-	dependencies = { "williamboman/mason-lspconfig.nvim" },
-	-- config = function()
-	-- require("config.lsp.mason")
-	-- end,
-  opts = {}
+	config = function()
+		require("config.lsp.mason")
+	end,
 }
