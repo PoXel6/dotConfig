@@ -1,0 +1,121 @@
+let mapleader = " "
+" ==== Setting ====
+set scrolloff=10
+set relativenumber
+set clipboard+=ideaput
+set ignorecase
+set smartcase
+set incsearch
+set timeoutlen=5000
+set ideajoin
+
+set nerdtree
+set highlightedyank
+let g:highlightedyank_highlight_duration = 100
+
+set which-key
+let g:WhichKey_FontSize = 25
+let g:WhichKey_CommandColor = "#41ead4"
+let g:WhichKey_PrefixColor = "#f335b2"
+let g:WhichKey_SortOrder = "by_key_prefix_first"
+let g:WhichKeyDesc_leader = "<leader> Leader key"
+
+let g:WhichKeyDesc_refactoring = "<leader>r Refactoring menu"
+let g:WhichKeyDesc_refactoring_rename = "<leader>rn Rename element"
+let g:WhichKeyDesc_refactoring_method = "<leader>rm Extract method"
+let g:WhichKeyDesc_refactoring_variable = "<leader>rv Introduce variable"
+let g:WhichKeyDesc_refactoring_field = "<leader>rf Introduce field"
+let g:WhichKeyDesc_refactoring_signature = "<leader>rs Change signature"
+let g:WhichKeyDesc_refactoring_all = "<leader>rr Open refactorings list"
+map <leader>rn <Action>(RenameElement)
+map <leader>rm <Action>(ExtractMethod)
+map <leader>rv <Action>(IntroduceVariable)
+map <leader>rf <Action>(IntroduceField)
+map <leader>rs <Action>(ChangeSignature)
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+
+let g:WhichKeyDesc_goto = "<leader>g Go to X"
+let g:WhichKeyDesc_goto_declaration = "<leader>gd Go to Definition"
+let g:WhichKeyDesc_goto_type_declaration = "<leader>gy Go to Type Definition"
+let g:WhichKeyDesc_goto_implementation = "<leader>gi Go to Implementation"
+let g:WhichKeyDesc_goto_usages = "<leader>gu Go to Usages"
+let g:WhichKeyDesc_goto_test = "<leader>gt Go to Test"
+let g:WhichKeyDesc_goto_back = "<leader>gb Go Back"
+let g:WhichKeyDesc_goto_forward = "<leader>gf Go Forward"
+nmap <leader>gd <Action>(GotoDeclaration)
+nmap <leader>gy <Action>(GotoTypeDeclaration)
+nmap <leader>gi <Action>(GotoImplementation)
+nmap <leader>gu <Action>(ShowUsages)
+nmap <leader>gt <Action>(GotoTest)
+nmap <leader>gf <Action>(Back)
+nmap <leader>gb <Action>(Forward)
+
+
+let g:WhichKeyDesc_errors = "<leader>e Error navigation"
+let g:WhichKeyDesc_errors_next = "<leader>en Go to next error in solution"
+let g:WhichKeyDesc_errors_prev = "<leader>ep Go to previous error in solution"
+map <leader>en <Action>(ReSharperGotoNextErrorInSolution)
+map <leader>ep <Action>(ReSharperGotoPrevErrorInSolution)
+
+let g:WhichKeyDesc_Fold = "<leader>z Folding"
+let g:WhichKeyDesc_Fold_All = "<leader>zc Fold region"
+let g:WhichKeyDesc_Unfold_All = "<leader>zc Unfold region"
+map <leader>zc :action CollapseAllRegions<CR>
+map <leader>zo :action ExpandAllRegions<CR>
+
+let g:WhichKeyDesc_Search = "<leader>s Search for X"
+let g:WhichKeyDesc_SearchEverywhere = "<leader>sa Search Everywhere"
+let g:WhichKeyDesc_SearchClasses = "<leader>sc Search For Classes"
+let g:WhichKeyDesc_SearchFiles = "<leader>sf Search For Files"
+let g:WhichKeyDesc_SearchSymbols = "<leader>ss Search For Symbols"
+let g:WhichKeyDesc_SearchActions = "<leader>st Search For Actions"
+nmap <leader>sa <Action>(SearchEverywhere)
+nmap <leader>sc <Action>(GotoClass)
+nmap <leader>sf <Action>(GotoFile)
+nmap <leader>ss <Action>(GotoSymbol)
+nmap <leader>st <Action>(GotoAction)
+
+" IdeaVim action mappings
+nmap <leader>n <Action>(NewClass)
+nmap K <Action>(QuickJavaDoc)
+nmap <leader>run <Action>(Run)
+nmap <leader>deu <Action>(Debug)
+nnoremap <leader><leader> <C-^>
+
+let g:WhichKeyDesc_Generate = "<leader>cg Code Generator"
+let g:WhichKeyDesc_Surround = "<leader>cs Surround with..."
+let g:WhichKeyDesc_SetShortcutAction = "<leader>ca Code Action"
+let g:WhichKeyDesc_ReformatCode = "<leader>cf Code Format"
+map <leader>ca <Action>(ShowIntentionActions)
+map <leader>cg <Action>(Generate)
+map <leader>cs <Action>(SurroundWith)
+map <leader>cf <Action>(ReformatCode)
+
+" Debug
+map <leader>dsi <Action>(StepInto)
+map <leader>dso Action>(StepOut)
+map <leader>dsa Action>(StepOver)
+
+nnoremap <leader>R :source ~/.ideavimrc<CR>
+let:g WhichKeyDesc_Reload = "<leader>R Reloading IdeaVim Configs"
+
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+vnoremap < <gv
+vnoremap > >gv
+
+" vnoremap <A-S-J> yygvpgv<Esc>jV
+" nnoremap <A-S-J> Vyygvpgv<Esc>jV<Esc>
+
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+imap <C-h> <Left>
+imap <C-j> <Down>
+imap <C-k> <Up>
+imap <C-l> <Right>
+
+nnoremap <A-L> :tabnext<CR>
+nnoremap <A-H> :tabprev<CR>
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
