@@ -2,6 +2,7 @@ local path = "custom.keymaps."
 
 require(path .. "telescope")
 require(path .. "lsp")
+require(path .. "harpoon")
 
 -- vim bindings
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { silent = true, desc = "Move the Line in Visual mode Down" })
