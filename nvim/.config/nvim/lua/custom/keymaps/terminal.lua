@@ -1,1 +1,0 @@
--- vim.keymap.set("t", "<C-c><C-c>", "<C-\\><C-n>")
