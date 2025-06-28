@@ -1,11 +1,11 @@
 return {
-	lazy = true,
-	event = "BufEnter",
-	"nvim-lualine/lualine.nvim",
-	dependencies = {
-		"echasnovski/mini.icons",
-	},
-	config = function()
-		require("config.ui.lualine")
-	end,
+  lazy = true,
+  event = "BufEnter",
+  "nvim-lualine/lualine.nvim",
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+  },
+  config = function()
+    require("config.ui.lualine")
+  end,
 }
