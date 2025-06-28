@@ -16,22 +16,19 @@ return {
     event = "VeryLazy",
     opts = {},
   },
-  -- {
-  -- 	"nobbmaestro/nvim-andromeda",
-  -- 	priority = 1000,
-  -- 	event = "VeryLazy",
-  -- 	dependencies = {
-  -- 		"tjdevries/colorbuddy.nvim",
-  -- 		branch = "dev",
-  -- 	},
-  -- 	opts = {
-  -- 		preset = "andromeda",
-  -- 		transparent_bg = true,
-  -- 		styles = {
-  -- 			italic = true,
-  -- 		},
-  -- 	},
-  -- },
+  {
+    'NTBBloodbath/doom-one.nvim',
+    priority = 1000,
+    -- opts = {
+    --       vim.g.doom_one_cursor_coloring = true,
+    --       vim.g.doom_one_terminal_colors = true,
+    --       vim.g.doom_one_italic_comments = true,
+    --       vim.g.doom_one_enable_treesitter = true,
+    --       vim.g.doom_one_diagnostics_text_color = true,
+    --       vim.g.doom_one_transparent_background = true,
+    --       vim.g.doom_one_plugin_telescope = false,
+    -- },
+  },
   {
     "Mofiqul/vscode.nvim",
     priority = 1000,
