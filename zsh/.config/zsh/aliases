@@ -1,5 +1,6 @@
 alias srczsh='source $HOME/.zshrc'
 alias srcbash='source $XDG_CONFIG_HOME/bash/bashrc'
+alias tss='tmux-sessionizer'
 
 alias vpn='sudo openvpn --config /etc/openvpn/client/free.ovpn'
 alias ff='fastfetch'
