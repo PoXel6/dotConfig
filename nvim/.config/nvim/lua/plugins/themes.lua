@@ -19,15 +19,15 @@ return {
   {
     'NTBBloodbath/doom-one.nvim',
     priority = 1000,
-    -- opts = {
-    --       vim.g.doom_one_cursor_coloring = true,
-    --       vim.g.doom_one_terminal_colors = true,
-    --       vim.g.doom_one_italic_comments = true,
-    --       vim.g.doom_one_enable_treesitter = true,
-    --       vim.g.doom_one_diagnostics_text_color = true,
-    --       vim.g.doom_one_transparent_background = true,
-    --       vim.g.doom_one_plugin_telescope = false,
-    -- },
+    config = function()
+      vim.g.doom_one_cursor_coloring = true
+      vim.g.doom_one_terminal_colors = true
+      vim.g.doom_one_italic_comments = true
+      vim.g.doom_one_enable_treesitter = true
+      vim.g.doom_one_diagnostics_text_color = true
+      vim.g.doom_one_transparent_background = true
+      vim.g.doom_one_plugin_telescope = true
+    end
   },
   {
     "Mofiqul/vscode.nvim",
