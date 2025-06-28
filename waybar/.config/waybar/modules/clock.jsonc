@@ -2,7 +2,7 @@
   "clock": {
     "interval": 60,
     "tooltip": true,
-    "format": "<big> </big> {:%H:%M}",
+    "format": " {:%A %H:%M}",
     "format-alt": "<big></big>   {:%A, %B %d, %Y - %R}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {

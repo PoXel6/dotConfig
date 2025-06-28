@@ -1,13 +1,15 @@
 {
   "wireplumber": {
-    "format": "{icon}    {volume}%",
-    "format-muted": "0% <big>󰝟</big>",
+    "format": "{icon}",
+    "format-muted": "<big>󰝟</big>",
+    "tooltip": true,
+    "tooltip-format": "{volume}% {icon}",
     "on-click": "pwvucontrol",
     "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "format-icons": [
-      "<span foreground=\"orange\"></span>",
-      "<span foreground=\"yellow\"></span>",
-      "<span foreground=\"green\"></span>",
+      "",
+      "",
+      "",
     ],
   },
 }
