@@ -1,4 +1,4 @@
-@import "waybar_theme.css";
+@import "theme.css";
 
 * {
   border: none;
@@ -35,7 +35,6 @@ tooltip {
   text-shadow: @wb-act-fg-glow 0px 0 5px;
   margin: 0 3px;
   padding: 0 2px;
-  border-radius: 8px;
 }
 
 #workspaces button.urgent {
