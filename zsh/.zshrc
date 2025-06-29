@@ -11,7 +11,7 @@ export PATH="$HOME/Personal/dev:$PATH"
 [ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
 
 # Customization
-HISTFILE="$XDG_CACHE_HOME"/zsh/history
+# HISTFILE="$XDG_CACHE_HOME"/zsh/history
 HISTSIZE=1000000
 SAVEHIST=1000000
 setopt autocd beep extendedglob notify
@@ -38,9 +38,7 @@ plug "zsh-autosuggestions"
 source $XDG_CONFIG_HOME/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $XDG_CONFIG_HOME/zsh/plugins/zsh-completions/zsh-completions.plugin.zsh
 source $XDG_CONFIG_HOME/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $XDG_CONFIG_HOME/zsh/.zshrc.zni
-
-fpath=($XDG_CONFIG_HOME/zsh/plugins/zsh-completions/src $fpath)
+fpath=(path/to/zsh-completions/src $fpath)
 
 # Defaults
 source <(fzf --zsh)
