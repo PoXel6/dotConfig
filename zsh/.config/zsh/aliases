@@ -4,10 +4,10 @@ alias tss='tmux-sessionizer'
 
 alias vpn='sudo openvpn --config /etc/openvpn/client/free.ovpn'
 alias ff='fastfetch'
-alias  l='eza -lh  --icons=auto --sort=name'                                        # long list
-alias ls='eza -1   --icons=auto --sort=name'                                        # short list
-alias ll='eza -lha --icons=auto --sort=name --group-directories-first'  # long list all
-alias ld='eza -lhD --icons=auto --sort=name'                                        # short list
+alias  l='eza -lh  --icons=auto --sort=type'                                        # long list
+alias ls='eza -1   --icons=auto --sort=type'                                        # short list
+alias ll='eza -lha --icons=auto --sort=type --group-directories-first'  # long list all
+alias ld='eza -lhD --icons=auto --sort=type'                                        # short list
 alias lt='eza --icons=auto --tree'                                      # list folder as tree
 alias cd='z'
 
