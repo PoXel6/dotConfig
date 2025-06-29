@@ -1,5 +1,6 @@
 return {
 
+  kotlin_language_server = {},
 	biome = {
 		single_file_support = true,
 		filetypes = {

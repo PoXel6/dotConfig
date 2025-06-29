@@ -1,12 +1,1 @@
-@define-color bar-bg transparent;
-
-@define-color main-fg #11111b;
-@define-color main-bg #cdd6f4;
-
-/* @define-color wb-act-bg #4e6891; */
-@define-color wb-act-bg transparent;
-@define-color wb-act-fg #ffff00;
-@define-color wb-act-fg-glow #f0e68c;
-
-@define-color wb-hvr-fg #b54c5b;
-@define-color wb-hvr-bg transparent;
+/home/pox/Personal/myland/everforest/waybar/theme.css
