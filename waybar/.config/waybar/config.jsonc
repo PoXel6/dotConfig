@@ -1,1 +1,42 @@
-/home/pox/Personal/myland/onedark/waybar/config.jsonc
+
+/*
+  
+  ██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗ 
+  ██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+  ██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝
+  ██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+  ╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║
+   ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+*/
+{
+  "layer": "top",
+  "position": "top",
+  "mode": "dock",
+  "height": 32,
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "reload_style_on_change": true,
+
+  "include": [
+    "~/.config/waybar/modules/*.jsonc",
+    "~/.config/waybar/pad-modules.jsonc",
+    "~/.config/waybar/random-pad-modules.jsonc",
+  ],
+
+  "modules-left": [
+    "hyprland/workspaces",
+  ],
+
+  "modules-center": [
+    "clock",
+  ],
+
+  "modules-right": [
+    "tray",
+    "wireplumber",
+    "custom/notification",
+    "custom/power",
+    "custom/powermenu",
+  ],
+}

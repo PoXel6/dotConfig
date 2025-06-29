@@ -1,7 +1,7 @@
 zsh/.config/zsh/plugins/
 
 # auto gen themes
-waybar/.config/waybar/config.jsonc
-waybar/.config/waybar/waybar_theme.css
+waybar/.config/waybar/theme.css
 hypr/.config/hypr/theme.conf
 kitty/.config/kitty/theme.conf
+kitty/.config/btop/theme.conf
