@@ -38,7 +38,9 @@ plug "zsh-autosuggestions"
 source $XDG_CONFIG_HOME/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $XDG_CONFIG_HOME/zsh/plugins/zsh-completions/zsh-completions.plugin.zsh
 source $XDG_CONFIG_HOME/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-fpath=(path/to/zsh-completions/src $fpath)
+
+fpath=($XDG_CONFIG_HOME/zsh/plugins/zsh-autosuggestions/src $fpath)
+autoload -U compinit && compinit
 
 # Defaults
 source <(fzf --zsh)
