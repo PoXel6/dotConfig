@@ -7,6 +7,6 @@ return {
 	},
 	version = "1.*",
 
-	opts = require("config.completion.blink"),
+	opts = require("config.blink"),
 	opts_extend = { "sources.default" },
 }

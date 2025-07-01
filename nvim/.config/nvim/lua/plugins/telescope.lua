@@ -15,7 +15,7 @@ return {
 			},
 		},
 		config = function()
-			require("config.telescope.options")
+			require("config.telescope")
 		end,
 	},
 }
