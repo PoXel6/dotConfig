@@ -1,6 +1,6 @@
 return {
 	keymap = {
-		preset = "super-tab",
+		preset = "default",
 		["<C-e>"] = {},
 	},
 
