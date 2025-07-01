@@ -1,6 +1,7 @@
 return {
 
   zls = {},
+
   biome = {
     single_file_support = true,
     filetypes = {
@@ -19,6 +20,7 @@ return {
       "vue",
     },
   },
+
   ts_ls = {
     init_options = {
       preferences = {
@@ -34,7 +36,9 @@ return {
       -- },
     },
   },
+
   cssls = {},
+
   emmet_language_server = {
     filetypes = {
       "css",
@@ -48,32 +52,8 @@ return {
       "scss",
       "pug",
     },
-    -- Read more about this options in the [vscode docs](https://code.visualstudio.com/docs/editor/emmet#_emmet-configuration).
-    -- **Note:** only the options listed in the table are supported.
-    init_options = {
-      ---@type table<string, string>
-      includeLanguages = {},
-      --- @type string[]
-      excludeLanguages = {},
-      --- @type string[]
-
-      extensionsPath = {},
-      --- @type table<string, any> [Emmet Docs](https://docs.emmet.io/customization/preferences/)
-
-      preferences = {},
-      --- @type boolean Defaults to `true`
-      showAbbreviationSuggestions = true,
-      --- @type "always" | "never" Defaults to `"always"`
-      showExpandedAbbreviation = "always",
-      --- @type boolean Defaults to `false`
-      showSuggestionsAsSnippets = false,
-      --- @type table<string, any> [Emmet Docs](https://docs.emmet.io/customization/syntax-profiles/)
-      syntaxProfiles = {},
-      --- @type table<string, string> [Emmet Docs](https://docs.emmet.io/customization/snippets/#variables)
-
-      variables = {},
-    },
   },
+
   volar = {
     init_options = {
       vue = {
@@ -81,6 +61,7 @@ return {
       },
     },
   },
+
   clangd = {
     cmd = {
       "clangd",
@@ -93,6 +74,7 @@ return {
     ---@diagnostic disable-next-line: undefined-global
     flag = lsp_flags,
   },
+
   lua_ls = {
     codelens = {
       enable = true,
@@ -106,6 +88,7 @@ return {
       arrayIndex = "Disable",
     },
   },
+
   gopls = {
     completeUnimported = true,
     usePlaceholders = true,
@@ -124,7 +107,9 @@ return {
   },
 
   pyright = {},
+
   ruff = {},
 
   rust_analyzer = {},
+
 }
