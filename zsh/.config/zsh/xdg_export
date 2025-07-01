@@ -9,10 +9,10 @@ export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
 export GOPATH="$XDG_DATA_HOME"/go
-
+export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default 
 # XDG_CACHE_HOME AKA $HOME/.cache
 export PYTHONPYCACHEPREFIX=$XDG_CACHE_HOME/python
 export PYTHON_HISTORY=$XDG_CACHE_HOME/python_history
-export HISTFILE="$XDG_CACHE_HOME"/bash/history
+# export HISTFILE="$XDG_CACHE_HOME"/bash/history
 export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
 echo hsts-file \= "$XDG_CACHE_HOME"/wget-hsts >> "$XDG_CONFIG_HOME/wget/wgetrc"

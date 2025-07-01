@@ -11,9 +11,12 @@ export PATH="$HOME/Personal/dev:$PATH"
 [ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
 
 # Customization
-# HISTFILE="$XDG_CACHE_HOME"/zsh/history
-HISTSIZE=1000000
-SAVEHIST=1000000
+# HISTSIZE=1000000
+# SAVEHIST=1000000
+HISTFILE="$XDG_CACHE_HOME"/zsh/history
+HISTSIZE=100000
+SAVEHIST=100000
+setopt appendhistory
 setopt autocd beep extendedglob notify
 bindkey -e
 
@@ -43,6 +46,6 @@ fpath=($XDG_CONFIG_HOME/zsh/plugins/zsh-autosuggestions/src $fpath)
 autoload -U compinit && compinit
 
 # Defaults
-source <(fzf --zsh)
+# source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
