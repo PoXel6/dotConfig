@@ -25,23 +25,28 @@ local {}_fmt = {}
 
 local {}_inodes = {{ {} }}
 
-ls.add_snippets("{}", {{
+local {} = {{
   s("{}", fmt({}_fmt, {}_inodes, {{}})),
-}})
-{}]]
+}}
+
+ls.add_snippets("{}", {}){}]]
 
 local snip_inodes = {
   i(1),
   i(2, "fmt"),
   rep(1),
   i(3, "inodes"),
+  rep(1),
+  rep(1),
+  rep(1),
+  rep(1),
   i(4, "lang"),
-  rep(1),
-  rep(1),
   rep(1),
   i(0),
 }
 
-ls.add_snippets("lua", {
+local snip = {
   s("snip", fmt(snip_fmt, snip_inodes, {})),
-})
+}
+
+ls.add_snippets("lua", snip)
