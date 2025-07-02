@@ -3,43 +3,30 @@ local s = ls.snippet
 local i = ls.insert_node
 local fmt = require("luasnip.extras.fmt").fmt
 
---stylua:ignore
-ls.add_snippets("vue", {
-  s(
-    "temp",
-    fmt(
-      [[
-    <template>
-      ()
-    </template>
-    ]],
-      {
-        i(0),
-      },
-      {
-        delimiters = "()",
-      }
-    )
-  ),
-})
+local temp_fmt = "<template>\n\t{}\n</template>"
 
-ls.add_snippets("vue", {
-  s(
-    "setup",
-    fmt(
-      [[
-  <script setup lang="()">
-    ()
-  </script>
+local temp_inodes = { i(0) }
 
-  ]],
-      {
-        i(1, "ts"),
-        i(2, ""),
-      },
-      {
-        delimiters = "()",
-      }
-    )
-  ),
-})
+local temp = {
+  s("temp", fmt(temp_fmt, temp_inodes, {})),
+}
+
+local css_fmt = "<style>\n\t{}\n</style>"
+
+local css_inodes = { i(0) }
+
+local css = {
+  s("css", fmt(css_fmt, css_inodes, {})),
+}
+
+local ts_fmt = "<script setup lang=\"ts\">\n\t{}\n</script>"
+
+local ts_inodes = { i(0) }
+
+local ts = {
+  s("ts", fmt(ts_fmt, ts_inodes, {})),
+}
+
+ls.add_snippets("vue", ts)
+ls.add_snippets("vue", css)
+ls.add_snippets("vue", temp)
