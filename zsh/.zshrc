@@ -6,6 +6,7 @@ export XDG_DATA_HOME="$HOME/.local/share/"
 export PATH="$XDG_DATA_HOME/bin:$PATH"
 export PATH="$HOME/Personal/dev:$PATH"
 
+
 # Create zsh directories if they don't exist
 [ -d "$XDG_CONFIG_HOME"/zsh ] || mkdir -p "$XDG_CONFIG_HOME"/zsh
 [ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
