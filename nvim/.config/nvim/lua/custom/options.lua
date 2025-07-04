@@ -1,37 +1,32 @@
-local opt = vim.opt
 local o = vim.o
 local g = vim.g
 
 vim.loader.enable(true)
-vim.diagnostic.config({
-  virtual_lines = true,
-})
+vim.diagnostic.config({ virtual_lines = true, })
+
 g.mapleader = " "
-g.netrw_altfile = 1
-g.toggle_theme_icon = "   "
 g.netrw_banner = 0
+g.netrw_altfile = 1
 
 -- vim setting
-opt.nu = true
-opt.relativenumber = true
-opt.incsearch = true
-opt.termguicolors = true
-o.termguicolors = true
 o.showmode = false
+o.nu = true
+o.relativenumber = true
+o.incsearch = true
+o.termguicolors = true
 o.undofile = true
-opt.showbreak = "↪ "
-opt.updatetime = 250
-o.timeoutlen = 300
-opt.scrolloff = 10
-
--- Case
 o.ignorecase = true
 o.smartcase = true
+
+o.showbreak = "↪ "
+o.updatetime = 250
+o.timeoutlen = 300
+o.scrolloff = 10
 o.mouse = "a"
 
 -- Indenting
 o.expandtab = true
-o.shiftwidth = 2
 o.smartindent = true
+o.shiftwidth = 2
 o.tabstop = 2
 o.softtabstop = 2
