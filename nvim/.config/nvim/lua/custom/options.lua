@@ -12,19 +12,14 @@ g.toggle_theme_icon = "   "
 g.netrw_banner = 0
 
 -- vim setting
-opt.relativenumber = true
-opt.termguicolors = true
-opt.incsearch = true
 opt.nu = true
-opt.wrap = false
-
+opt.relativenumber = true
+opt.incsearch = true
+opt.termguicolors = true
 o.termguicolors = true
 o.showmode = false
 o.undofile = true
-
 opt.showbreak = "↪ "
-opt.backspace = { "indent", "eol", "start" }
-
 opt.updatetime = 250
 o.timeoutlen = 300
 opt.scrolloff = 10
@@ -32,7 +27,6 @@ opt.scrolloff = 10
 -- Case
 o.ignorecase = true
 o.smartcase = true
-
 o.mouse = "a"
 
 -- Indenting
