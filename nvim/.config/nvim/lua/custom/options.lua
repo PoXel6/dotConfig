@@ -4,7 +4,7 @@ local g = vim.g
 
 vim.loader.enable(true)
 vim.diagnostic.config({
-	virtual_lines = true,
+  virtual_lines = true,
 })
 g.mapleader = " "
 g.netrw_altfile = 1
@@ -21,13 +21,6 @@ opt.wrap = false
 o.termguicolors = true
 o.showmode = false
 o.undofile = true
-
--- Fold
-opt.foldmethod = "expr"
-opt.foldexpr = "nvim_treesitter#foldexpr()"
-opt.foldlevelstart = 99
-opt.foldcolumn = "1"
-o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 
 opt.showbreak = "↪ "
 opt.backspace = { "indent", "eol", "start" }
