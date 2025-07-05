@@ -22,6 +22,7 @@ o.showbreak = "↪ "
 o.updatetime = 250
 o.timeoutlen = 300
 o.scrolloff = 10
+o.cmdheight = 0
 o.mouse = "a"
 
 -- Indenting
