@@ -1,4 +1,4 @@
-local path = "custom.keymaps."
+local path = "pox.custom.keymaps."
 
 require(path .. "telescope")
 require(path .. "lsp")

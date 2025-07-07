@@ -45,6 +45,6 @@ local opts = {
 		},
 	},
 
-	servers = require("config.lsp.servers"),
+	servers = require("pox.config.lsp.servers"),
 }
 return opts

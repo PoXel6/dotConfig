@@ -4,6 +4,6 @@ return {
 	cmd = "Mason",
 	build = ":MasonUpdate",
 	config = function()
-		require("config.lsp.mason")
+		require("pox.config.lsp.mason")
 	end,
 }

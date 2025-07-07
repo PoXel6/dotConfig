@@ -5,7 +5,7 @@ return {
 		"mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
 	},
-	opts = require("config.lsp.options"),
+	opts = require("pox.config.lsp.options"),
 
 	config = function(_, opts)
 		for server, config in pairs(opts.servers) do

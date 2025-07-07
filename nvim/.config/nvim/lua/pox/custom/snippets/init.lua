@@ -1,4 +1,4 @@
-local path = "custom.snippets."
+local path = "pox.custom.snippets."
 require(path .. "all")
 require(path .. "lua")
 require(path .. "vue")

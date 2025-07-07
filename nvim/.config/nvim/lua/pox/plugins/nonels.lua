@@ -8,6 +8,6 @@ return {
 	},
 	"nvimtools/none-ls.nvim",
 	config = function()
-		require("config.none-ls")
+		require("pox.config.none-ls")
 	end,
 }

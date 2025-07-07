@@ -15,7 +15,7 @@ return {
 			},
 		},
 		config = function()
-			require("config.telescope")
+			require("pox.config.telescope")
 		end,
 	},
 }

@@ -2,7 +2,7 @@ return {
 
 	spec = {
 		{
-			import = "plugins",
+			import = "pox.plugins",
 		},
 	},
 

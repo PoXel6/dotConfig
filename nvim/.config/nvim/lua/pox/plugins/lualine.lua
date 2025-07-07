@@ -6,6 +6,6 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   config = function()
-    require("config.lualine")
+    require("pox.config.lualine")
   end,
 }

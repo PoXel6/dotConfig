@@ -7,6 +7,6 @@ return {
 	},
 	version = "1.*",
 
-	opts = require("config.blink"),
+	opts = require("pox.config.blink"),
 	opts_extend = { "sources.default" },
 }
