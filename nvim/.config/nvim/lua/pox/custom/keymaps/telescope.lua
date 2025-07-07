@@ -8,7 +8,6 @@ local half = {
 
 vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[S]earch [G]rep" })
 vim.keymap.set("n", "<leader>sb", builtin.buffers, { desc = "[S]earch [B]uffers" })
-vim.keymap.set("n", "<leader>st", ":Telescope themes<CR>", { desc = "[S]earch [T]hemes" })
 
 vim.keymap.set("n", "<leader>sf", function()
 	builtin.find_files(themes.get_dropdown(), {
