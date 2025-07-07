@@ -1,6 +1,5 @@
 # My Linux Configurations
 
-## Packages
 ### **WM**: [Hyprland](https://github.com/hyprwm/Hyprland)  
 ### **Shell**: [Zsh](https://www.zsh.org/)  
 ### **Prompt**: [Starship](https://starship.rs)  
@@ -15,11 +14,3 @@
 ### **Wallpaper Daemon**: [Swww](https://github.com/LGFae/swww)
 ### **Screenshot Tool**: [Swappy](https://github.com/jtheoof/swappy) & [Grimblast](https://github.com/hyprwm/contrib/tree/main/grimblast)
 ### **Font**: Jetbrains Mono Nerd Font & Inter Variable & Noto-emoji for emojies
-
-## Todo:
-- setup widgets with quickshell or eww
-- generate colorscheme based on [Hellwal](https://github.com/danihek/hellwal) for hyprland and waybar
-- remove mini from nvim
-- rewrite waybar's config
-- find replacement for swappy
-- try wofi and see if its better than rofi-wayland
