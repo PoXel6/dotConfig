@@ -3,7 +3,7 @@
     "interval": 60,
     "tooltip": true,
     "format": " {:%A %H:%M}",
-    "format-alt": "<big></big>   {:%A, %B %d, %Y - %R}",
+    "format-alt": "{:%B %d, %Y}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode": "year",
