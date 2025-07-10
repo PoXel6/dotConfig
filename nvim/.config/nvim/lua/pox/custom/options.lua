@@ -18,7 +18,7 @@ o.undofile = true
 o.ignorecase = true
 o.smartcase = true
 
-o.showbreak = "↪ "
+o.wrap = false
 o.updatetime = 250
 o.timeoutlen = 300
 o.scrolloff = 10
