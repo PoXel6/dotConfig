@@ -21,19 +21,31 @@ return {
     },
   },
 
-  ts_ls = {
-    init_options = {
-      preferences = {
-        disableSuggestions = true,
+  vtsls = {
+    settings = {
+      vtsls = {
+        tsserver = {
+          globalPlugins = {
+            {
+              name = "@vue/typescript-plugin",
+              location = vim.fn.stdpath('data') ..
+                  "/mason/packages/vue-language-server/node_modules/@vue/language-server",
+              languages = { "typescript", "javascript", "vue" },
+              enableForWorkspaceTypeScriptVersions = true,
+              configNamespace = "typescript",
+            },
+          },
+        },
       },
-      -- Vue support
-      -- plugins = {
-      -- 	{
-      -- 		name = "@vue/typescript-plugin",
-      -- 		location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
-      -- 		languages = { "javascript", "typescript", "vue" },
-      -- 	},
-      -- },
+    },
+    filetypes = {
+      "javascript",
+      "javascriptreact",
+      "javascript.jsx",
+      "typescript",
+      "typescriptreact",
+      "typescript.tsx",
+      "vue",
     },
   },
 
@@ -54,7 +66,7 @@ return {
     },
   },
 
-  volar = {
+  vue_ls = {
     init_options = {
       vue = {
         hybridMode = true,
@@ -71,8 +83,6 @@ return {
     init_options = {
       fallback_flags = { "-std=c++17" },
     },
-    ---@diagnostic disable-next-line: undefined-global
-    flag = lsp_flags,
   },
 
   lua_ls = {
