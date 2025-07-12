@@ -22,9 +22,7 @@ ls.add_snippets("lua", {
 
 local snip_fmt = [[
 local {}_fmt = {}
-
 local {}_inodes = {{ {} }}
-
 local {} = {{
   s("{}", fmt({}_fmt, {}_inodes, {{}})),
 }}
