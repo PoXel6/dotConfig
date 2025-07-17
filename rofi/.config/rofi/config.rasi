@@ -1,7 +1,6 @@
 configuration {
 /*	modes: "window,drun,run,ssh";*/
 	font: "Jetbrains Mono Nerd Font";
-	// font: "InterVariable";
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
@@ -152,8 +151,19 @@ configuration {
       action: "kb-cancel";
       delay:  0;
   }
+
   filebrowser {
       directories-first: true;
       sorting-method:    "name";
   }
 }
+//
+// element {
+//   orientation: vertical;
+//   children: [element-icon];
+// }
+//
+// element-icon {
+//   size: 20em;
+// }
+//
