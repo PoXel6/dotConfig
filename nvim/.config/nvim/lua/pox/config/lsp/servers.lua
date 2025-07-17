@@ -2,6 +2,8 @@ return {
 
   zls = {},
 
+  jsonls = {},
+
   biome = {
     single_file_support = true,
     filetypes = {
