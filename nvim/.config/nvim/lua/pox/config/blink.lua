@@ -6,14 +6,20 @@ return {
 
   completion = {
     documentation = {
-      auto_show = false,
+      auto_show = true,
       auto_show_delay_ms = 0,
       window = {
         max_width = 35,
         border = "rounded",
       },
     },
+
     menu = {
+      border = "rounded",
+      max_height = 7,
+      winblend = 0,
+      scrollbar = false,
+
       draw = {
         align_to = "label",
         columns = {
@@ -32,7 +38,6 @@ return {
           },
         },
       },
-      max_height = 7,
     },
     ghost_text = { enabled = false },
   },
