@@ -2,6 +2,8 @@ return {
 
   zls = {},
 
+  jdtls = {},
+
   jsonls = {},
 
   biome = {
