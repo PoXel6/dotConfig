@@ -2,7 +2,7 @@ local o = vim.o
 local g = vim.g
 
 vim.loader.enable(true)
-vim.diagnostic.config({ virtual_lines = true, })
+vim.diagnostic.config({ virtual_lines = { current_line = true } })
 
 g.mapleader = " "
 g.netrw_banner = 0
