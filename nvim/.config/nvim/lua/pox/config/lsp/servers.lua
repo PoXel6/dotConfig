@@ -70,7 +70,7 @@ return {
     },
   },
 
-  vue_ls = {
+  volar = {
     init_options = {
       vue = {
         hybridMode = true,
