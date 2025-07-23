@@ -16,14 +16,14 @@ return {
 
     menu = {
       border = "rounded",
-      max_height = 7,
+      max_height = 9,
       winblend = 0,
       scrollbar = false,
 
       draw = {
         align_to = "label",
         columns = {
-          { "label",    "label_description", gap = 3 },
+          { "label", gap = 3 },
           { "kind_icon" },
           { "kind" },
         },
