@@ -20,6 +20,7 @@ SAVEHIST=100000
 setopt appendhistory
 setopt autocd beep extendedglob notify
 bindkey -e
+bindkey -s "^[1" "tmux-sessionizer^M"
 
 # Scripts
 source $XDG_CONFIG_HOME/zsh/aliases
