@@ -68,5 +68,6 @@ return {
 			},
 		},
 	},
+  install = { colorscheme = { "doom-one" } },
 	checker = { enabled = true },
 }
