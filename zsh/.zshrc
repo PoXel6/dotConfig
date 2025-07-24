@@ -21,6 +21,7 @@ setopt appendhistory
 setopt autocd beep extendedglob notify
 bindkey -e
 bindkey -s "^[1" "tmux-sessionizer^M"
+bindkey -s "^[2" "source $HOME/.zshrc^M"
 
 # Scripts
 source $XDG_CONFIG_HOME/zsh/aliases
