@@ -17,17 +17,16 @@ o.termguicolors = true
 o.undofile = true
 o.ignorecase = true
 o.smartcase = true
+o.winborder = "rounded"
 
 o.wrap = false
 o.updatetime = 250
 o.timeoutlen = 300
 o.scrolloff = 10
-o.cmdheight = 0
 o.mouse = "a"
 
 -- Indenting
 o.expandtab = true
 o.smartindent = true
-o.shiftwidth = 2
-o.tabstop = 2
-o.softtabstop = 2
+o.shiftwidth = 4
+o.tabstop = 4
