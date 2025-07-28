@@ -17,7 +17,6 @@ o.termguicolors = true
 o.undofile = true
 o.ignorecase = true
 o.smartcase = true
-o.winborder = "rounded"
 
 o.wrap = false
 o.updatetime = 250
