@@ -2,6 +2,7 @@ local telescope = require("telescope")
 telescope.setup({
     defaults = {
         preview = false,
+        border = false,
         prompt_prefix = "  >  ",
         file_ignore_patterns = {
             ".gradle/",
@@ -9,6 +10,8 @@ telescope.setup({
             ".git/",
             ".idea/",
             ".vscode/",
+            "bin/",
+            "target/"
         },
     },
     fzf = {
