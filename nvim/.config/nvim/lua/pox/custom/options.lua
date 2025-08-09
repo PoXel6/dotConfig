@@ -2,7 +2,6 @@ local o = vim.o
 local g = vim.g
 
 vim.loader.enable(true)
-vim.diagnostic.config({ virtual_lines = { current_line = true } })
 
 g.mapleader = " "
 g.netrw_banner = 0
@@ -18,6 +17,7 @@ o.undofile = true
 o.ignorecase = true
 o.smartcase = true
 o.winborder = "rounded"
+o.signcolumn = "no"
 
 o.wrap = false
 o.updatetime = 250
