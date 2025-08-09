@@ -1,6 +1,7 @@
 local path = "pox.custom.snippets."
 require(path .. "all")
 require(path .. "lua")
+require(path .. "rust")
 require(path .. "vue")
 require(path .. "javascript")
 require(path .. "python")
