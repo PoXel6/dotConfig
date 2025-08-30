@@ -1,7 +1,0 @@
-require("pox.custom.options")
-require("pox.lazy_setup")
-require("pox.custom.keymaps")
-require("pox.custom.autocmd")
-require("lazy").setup("plugins")
-require("pox.custom.snippets")
-require("pox.current-theme")
