@@ -7,6 +7,11 @@ target/
 lib/
 .gradle/
 .idea/
+.project
+.classpath
+.settings/
+.factorypath
+**/bin/
 
 # Python
 .mypy_cache/
@@ -14,3 +19,7 @@ lib/
 
 # Rust
 target/
+
+# Zig 
+**/bin/
+.zig-cache/

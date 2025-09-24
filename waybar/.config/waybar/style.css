@@ -4,8 +4,9 @@
   border: none;
   border-radius: 0px;
   font-family: "InterVariable", "Jetbrains Mono Nerd Font";
-  font-weight: 600;
-  font-size: 13px;
+  /* font-family: "ComicShannsNerdFont"; */
+  font-weight: 700;
+  font-size: 15px;
   min-height: 10px;
   padding: 0 2px;
   margin: 0;

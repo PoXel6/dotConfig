@@ -19,9 +19,12 @@
   "reload_style_on_change": true,
 
   "include": [
-    "~/.config/waybar/modules/*.jsonc",
-    "~/.config/waybar/pad-modules.jsonc",
-    "~/.config/waybar/random-pad-modules.jsonc",
+    "~/.config/waybar/modules/update.jsonc",
+    "~/.config/waybar/modules/powermenu.jsonc",
+    "~/.config/waybar/modules/wireplumber.jsonc",
+    "~/.config/waybar/modules/update.jsonc",
+    "~/.config/waybar/modules/notification.jsonc",
+    "~/.config/waybar/modules/clock.jsonc",
   ],
 
   "modules-left": [
@@ -35,8 +38,8 @@
   "modules-right": [
     "tray",
     "wireplumber",
+	"custom/update",
     "custom/notification",
-    "custom/power",
     "custom/powermenu",
   ],
 }

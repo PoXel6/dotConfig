@@ -3,6 +3,7 @@ alias srcbash='source $XDG_CONFIG_HOME/bash/bashrc'
 alias tss='tmux-sessionizer'
 
 alias vpn='sudo openvpn --config /etc/openvpn/client/free.ovpn'
+alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 alias ff='fastfetch'
 alias fff='fastfetch --config examples/10.jsonc  --logo ~/.config/fastfetch/arch-uwux.png --logo-preserve-aspect-ratio --logo-type kitty-icat --logo-width 40'
 alias  l='eza -lh  --icons=auto --sort=type'                                        # long list

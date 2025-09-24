@@ -47,8 +47,11 @@ source $XDG_CONFIG_HOME/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 fpath=($XDG_CONFIG_HOME/zsh/plugins/zsh-autosuggestions/src $fpath)
 autoload -U compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' menu select
 
 # Defaults
 # source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
+

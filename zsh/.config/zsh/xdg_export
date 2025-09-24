@@ -3,6 +3,9 @@ export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0"
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+export GRADLE_USER_HOME="$XDG_CONFIG_HOME"/gradle
 
 # XDG_DATA_HOME AKA $HOME/.local/state/
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
@@ -15,4 +18,5 @@ export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default
 export PYTHONPYCACHEPREFIX=$XDG_CACHE_HOME/python
 export PYTHON_HISTORY=$XDG_CACHE_HOME/python_history
 export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
+export NODE_REPL_HISTORY="$XDG_CONFIG_HOME/node/repl_history"
 echo hsts-file \= "$XDG_CACHE_HOME/wget-hsts" >> "$XDG_CONFIG_HOME/wget/wgetrc"
