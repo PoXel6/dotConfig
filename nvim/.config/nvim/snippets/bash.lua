@@ -1,10 +1,10 @@
 local ls = require("luasnip")
 local s = ls.snippet
 local i = ls.insert_node
+local fmt = require("luasnip.extras.fmt").fmt
 local c = ls.choice_node
 local t = ls.text_node
 local f = ls.function_node
-local fmt = require("luasnip.extras.fmt").fmt
 
 local shebang_fmt = "#!/usr/bin/env {}"
 local shebang_inodes = { c(1, {

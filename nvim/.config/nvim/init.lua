@@ -25,7 +25,7 @@ vim.pack.add({
 	'https://github.com/iamcco/markdown-preview.nvim',
 })
 
-require('nvtheme').setup()
+require('nvtheme').setup({theme = "doom"})
 require("mason").setup()
 require("luasnip").setup()
 require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets/" })
@@ -79,6 +79,7 @@ vim.lsp.enable({
 	"jsonls",
 	"ruff", "pyright", "mypy",
 	"tinymist", "marksman",
+	"jdtls",
 })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
