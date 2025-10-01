@@ -1,7 +1,0 @@
-source $XDG_CONFIG_HOME/zsh/xdg_export
-source $XDG_CONFIG_HOME/zsh/aliases
-source $XDG_CONFIG_HOME/zsh/defaults
-
-source <(fzf --bash)
-eval "$(zoxide init bash)"
-eval "$(starship init bash)"
