@@ -55,3 +55,4 @@ zstyle ':completion:*' menu select
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
+source ~/.cache/hellwal/variables.sh

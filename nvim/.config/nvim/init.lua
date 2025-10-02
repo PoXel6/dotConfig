@@ -27,11 +27,11 @@ vim.pack.add({
 	'https://github.com/iamcco/markdown-preview.nvim',
 })
 
-require('nvtheme').setup({theme = "doom"})
--- vim.cmd[[colorscheme jb]]
+require('nvtheme').setup({ theme = "doom" })
 require("mason").setup()
 require("luasnip").setup()
 require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets/" })
+require("nvim-treesitter").setup({ensure_installed = true})
 require("blink.cmp").setup {
 	keymap = {
 		preset = 'default',
@@ -63,6 +63,7 @@ require("telescope").setup {
 			"target/",
 			"bin/",
 			"node_modules/",
+			"build/",
 		},
 	},
 	pickers = {},
@@ -75,12 +76,12 @@ vim.lsp.enable({
 	"emmylua_ls",
 	"rust_analyzer",
 	"clangd", "clang-format",
-	"vtsls",
+	"vtsls", "biome",
 	"bashls", "shfmt",
 	"emmet_language_server", "superhtml",
 	"cssls", "css_variables",
 	"jsonls",
-	"ruff", "pyright", "mypy",
+	"ruff", "pyright",
 	"tinymist", "marksman",
 	"jdtls",
 })
@@ -104,7 +105,6 @@ vim.keymap.set("n", "-", "<CMD>Ex<CR>")
 vim.keymap.set("n", "<leader>sf", "<CMD>Telescope find_files<CR>", { silent = true })
 vim.keymap.set("n", "<leader>sh", "<CMD>Telescope help_tags<CR>", { silent = true })
 vim.keymap.set("n", "<leader>sl", "<CMD>Telescope live_grep<CR>", { silent = true })
-vim.keymap.set("n", "<leader>t", "<CMD>tab term<CR>", { silent = true })
 vim.keymap.set({ "x", "v", "n" }, "gro", vim.lsp.buf.format)
 vim.keymap.set({ "i", "s" }, "<C-e>", function()
 	return require("luasnip").expandable()
@@ -143,9 +143,9 @@ vim.keymap.set({ "i", "s" }, "<C-p>", function()
 end, { expr = true, silent = true })
 
 
-vim.api.nvim_set_hl(0,"TabLine", { bg = "NONE" })
-vim.api.nvim_set_hl(0,"TabLineSel", { bg = "NONE" })
-vim.api.nvim_set_hl(0,"TabLineFill", { bg = "NONE" })
-vim.api.nvim_set_hl(0,"StatusLine", { bg = "NONE" })
-vim.api.nvim_set_hl(0,"StatusLineNC", { bg = "NONE" })
-vim.api.nvim_set_hl(0,"StatusLinePart", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "TabLine", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "TabLineSel", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "TabLineFill", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "StatusLine", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "StatusLinePart", { bg = "NONE" })

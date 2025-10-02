@@ -1,6 +1,16 @@
+// @import "~/.cache/hellwal/rofi.rasi"
+@import "./theme.rasi"
+
+* {
+    separatorcolor: transparent;
+    selected-normal-background: @select;
+    normal-background: @bg0;
+    alternate-normal-background: @bg1;
+}
+
 entry {
     placeholder: "";
-    text-color: #dddddd;
+    text-color: @text;
     padding: 8px 0 8px 8px;
 }
 
@@ -15,25 +25,18 @@ inputbar {
     children: [entry];
 }
 
-* {
-    separatorcolor: transparent;
-    selected-normal-background: rgba(255,255,255, 5%);
-    normal-background: rgba(255,255,255, 0%);
-    alternate-normal-background: rgba(255,255,255, 0%);
-}
-
 mainbox {
     border: 2px;
-    border-color: rgba(255,255,255, 20%);
+    border-color: @border;
     border-radius: 10px;
     padding: 10px;
 }
 
 window {
+    border-color: @border;
+    background-color: @bg;
     border-radius: 11px;
     border: 1px solid;
-    border-color: #000000;
-    background-color: rgba(38,43,52,85%);
     padding: 0px;
     width: 30%;
 }
@@ -51,7 +54,7 @@ element {
 }
 
 element-text {
-    text-color: #e1e1e1;
+    text-color: @fg1;
 }
 
 element-icon {
@@ -59,7 +62,7 @@ element-icon {
 }
 
 #scrollbar {
-    handle-color: #3a3f4a;
+    handle-color: @scrollbar;
     handle-width: 4px ;
     padding: 0;
 }
