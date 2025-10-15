@@ -2,39 +2,17 @@ alias srczsh='source $HOME/.zshrc'
 alias srcbash='source $XDG_CONFIG_HOME/bash/bashrc'
 alias tss='tmux-sessionizer'
 
-alias vpn='sudo openvpn --config /etc/openvpn/client/free.ovpn'
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 alias ff='fastfetch'
 alias fff='fastfetch --config examples/10.jsonc  --logo ~/.config/fastfetch/arch-uwux.png --logo-preserve-aspect-ratio --logo-type kitty-icat --logo-width 40'
-alias  l='eza -lh  --icons=auto --sort=type'                                        # long list
-alias ls='eza -1   --icons=auto --sort=type'                                        # short list
-alias ll='eza -lha --icons=auto --sort=type --group-directories-first'  # long list all
-alias ld='eza -lhD --icons=auto --sort=type'                                        # short list
-alias lt='eza --icons=auto --tree'                                      # list folder as tree
-alias cd='z'
-
-# ctl aliases 
-alias ctl='systemctl'
-alias sctl='sudo systemctl'
-alias hctl='hyprctl'
-alias jctl='journalctl'
 
 # Vim aliases
-alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
 
-# Tmux aliases
-alias t='tmux'
-alias ta='tmux attach'
-alias tsk='tmux send-keys'
-alias tsh='tmux run-shell'
-alias tns='tmux new-session'
-alias tnw='tmux new-window'
-alias tka='tmux kill-server'
-alias tks='tmux kill-session'
-alias tkp='tmux kill-pane'
-alias tkw='tmux kill-window'
+alias ls='eza -GAstype -F --hyperlink --icons=always'
+alias ll='eza -hAlstype -F --hyperlink --icons=always'
+alias lt='eza --tree -Astype -F --hyperlink --icons=always'
 
 # Git aliases
 alias g='git'
@@ -55,11 +33,3 @@ alias gw='git switch'
 alias gco='git checkout'
 alias gpu='git pull && git push'
 alias gsync='git add -A && git commit -m "automatic commit" && git pull && git push'
-
-# Handy change dir shortcuts
-alias mkdir='mkdir -p'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias .3='cd ../../..'
-alias .4='cd ../../../..'
-alias .5='cd ../../../../..'
