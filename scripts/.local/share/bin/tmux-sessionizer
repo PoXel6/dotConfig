@@ -17,7 +17,7 @@ if [[ -z $selected ]]; then
 	exit 0
 fi
 
-selected_name=$(basename "$selected" | tr . _)
+selected_name=$(basename "$selected" | tr .- _)
 tmux_running=$(pgrep tmux)
 
 attach() {
@@ -30,10 +30,10 @@ attach() {
 
 create() {
 	tmux new-session -s $selected_name -c $selected -d
-	tmux neww -t $selected_name:9 -c $selected
+	tmux neww -t $selected_name:2 -c $selected
 	tmux selectw -t $selected_name:1
 	sleep 0.150
-	tmux send -t $selected_name:1 "nvim"
+	tmux send -t $selected_name:1 "nvim"
 	tmux send -t $selected_name:2 "fastfetch"
 	attach
 }
