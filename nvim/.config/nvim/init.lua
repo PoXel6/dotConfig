@@ -8,14 +8,12 @@ vim.o.winborder = "rounded"
 vim.o.scrolloff = 10
 vim.o.sidescrolloff = 10
 vim.o.wrap = false
-vim.o.termguicolors = true
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.g.netrw_banner = false
 
 vim.pack.add({
-	'https://github.com/poxel6/nvtheme.nvim',
-	'https://github.com/nickkadutskyi/jb.nvim',
+	'https://github.com/poxel6/doom-one.nvim',
 	'https://github.com/nvim-lua/plenary.nvim',
 	'https://github.com/mason-org/mason.nvim',
 	'https://github.com/L3MON4D3/LuaSnip',
@@ -27,11 +25,12 @@ vim.pack.add({
 	'https://github.com/iamcco/markdown-preview.nvim',
 })
 
-require('nvtheme').setup({ theme = "doom" })
+vim.cmd [[colorscheme doom-one]]
+
 require("mason").setup()
 require("luasnip").setup()
 require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets/" })
-require("nvim-treesitter").setup({ensure_installed = true})
+require("nvim-treesitter").setup({ ensure_installed = true })
 require("blink.cmp").setup {
 	keymap = {
 		preset = 'default',
