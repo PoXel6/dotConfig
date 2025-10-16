@@ -1,14 +1,10 @@
 @import "theme.css";
 
 * {
-  border: none;
-  border-radius: 0px;
-  font-family: "InterVariable", "Jetbrains Mono Nerd Font";
-  /* font-family: "ComicShannsNerdFont"; */
-  font-weight: 700;
-  font-size: 15px;
+  font-family: "InterVariable", "ComicShannsNerdFont";
+  font-size: 16px;
   min-height: 10px;
-  padding: 0 2px;
+  padding: 0 1px;
   margin: 0;
 }
 
@@ -19,27 +15,25 @@ window#waybar {
 tooltip {
   background: @main-bg;
   color: @main-fg;
-  border-radius: 9px;
+  border-radius: 5px;
   padding: 5px;
   font-size: 1.4rem;
 }
 
 #workspaces button {
   color: @main-fg;
-  box-shadow: none;
-  text-shadow: none;
 }
 
 #workspaces button.active {
   background: @wk-act-bg;
   color: @wb-act-fg;
-  text-shadow: @wb-act-fg-glow 0px 0 5px;
   margin: 0 3px;
   padding: 0 2px;
 }
 
 #workspaces button.urgent {
-  color: red;
+  color: @wb-urg-fg;
+  background: @wb-urg-bg;
   opacity: 0.9;
 }
 
