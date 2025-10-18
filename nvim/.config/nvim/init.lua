@@ -9,7 +9,6 @@ vim.o.scrolloff = 10
 vim.o.sidescrolloff = 10
 vim.o.wrap = false
 vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 vim.g.netrw_banner = false
 
 vim.pack.add({
@@ -34,7 +33,6 @@ require("nvim-treesitter").setup({ ensure_installed = true })
 require("blink.cmp").setup {
 	keymap = {
 		preset = 'default',
-		['<C-e>'] = {},
 		['<C-k>'] = { 'fallback' },
 		['<C-y>'] = { 'select_and_accept', 'fallback' },
 
@@ -99,12 +97,16 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
-vim.keymap.set("n", "<leader><leader>", "<CMD>e #<CR>")
 vim.keymap.set("n", "-", "<CMD>Ex<CR>")
+vim.keymap.set("n", "<leader><leader>", "<CMD>e #<CR>")
+vim.keymap.set("n", "<leader>m", "<CMD>make<CR>")
+vim.keymap.set({ "x", "v", "n" }, "<leader>y", '"+y')
+vim.keymap.set({ "x", "v", "n" }, "gro", vim.lsp.buf.format)
+
 vim.keymap.set("n", "<leader>sf", "<CMD>Telescope find_files<CR>", { silent = true })
 vim.keymap.set("n", "<leader>sh", "<CMD>Telescope help_tags<CR>", { silent = true })
 vim.keymap.set("n", "<leader>sl", "<CMD>Telescope live_grep<CR>", { silent = true })
-vim.keymap.set({ "x", "v", "n" }, "gro", vim.lsp.buf.format)
+
 vim.keymap.set({ "i", "s" }, "<C-e>", function()
 	return require("luasnip").expandable()
 		and '<CMD>lua require("luasnip").expand()<CR>'
@@ -140,7 +142,6 @@ vim.keymap.set({ "i", "s" }, "<C-p>", function()
 		return '<C-p>'
 	end
 end, { expr = true, silent = true })
-
 
 vim.api.nvim_set_hl(0, "TabLine", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "TabLineSel", { bg = "NONE" })
