@@ -1,0 +1,95 @@
+#!/usr/bin/env bash
+
+NAME="startech"
+
+LAUNCHER="$HOME/.local/share/xmcl/instances"
+INSTANCE="$LAUNCHER/Star Technology-1.20.1"
+SAVES="$INSTANCE/saves"
+WORLD="$SAVES/Balls deez nuts"
+TEST_WORLD="$SAVES/bdn-copy-$(date -Idate)"
+
+# Help page
+usage() {
+	echo "Just a simple script to automate my need for making Star Technology worlds"
+	echo ""
+	echo "Usage:"
+	echo "	$NAME [option] [options for options]"
+	echo ""
+	echo "Options:"
+	echo "	-h, --help				shows this text"
+	echo ""
+	echo "Commands:"
+	echo "	backup					create a zip backup of the world."
+	echo "	copy [create | remove]			creates or removes a copy of the main world"
+}
+
+status() {
+	echo $SAVES | eza -1 --icons=always -stype
+}
+
+backup() {
+	backup_file=$NAME-backup.zip
+	if [[ -f $backup_file  ]]; then
+		echo $WORLD | zip -db -r -dc -u $backup_file -
+	else
+		echo "$WORLD" | zip -db -dc $backup_file -
+	fi
+}
+
+copy() {
+	case $1 in
+	rmcopy)
+		rmcopy
+		;;
+	mkcopy)
+		mkcopy
+		;;
+	*)
+		echo "[ERROR]: invalid options try\n\t<name> [mkcopy|rmcopy|backup]"
+		;;
+	esac
+}
+
+mkcopy() {
+	if [[ ! -d "$TEST_WORLD" ]]; then
+		cp -r "$WORLD" "$TEST_WORLD"
+	else
+		echo "[Info]: World copy already exists"
+		echo "[Info]: if you wish to delete it run:"
+		echo "	$NAME copy remove|rm"
+	fi
+}
+
+rmcopy() {
+	if [[ ! -d "$TEST_WORLD" ]]; then
+		echo "[Info]: Found no world copy of today"
+		echo "[Info]: if you wish to create it run:"
+		echo "	$NAME copy [create]"
+	else
+		echo "[INFO]: Deleting $TEST_WORLD"
+		rm -r "$TEST_WORLD"
+	fi
+}
+
+if [[ $# != 0 ]]; then
+	case $1 in
+	status)
+		;;
+	backup)
+		backup
+		;;
+	mkcopy)
+		copy $1
+		;;
+	rmcopy)
+		copy $1
+		;;
+
+	* | --help | -h)
+		usage
+		;;
+	esac
+	status
+else
+	backup
+fi

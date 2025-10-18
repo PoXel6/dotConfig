@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+TMP_FOLDER="$HOME/Personal/TMP/"
+
+input="USER INPUT"
+
+TMP_NAME=""
+if [[ $# != 1 ]]; then
+	read -p "[PROMPT]: Enter a name: " input
+	TMP_NAME="test-$input"
+else
+	TMP_NAME="test-$1"
+fi
+
+if [[ ! -d "$TMP_FOLDER/$TMP_NAME" ]]; then
+	mkdir "$TMP_FOLDER/$TMP_NAME"
+fi
+cd "$TMP_FOLDER/$TMP_NAME"
+exec $SHELL

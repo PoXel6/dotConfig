@@ -1,0 +1,76 @@
+#!/usr/bin/env bash
+
+LAUNCHER=$HOME/.local/share/xmcl/instances
+RLCRAFT=$LAUNCHER/RLCraft-2.9.3
+SAVES="$RLCRAFT/saves"
+WORLD="$SAVES/01"
+NAME="rlcraft"
+# WORLD=$(fd . --mindepth=1 --maxdepth=1 -td "$SAVES" | sed "s|$SAVES/||"| fzf --prompt="Select your world > " --color=bw --no-scrollbar)
+#
+usage() {
+	echo "Just a simple script to automate my need for making RLCraft worlds"
+	echo ""
+	echo "Usage:"
+	echo "	$NAME [option] [options for options]"
+	echo ""
+	echo "Options:"
+	echo "	-h, --help				shows this text"
+	echo ""
+	echo "Commands:"
+	echo "	backup					create a zip backup of the world."
+	echo "	copy [create | remove]			creates or removes a copy of the main world"
+}
+
+status() {
+	eza -1 --icons=always $SAVES
+}
+
+backup() {
+	cd $SAVES
+	zip -db -r -dc -u $NAME-backup $WORLD
+	notify-send -u low -a RLCraft "Backup Finished" "$(echo $WORLD | sed "s|$LAUNCHER/||") is backed up."
+}
+
+copy() {
+	TEST_WORLD="$WORLD-copy-$(date -Idate)"
+	case $1 in
+	rm|remove)
+		if [[ ! -d "$TEST_WORLD" ]]; then
+			echo "[Info]: Found no world copy of today"
+			echo "[Info]: if you wish to create it run:"
+			echo "	$NAME copy [create]"
+		else
+			rm -r "$TEST_WORLD"
+			notify-send -u low -a RLCraft $(echo "Deleted $TEST_WORLD" | sed "s|$LAUNCHER/||")
+		fi
+		;;
+	*)
+		if [[ ! -d "$TEST_WORLD" ]]; then
+			cp -r $WORLD "$TEST_WORLD"
+			notify-send -u low -a RLCraft $(echo "Created $TEST_WORLD" | sed "s|$LAUNCHER/||")
+		else
+			echo "[Info]: World copy already exists"
+			echo "[Info]: if you wish to delete it run:"
+			echo "	$NAME copy remove|rm"
+		fi
+		;;
+	esac
+}
+
+if [[ $# != 0 ]]; then
+	case $1 in
+	backup)
+		backup
+		status
+		;;
+	copy)
+		copy $2
+		status
+		;;
+	*|--help|-h)
+		usage
+		;;
+	esac
+else
+	backup
+fi

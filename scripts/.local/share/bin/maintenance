@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+echo "Removing orphan packages..."
+echo "---------------------------"
+yay -Rns $(yay -Qqdtt) --noconfirm
+
+echo "Failed systemd services"
+echo "---------------------------"
+systemctl --failed | less
+
+echo "Journalctl logs"
+echo "---------------------------"
+journalctl -b
+
+echo "Clearing caches"
+echo "---------------------------"
+sudo rm -rf /var/cache/pacman/pkg/*
+rm -rf $XDG_CACHE_HOME/yay/*
+rm -rf $XDG_CACHE_HOME/gradle/*
+
+echo "Updating system..."
+echo "---------------------------"
+yay -Syu --noconfirm
+
