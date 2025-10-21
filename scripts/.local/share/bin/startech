@@ -5,8 +5,9 @@ NAME="startech"
 LAUNCHER="$HOME/.local/share/xmcl/instances"
 INSTANCE="$LAUNCHER/Star Technology-1.20.1"
 SAVES="$INSTANCE/saves"
-WORLD="$SAVES/Balls deez nuts"
-TEST_WORLD="$SAVES/bdn-copy-$(date -Idate)"
+WORLD="$SAVES/BrandNewStartFR"
+TEST_WORLD="$SAVES/bnsfr-copy-$(date -Idate)"
+NOTIF_SOURCE="Star\ Technology"
 
 # Help page
 usage() {
@@ -24,16 +25,18 @@ usage() {
 }
 
 status() {
-	echo $SAVES | eza -1 --icons=always -stype
+	eza -1 --icons=always -stype "$SAVES"
 }
 
 backup() {
 	backup_file=$NAME-backup.zip
-	if [[ -f $backup_file  ]]; then
-		echo $WORLD | zip -db -r -dc -u $backup_file -
+	cd "$SAVES"
+	if [[ -f $backup_file ]]; then
+		zip -db -r -dc -u $backup_file "$WORLD"
 	else
-		echo "$WORLD" | zip -db -dc $backup_file -
+		zip -db -dc $backup_file "$WORLD"
 	fi
+	notify-send -u low -a "$NOTIF_SOURCE" "Backup Finished" "$(echo $WORLD | sed "s|$LAUNCHER/||") is backed up."
 }
 
 copy() {
@@ -53,6 +56,8 @@ copy() {
 mkcopy() {
 	if [[ ! -d "$TEST_WORLD" ]]; then
 		cp -r "$WORLD" "$TEST_WORLD"
+		balls=
+		notify-send -u low -a "$NOTIF_SOURCE" "Copy Created" "$(echo "Created $TEST_WORLD" | sed "s|$LAUNCHER/||")"
 	else
 		echo "[Info]: World copy already exists"
 		echo "[Info]: if you wish to delete it run:"
@@ -66,30 +71,33 @@ rmcopy() {
 		echo "[Info]: if you wish to create it run:"
 		echo "	$NAME copy [create]"
 	else
-		echo "[INFO]: Deleting $TEST_WORLD"
 		rm -r "$TEST_WORLD"
+		notify-send -u low -a "$NOTIF_SOURCE" "Copy Deleted" "$(echo "Deleted $TEST_WORLD" | sed "s|$LAUNCHER/||")"
 	fi
 }
 
 if [[ $# != 0 ]]; then
 	case $1 in
 	status)
+		status
 		;;
 	backup)
 		backup
+		status
 		;;
 	mkcopy)
 		copy $1
+		status
 		;;
 	rmcopy)
 		copy $1
+		status
 		;;
 
 	* | --help | -h)
 		usage
 		;;
 	esac
-	status
 else
 	backup
 fi
