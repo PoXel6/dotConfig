@@ -4,8 +4,8 @@ export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
-export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 export GRADLE_USER_HOME="$XDG_CONFIG_HOME"/gradle
+unset _JAVA_OPTIONS
 
 # XDG_DATA_HOME AKA $HOME/.local/state/
 export CARGO_HOME="$XDG_DATA_HOME"/cargo

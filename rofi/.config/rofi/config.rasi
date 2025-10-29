@@ -9,9 +9,12 @@
 }
 
 entry {
-    placeholder: "";
+    placeholder: ".  .  .";
     text-color: @text;
     padding: 8px 0 8px 8px;
+	margin: 5px 0px 10px 0px;
+    background-color: @scrollbar;
+    border-radius: 10px;
 }
 
 configuration {

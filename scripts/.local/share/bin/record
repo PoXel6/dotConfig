@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+# p://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0
+# analyse=0x3:0x3 me=dia subme=1 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16
+# chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1
+# chroma_qp_offset=0 threads=4 lookahead_threads=4 sliced_threads=1 slices=4
+# nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=0
+# weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc=crf
+# mbtree=0 crf=18.0 qcomp=0.00 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40
+# aq=1:1.00
+# Output #0, matroska, to 'recording.mkv':
+
+CODEC=libx264
+DIR=$HOME/Videos/recordings/$(date '+%Y_%m_%d')
+mkdir -p "$DIR"
+NAME="$DIR/recording_$(date '+%Hh%Mm%Ss')"
+FPS=30
+PRESET=fast
+CRF=18
+
+echo $NAME
+
+region() {
+	$BASE -g "$(slurp)"
+}
+
+fullscreen() {
+	$BASE
+}
+
+audio() {
+	$BASE --audio
+}
+
+wf-recorder \
+	-r $FPS \
+	-p crf=$CRF \
+	-p qcomp=0.8 \
+	-p qdiff=4 \
+	-p qpmin=3 \
+	-p qpmax=7 \
+	-p bframes=4 \
+	-p ip_ratio=0.71 \
+	-f $NAME.mp4

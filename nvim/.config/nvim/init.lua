@@ -97,6 +97,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
+vim.api.nvim_create_user_command("Chmod", '!chmod +x %', {})
+vim.keymap.set("n", "\\", "<CMD>make<CR>")
 vim.keymap.set("n", "-", "<CMD>Ex<CR>")
 vim.keymap.set("n", "<leader><leader>", "<CMD>e #<CR>")
 vim.keymap.set("n", "<leader>m", "<CMD>make<CR>")

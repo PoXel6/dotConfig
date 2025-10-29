@@ -16,15 +16,19 @@ save_shader() {
 
 save_shader
 
-scrDir=$(dirname "$(realpath "$0")")
-swpy_dir="$PICTURES/screenshots/.swappy"
-save_dir="${2:-$PICTURES/screenshots}"
-save_file=$(date +'%y%m%d_%Hh%Mm%Ss_screenshot.png')
+swappy_dir="$XDG_CONFIG_HOME/swappy/"
+save_dir="$PICTURES/screenshots/$(date +'%Y_%m_%d')/"
+save_file=screenshot_$(date '+%Hh%Mm%Ss').png
 temp_screenshot="/tmp/screenshot.png"
 
 mkdir -p $save_dir
-mkdir -p $swpy_dir
-echo -e "[Default]\nsave_dir=$save_dir\nsave_filename_format=$save_file" >$swpy_dir/config
+mkdir -p $swappy_dir
+echo \
+	"[Default]
+save_dir=$save_dir
+save_filename_format=$save_file
+auto_save=true
+" >$swappy_dir/config
 
 if [[ $# != 0 ]]; then
 	result=$1
@@ -39,25 +43,27 @@ fi
 case $result in
 "All Monitors")
 	notify-send "Screenshot of Screens" "Screenshot has been copies to your clipboard" -a grimblast -u low
-	grimblast copysave screen $temp_screenshot && restore_shader && swappy -f $temp_screenshot
+	grimblast copysave screen $temp_screenshot && restore_shader
 	;;
 Area)
 	notify-send "Screenshot of Area" "Screenshot has been copies to your clipboard" -a grimblast -u low
-	grimblast copysave area $temp_screenshot && restore_shader && swappy -f $temp_screenshot
+	grimblast copysave area $temp_screenshot && restore_shader
 	;;
 Frozen)
 	notify-send "Screenshot of frozen Area" "Screenshot has been copies to your clipboard" -a grimblast -u low
-	grimblast --freeze copysave area $temp_screenshot && restore_shader && swappy -f $temp_screenshot
+	grimblast --freeze copysave area $temp_screenshot && restore_shader
 	;;
 Monitor)
 	notify-send "Screenshot of Screen" "Screenshot has been copies to your clipboard" -a grimblast -u low
-	grimblast copysave output $temp_screenshot && restore_shader && swappy -f $temp_screenshot
+	grimblast copysave output $temp_screenshot && restore_shader
 	;;
 *)
-	notify-send -u High "ERROR" "Something went wrong!" ;;
+	notify-send -u High "ERROR" "Something went wrong!"
+	;;
 esac
 
-rm "$temp_screenshot"
+mv "$temp_screenshot" "$save_dir/$save_file"
+imv "$save_dir/$save_file"
 
 if [ -f "${save_dir}/${save_file}" ]; then
 	notify-send -a "t1" -i "${save_dir}/${save_file}" "saved in ${save_dir}"
