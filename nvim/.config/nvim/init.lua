@@ -99,9 +99,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 vim.api.nvim_create_user_command("Chmod", '!chmod +x %', {})
 vim.keymap.set("n", "\\", "<CMD>make<CR>")
+vim.keymap.set("n", "<leader>r", "<CMD>make<CR>")
+vim.keymap.set("n", "<F5>", "<CMD>update<CR><CMD>restart<CR><C-o>")
 vim.keymap.set("n", "-", "<CMD>Ex<CR>")
 vim.keymap.set("n", "<leader><leader>", "<CMD>e #<CR>")
-vim.keymap.set("n", "<leader>m", "<CMD>make<CR>")
 vim.keymap.set({ "x", "v", "n" }, "<leader>y", '"+y')
 vim.keymap.set({ "x", "v", "n" }, "gro", vim.lsp.buf.format)
 
