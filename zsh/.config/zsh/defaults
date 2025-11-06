@@ -3,4 +3,4 @@ export MANPAGER='nvim +Man!'
 export EDITOR='nvim'
 export TERM='ghostty'
 export TERMINAL='ghostty'
-
+export XDG_STATE_HOME=$HOME/.local/state

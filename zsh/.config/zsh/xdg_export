@@ -2,8 +2,8 @@
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0"
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
-export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 export GRADLE_USER_HOME="$XDG_CONFIG_HOME"/gradle
 unset _JAVA_OPTIONS
 

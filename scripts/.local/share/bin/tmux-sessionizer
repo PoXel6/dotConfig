@@ -6,11 +6,12 @@ else
 	selected=$(find \
 		~/Personal \
 		~/Personal/LEARNING/ \
-		~/Personal/TMP/ \
+		~/Personal/TMP/*/ \
 		~/Personal/CodeezNutz/*/ \
 		~/Personal/CodeezNutz/java/Minecraft/ \
 		$XDG_CONFIG_HOME/ \
-		-mindepth 1 -maxdepth 1 -type d,l | fzf --color="bw" --no-scrollbar)
+		-mindepth 1 -maxdepth 1 -type d,l | \
+		fzf --color="bw" --no-scrollbar)
 fi
 
 if [[ -z $selected ]]; then
@@ -32,9 +33,6 @@ create() {
 	tmux new-session -s $selected_name -c $selected -d
 	tmux neww -t $selected_name:2 -c $selected
 	tmux selectw -t $selected_name:1
-	sleep 0.150
-	tmux send -t $selected_name:1 "nvim"
-	tmux send -t $selected_name:2 "fastfetch"
 	attach
 }
 

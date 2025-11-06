@@ -1,19 +1,21 @@
 #!/usr/bin/env bash
 
-TMP_FOLDER="$HOME/Personal/TMP/"
-
+TMP_LOCATION="$HOME/Personal/TMP/"
+TMP_FOLDER="$TMP_LOCATION/$(date '+%Y_%m_%d')"
 input="USER INPUT"
 
-TMP_NAME=""
+TMP_NAME="test-"
 if [[ $# != 1 ]]; then
 	read -p "[PROMPT]: Enter a name: " input
-	TMP_NAME="test-$input"
+	TMP_NAME+="$input"
 else
-	TMP_NAME="test-$1"
+	TMP_NAME+="$1"
 fi
 
-if [[ ! -d "$TMP_FOLDER/$TMP_NAME" ]]; then
-	mkdir "$TMP_FOLDER/$TMP_NAME"
+TARGET="$TMP_FOLDER/$TMP_NAME"
+
+if [[ ! -d "$TARGET" ]]; then
+	mkdir -p "$TARGET"
 fi
-cd "$TMP_FOLDER/$TMP_NAME"
-exec $SHELL
+
+~/.local/share/bin/tmux-sessionizer "$TARGET"
