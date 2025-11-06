@@ -15,21 +15,9 @@ alias ll='eza -hAlstype -F --hyperlink --icons=always'
 alias lt='eza --tree -Astype -F --hyperlink --icons=always'
 
 # Git aliases
-alias g='git'
-alias ga='git add'
-alias gb='git branch'
-alias gc='git commit -t ~/dotconfig/git/.config/git/template'
-alias gC='git clone'
-alias gd='git diff'
-alias gf='git fetch'
 alias gl="git log --all --graph --pretty=format:'%C(magenta)%h %C(white)%an@%C(auto)%ar %C(auto)%D%n%s%n%n'"
-alias gm='git merge'
-alias gp='git pull'
-alias gr='git restore'
-alias gR='git reset'
+alias gc="git add -A && git commit"
 alias gs='git status -s'
 alias gu='git push'
-alias gw='git switch'
-alias gco='git checkout'
-alias gpu='git pull && git push'
+alias gp='git pull && git push'
 alias gsync='git add -A && git commit -m "automatic commit" && git pull && git push'
