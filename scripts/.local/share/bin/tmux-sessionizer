@@ -7,6 +7,7 @@ else
 		~/Personal \
 		~/Personal/LEARNING/ \
 		~/Personal/TMP/*/ \
+		~/Personal/SOURCE/ \
 		~/Personal/CodeezNutz/*/ \
 		~/Personal/CodeezNutz/java/Minecraft/ \
 		$XDG_CONFIG_HOME/ \
