@@ -15,7 +15,7 @@ alias ll='eza -hAlstype -F --hyperlink --icons=always'
 alias lt='eza --tree -Astype -F --hyperlink --icons=always'
 
 # Git aliases
-alias gl='git log --all --graph'
+alias gl='git log --all --graph --decorate --pretty=one'
 alias gs='git status'
 alias gd='git diff'
 alias gc='git add -A && git commit'

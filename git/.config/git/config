@@ -1,15 +1,18 @@
 [core]
 	editor = $EDITOR
-	pager = bat --style=grid 
+	pager = delta
 	autocrlf = input
 	compression = 9
 	preloadindex = true
 
 [format]
-	pretty = %C(magenta)%h %C(auto)%ar %C(auto)%D%n%C(auto)%s%n
+	pretty = %C(red)%h %C(auto)%ar %C(magenta)%an %C(auto)%D%n    %C(white)%s%n    %C(auto)%b%n
 
 [pretty]
-	oneline = %C(red)%h%n%n%n%n
+	one = %C(red)%h  %C(magenta)%an  %C(auto)%s     %C(auto)%d
+
+[alias]
+	log = log --all --graph --decorate --pretty=one
 
 [user]
 	name = pox
@@ -32,8 +35,19 @@
 [diff]
 	renames = copies
 
+[difftool]
+	tool = nvimdiff
+	guitool = nvimdiff
+
 [interactive]
+	diffFilter = delta --color-only --show-syntax-themes
 	singleKey = true
+
+[delta]
+	hyperlinks = true
+	side-by-side = true
+	navigate = true
+	dark = true
 
 [url "git@github.com:PoXel6/"]
 	insteadOf = "pox:"
@@ -53,6 +67,7 @@
 [merge]
 	tool = nvimdiff1
 	guitool = nvimdiff1
+	conflictStyle = zdiff3
 
 [rebase]
 	autoStash = true
