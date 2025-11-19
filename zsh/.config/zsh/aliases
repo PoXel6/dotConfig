@@ -15,9 +15,10 @@ alias ll='eza -hAlstype -F --hyperlink --icons=always'
 alias lt='eza --tree -Astype -F --hyperlink --icons=always'
 
 # Git aliases
-alias gl="git log --all --graph --pretty=format:'%C(magenta)%h %C(white)%an@%C(auto)%ar %C(auto)%D%n%s%n%n'"
-alias gc="git add -A && git commit"
-alias gs='git status -s'
+alias gl='git log --all --graph'
+alias gs='git status'
+alias gd='git diff'
+alias gc='git add -A && git commit'
 alias gu='git push'
 alias gp='git pull && git push'
 alias gsync='git add -A && git commit -m "automatic commit" && git pull && git push'

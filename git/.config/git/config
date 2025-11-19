@@ -1,78 +1,81 @@
 [core]
 	editor = $EDITOR
+	pager = bat --style=grid 
 	autocrlf = input
-  compression = 9
-  preloadindex = true
+	compression = 9
+	preloadindex = true
+
+[format]
+	pretty = %C(magenta)%h %C(auto)%ar %C(auto)%D%n%C(auto)%s%n
+
+[pretty]
+	oneline = %C(red)%h%n%n%n%n
 
 [user]
-  name = pox
+	name = pox
 	email = iampoxel6@gmail.com
 
 [init]
 	defaultBranch = main
 
 [advice]
-  addEmptyPathspec = false
-  pushNonFastForward = false
-  statusHints = false
+	addEmptyPathspec = false
+	pushNonFastForward = false
+	statusHints = false
 
 [status]
-  branch = true
-  showStash = true
-  showUntrackedFiles = all
+	short = true
+	branch = true
+	showStash = true
+	showUntrackedFiles = normal
 
 [diff]
-  context = 3
-  tool = diff-so-fancy
-  renames = copies
-
-[pager]
-  diff = diff-so-fancy | $PAGER
+	renames = copies
 
 [interactive]
-  diffFilter = diff-so-fancy --patch
-  singleKey = true
-
-[diff-so-fancy]
-  markEmptyLines = false
+	singleKey = true
 
 [url "git@github.com:PoXel6/"]
-  insteadOf = "pox:"
+	insteadOf = "pox:"
 
 [url "git@github.com:"]
-  insteadOf = "gh:"
+	insteadOf = "gh:"
 
 [push]
-  autoSetupRemote = true
-  default = current
-  followTags = true
+	autoSetupRemote = true
+	default = current
+	followTags = true
 
 [pull]
-  default = current
-  rebase = true
+	default = current
+	rebase = true
+
+[merge]
+	tool = nvimdiff1
+	guitool = nvimdiff1
 
 [rebase]
-  autoStash = true
-  missingCommitCheck = true
+	autoStash = true
+	missingCommitCheck = true
 
 [log]
-  abbrevCommit = true
-  graphColors = blue,yellow,cyan,magenta,green,red
+	abbrevCommit = true
+	graphColors = blue,yellow,cyan,magenta,green,red
 
 [color]
-    ui = auto
+	ui = auto
 
 [color "decorate"]
-  HEAD = red
-  branch = yellow
-  tag = red
-  remoteBranch = blue
+	HEAD = red
+	branch = yellow
+	tag = red
+	remoteBranch = blue
 
 [branch]
-  sort = -committerdate
+	sort = -committerdate
 
 [tag]
-  sort = -taggerdate
+	sort = -taggerdate
 
 [rerere]
-  enabled = true
+	enabled = true

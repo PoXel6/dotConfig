@@ -5,9 +5,9 @@ if [[ $# -eq 1 ]]; then
 else
 	selected=$(find \
 		~/Personal \
-		~/Personal/LEARNING/ \
-		~/Personal/TMP/*/ \
-		~/Personal/SOURCE/ \
+		~/Personal/resource/*/ \
+		~/Personal/tmp/*/ \
+		~/Personal/source/ \
 		~/Personal/CodeezNutz/*/ \
 		~/Personal/CodeezNutz/java/Minecraft/ \
 		$XDG_CONFIG_HOME/ \

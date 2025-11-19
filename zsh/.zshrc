@@ -28,6 +28,10 @@ source $XDG_CONFIG_HOME/zsh/aliases
 source $XDG_CONFIG_HOME/zsh/xdg_export
 source $XDG_CONFIG_HOME/zsh/defaults
 
+function cd () {
+	builtin cd "$@" && ls
+}
+
 # Plugins
 plug() {
   [ -d $XDG_CONFIG_HOME/zsh/plugins/"$1"/ ] \
@@ -50,9 +54,5 @@ autoload -U compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
 
-# Defaults
-# source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
-
-source ~/.cache/hellwal/variables.sh

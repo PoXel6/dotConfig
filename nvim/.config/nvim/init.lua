@@ -22,6 +22,8 @@ vim.pack.add({
 	'https://github.com/nvim-telescope/telescope-fzy-native.nvim',
 	'https://github.com/nvim-treesitter/nvim-treesitter',
 	'https://github.com/iamcco/markdown-preview.nvim',
+	'https://github.com/nvim-tree/nvim-web-devicons',
+	'https://github.com/MeanderingProgrammer/render-markdown.nvim',
 })
 
 vim.cmd [[colorscheme doom-one]]
@@ -35,7 +37,6 @@ require("blink.cmp").setup {
 		preset = 'default',
 		['<C-k>'] = { 'fallback' },
 		['<C-y>'] = { 'select_and_accept', 'fallback' },
-
 	},
 	completion = {
 		documentation = { window = { scrollbar = false, max_width = 35, } },
@@ -69,6 +70,20 @@ require("telescope").setup {
 require("telescope").load_extension("ui-select")
 require("telescope").load_extension("fzy_native")
 
+require('render-markdown').setup({
+	completions = {
+		lsp = { enabled = true },
+		blink = { enabled = true }
+	},
+	link = {
+		render_mode = true
+	},
+	latex = {
+		converter = { 'utftex', 'latex2text' },
+	},
+	only_render_image_at_cursor = true,
+})
+
 vim.lsp.enable({
 	"emmylua_ls",
 	"rust_analyzer",
@@ -79,7 +94,7 @@ vim.lsp.enable({
 	"cssls", "css_variables",
 	"jsonls",
 	"ruff", "pyright",
-	"tinymist", "marksman",
+	"tinymist", "marksman", "markdown_oxide",
 	"jdtls",
 })
 
@@ -98,10 +113,17 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 vim.api.nvim_create_user_command("Chmod", '!chmod +x %', {})
-vim.keymap.set("n", "\\", "<CMD>make<CR>")
+
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
+vim.keymap.set("v", "<C-J>", ":co '<<CR>gv=gv", { silent = true })
+vim.keymap.set("v", "<C-K>", ":co '>-1<CR>gv=gv", { silent = true })
+
+vim.keymap.set("n", "<leader>r", "<CMD>make<CR>")
+vim.keymap.set("n", "<F5>", "<CMD>update<CR><CMD>restart<CR>")
 vim.keymap.set("n", "-", "<CMD>Ex<CR>")
 vim.keymap.set("n", "<leader><leader>", "<CMD>e #<CR>")
-vim.keymap.set("n", "<leader>m", "<CMD>make<CR>")
+
 vim.keymap.set({ "x", "v", "n" }, "<leader>y", '"+y')
 vim.keymap.set({ "x", "v", "n" }, "gro", vim.lsp.buf.format)
 
