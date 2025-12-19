@@ -33,6 +33,7 @@ audio() {
 
 wf-recorder \
 	-r $FPS \
+	--audio \
 	-p crf=$CRF \
 	-p qcomp=0.8 \
 	-p qdiff=4 \
