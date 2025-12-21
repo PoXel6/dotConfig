@@ -1,0 +1,10 @@
+style=$(echo -e "fullbar\nisland" | rofi -dmenu)
+rm ./config.jsonc
+rm ./style.css
+ln -s ./$style_config.jsonc ./config.jsonc
+
+echo "@import \"theme.css\";" > style.css
+echo "@import \"./styles/$style.css\";" >> style.css
+
+which waybar || killall waybar
+setsid uwsm app -- /usr/bin/waybar >/dev/null 2>&1 & disown

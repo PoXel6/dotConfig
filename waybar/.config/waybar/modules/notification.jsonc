@@ -6,7 +6,7 @@
       "notification": "<span foreground='red'><sup></sup></span>",
       "none": "",
       "dnd-notification": "<span foreground='red'><sup></sup></span>",
-      "dnd-none": "",
+      "dnd-none": "<big></big>",
       "inhibited-notification": "<span foreground='red'><sup></sup></span>",
       "inhibited-none": "",
       "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",

@@ -1,10 +1,10 @@
 {
   "custom/update": {
-    "format": "<span color=\"yellow\"><big>󰮯</big></span>   {}",
-    "intrval": 21600, // every 6 hours
+    "format": "<span color=\"yellow\"><big>󰮯</big></span>  {}",
+    "intrval": 21600,
     "exec": "$HOME/.local/share/bin/update",
     "exec-if": "exit 0",
     "on-click": "$HOME/.local/share/bin/update",
-    "tooltip": false,
+	"tooltip-format": "{$updates} package have update available.",
   },
 }

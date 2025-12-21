@@ -15,19 +15,19 @@
 @define-color wb-hvr-fg #61AFEF;
 @define-color wb-hvr-bg transparent;
 
-/* palette = 0=#282C34  bg 		*/
-/* palette = 1=#E06C75  red 	*/
-/* palette = 2=#98C379  lime	*/
-/* palette = 3=#E5C07B  yellow	*/
-/* palette = 4=#61AFEF  cyan 	*/
-/* palette = 5=#C678DD  purple	*/
-/* palette = 6=#56B6C2  blue	*/
-/* palette = 7=#ABB2BF  fg 		*/
-/* palette = 8=#5C6370  grey	*/
-/* palette = 9=#E06C75  red 	*/
-/* palette = 10=#98C379 lime	*/
-/* palette = 11=#E5C07B yellow 	*/
-/* palette = 12=#61AFEF cyan	*/
-/* palette = 13=#C678DD purple	*/
-/* palette = 14=#56B6C2 blue	*/
-/* palette = 15=#FFFFFF white	*/
+@define-color bg #282C34;
+@define-color red #E06C75;
+@define-color lime #98C379;
+@define-color yellow #E5C07B;
+@define-color cyan #61AFEF;
+@define-color purple #C678DD;
+@define-color blue #56B6C2;
+@define-color fg #ABB2BF;
+@define-color grey #5C6370;
+@define-color red #E06C75;
+@define-color lime #98C379;
+@define-color yellow #E5C07B;
+@define-color cyan #61AFEF;
+@define-color purple #C678DD;
+@define-color blue #56B6C2;
+@define-color white #FFFFFF;
