@@ -4,7 +4,8 @@
     "intrval": 21600,
     "exec": "$HOME/.local/share/bin/update",
     "exec-if": "exit 0",
-    "on-click": "$HOME/.local/share/bin/update",
-	"tooltip-format": "{$updates} package have update available.",
+    "on-click": "kitty --app-id=custom-updater sh -c 'fastfetch --logo-type builtin --logo arch2 --logo-padding 0 && yay -Syu --noconfirm' && read",
+    // "on-click-right": "$HOME/.local/share/bin/update",
+	"tooltip-format": "packages have update available.",
   },
 }

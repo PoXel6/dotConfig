@@ -37,6 +37,7 @@
   ],
 
   "modules-right": [
+	  "tray",
 	  "clock",
 	  "wireplumber"
   ],
