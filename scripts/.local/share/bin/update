@@ -9,6 +9,7 @@
 # fi
 
 updates=$(checkupdates | wc -l)
+echo $updates
 
-notify-send "Updates available" \
-	"There are $updates packages available for update\nTry running yay -Syu"
+# notify-send "Updates available" \
+# 	"There are $updates packages available for update\nTry running yay -Syu"
