@@ -12,7 +12,7 @@ alias vim='nvim'
 
 alias ls='eza -GAstype -F --hyperlink --icons=always'
 alias ll='eza -hAlstype -F --hyperlink --icons=always'
-alias lt='eza --tree -Astype -F --hyperlink --icons=always'
+alias lt='eza --tree -Astype -F --icons=never'
 
 # Git aliases
 alias gl='git log --all --graph --decorate --pretty=one'
