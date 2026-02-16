@@ -1,11 +1,17 @@
 * {
-	bg: rgba(38,43,52,85%);
+	bg: #CCCCCCdd;
 	bg0: rgba(255,255,255, 0%);
+	hover: #22222222;
+	text: #111111dd;
+    entry-text: #111111dd;
+	entry-icon: #111111dd;
+	placeholder: #4c4c4c69;
+	border: transparent;
+
+ 	// bg: rgba(38,43,52,85%);
 	bg1: rgba(255,255,255, 0%);
-	select: rgba(255,255,255, 5%);
     fg0:  #262b34d9;
     fg1:  #e1e1e1;
-	border: #ffffff33;
-	text: #dddddd;
+	// border: #ffffff33;
 	scrollbar: #3a3f4a;
 }
