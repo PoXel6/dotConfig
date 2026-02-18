@@ -27,9 +27,9 @@
   ],
 
   "modules-left": [
-	  "custom/powermenu",
+	  "clock",
+	  "wireplumber",
 	  "custom/update",
-	  "custom/notification"
   ],
 
   "modules-center": [
@@ -37,8 +37,8 @@
   ],
 
   "modules-right": [
+	  "custom/notification",
 	  "tray",
-	  "clock",
-	  "wireplumber"
+	  "custom/powermenu",
   ],
 }
