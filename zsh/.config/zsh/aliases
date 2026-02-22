@@ -10,8 +10,8 @@ alias fff='fastfetch --config examples/10.jsonc  --logo ~/.config/fastfetch/arch
 alias vi='nvim'
 alias vim='nvim'
 
-alias ls='eza -GAstype -F --hyperlink --icons=always'
-alias ll='eza -hAlstype -F --hyperlink --icons=always'
+alias ls='eza -GAstype -F --icons=always'
+alias ll='eza -hAlstype -F --icons=always'
 alias lt='eza --tree -Astype -F --icons=never'
 
 # Git aliases
