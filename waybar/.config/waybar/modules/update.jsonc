@@ -1,11 +1,15 @@
 {
   "custom/update": {
-    "format": "<span color=\"yellow\"><big>󰮯</big></span>  {}",
-    "intrval": 21600,
-    "exec": "$HOME/.local/share/bin/update",
-    "exec-if": "exit 0",
+    // "format": "<span color=\"yellow\"><big>󰮯</big></span>  {}",
+	"format": "  {}",
+	"interval": 43200, // (Arch Linux will try to check 12 hrs interval only
+    // "exec": "$HOME/.local/share/bin/update",
+    // "exec-if": "exit 0",
+	"exec": "checkupdates | wc -l",
+	"exec-if": "[[ $(checkupdates | wc -l) ]]",
     "on-click": "kitty --app-id=custom-updater sh -c 'fastfetch --logo-type builtin --logo arch2 --logo-padding 0 && yay -Syu --noconfirm' && read",
     // "on-click-right": "$HOME/.local/share/bin/update",
+	"tooltip": true,
 	"tooltip-format": "packages have update available.",
   },
 }

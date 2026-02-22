@@ -37,8 +37,9 @@
   ],
 
   "modules-right": [
-	  "custom/notification",
 	  "tray",
+	  "custom/network",
+	  "custom/notification",
 	  "custom/powermenu",
   ],
 }

@@ -4,8 +4,8 @@ rm $XDG_CONFIG_HOME/waybar/config.jsonc
 rm $XDG_CONFIG_HOME/waybar/style.css
 ln -s $XDG_CONFIG_HOME/waybar/"$style"_config.jsonc $XDG_CONFIG_HOME/waybar/config.jsonc
 
-echo "@import \"theme.css\";" > style.css
-echo "@import \"./styles/$style.css\";" >> style.css
+echo "@import \"theme.css\";" > $XDG_CONFIG_HOME/waybar/style.css
+echo "@import \"./styles/$style.css\";" >> $XDG_CONFIG_HOME/waybar/style.css
 
 killall waybar >/dev/null 2>&1
 setsid uwsm app -- /usr/bin/waybar >/dev/null 2>&1 & disown

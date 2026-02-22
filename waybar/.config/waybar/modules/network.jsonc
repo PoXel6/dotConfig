@@ -1,7 +1,7 @@
 {
 	"custom/network": {
 		"interface": "wlp2s0",
-		"format": "smth",
+		"format": "{}",
 		"format-wifi": "{essid} ({signalStrength}%) ",
 		"format-ethernet": "{ipaddr}/{cidr} 󰊗",
 		"format-disconnected": "", //An empty format will hide the module.
