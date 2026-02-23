@@ -3,7 +3,6 @@
 # Variables
 mDIR="$HOME/Music/"
 plDIR="$mDIR/Playlists"
-alDIR="$mDIR/Albums"
 
 notification() {
 	notify-send -a Music -n audio-headphones-symbolic -u low -i audio-headphones-symbolic "Now Playing:" "$@"
@@ -94,21 +93,6 @@ play_playlist() {
 	done
 }
 
-play_album() {
-	album=$(find -L "$alDIR" -mindepth 1 -maxdepth 1 -type d | sed "s|$alDIR/||")
-	choice=$(echo "$album" | rofi -i -dmenu)
-	set -o noglob
-	IFS=$'\n' albums=($album)
-	set +o noglob
-	for (( i=0; i<"${#albums[@]}"; ++i )); do
-		if [ "${albums[$i]}" = "$choice" ]; then
-			notification "$choice"
-			mpv --loop-playlist --vid=no "$alDIR/$choice"
-			break
-		fi
-	done
-}
-
 stop_music() {
 	mpv_pids=$(pgrep -x mpv)
 	if [ -n "$mpv_pids" ]; then
@@ -127,12 +111,7 @@ stop_music() {
 if pgrep -x "mpv" > /dev/null; then
 	stop_music
 else
-	user_choice=$(printf "Play from Online Stations 
-Play from Music directory
-Shuffle Play from Music directory
-Play a Playlist
-Play an Album
-" | rofi -dmenu)
+	user_choice=$(printf "Play from Music directory\nPlay from Online Stations\nPlay from your Playlists\nShuffle Play from Music directory" | rofi -dmenu)
 
 	echo "User choice: $user_choice"
 
@@ -143,14 +122,11 @@ Play an Album
 		"Play from Online Stations")
 			play_online_music
 			;;
-		"Shuffle Play from Music directory")
-			shuffle_local_music
-			;;
-		"Play a Playlist")
+		"Play from your Playlists")
 			play_playlist
 			;;
-		"Play an Album")
-			play_album
+		"Shuffle Play from Music directory")
+			shuffle_local_music
 			;;
 		*)
 			;;
