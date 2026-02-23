@@ -12,7 +12,7 @@ vim.g.mapleader = " "
 vim.g.netrw_banner = false
 
 vim.pack.add({
-	'https://github.com/poxel6/doom-one.nvim',
+	'https://github.com/navarasu/onedark.nvim',
 	'https://github.com/nvim-lua/plenary.nvim',
 	'https://github.com/mason-org/mason.nvim',
 	'https://github.com/L3MON4D3/LuaSnip',
@@ -26,7 +26,28 @@ vim.pack.add({
 	-- 'https://github.com/MeanderingProgrammer/render-markdown.nvim',
 })
 
-vim.cmd [[colorscheme doom-one]]
+vim.cmd [[colorscheme onedark]]
+require('onedark').setup({
+	style = 'dark',            -- 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+	transparent = true,        -- Show/hide background
+	term_colors = true,        -- Change terminal color as per the selected theme style
+	ending_tildes = false,     -- Show the end-of-buffer tildes. By default they are hidden
+	cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
+
+	-- toggle theme style ---
+	toggle_style_key = "<leader>cs",
+	toggle_style_list = { 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light' },
+
+	-- Options: italic, bold, underline, none
+	-- For e.g., keywords = 'italic,bold'
+	code_style = {
+		comments = 'italic',
+		keywords = 'none',
+		functions = 'none',
+		strings = 'none',
+		variables = 'none'
+	},
+})
 
 require("mason").setup()
 require("luasnip").setup()
@@ -54,6 +75,7 @@ require("blink.cmp").setup {
 	},
 	sources = { default = { 'lsp', 'path', 'buffer' } }
 }
+
 require("telescope").setup {
 	defaults = {
 		preview = false,
@@ -67,22 +89,9 @@ require("telescope").setup {
 	pickers = {},
 	extensions = {}
 }
--- require("telescope").load_extension("ui-select")
--- require("telescope").load_extension("fzy_native")
 
--- require('render-markdown').setup({
--- 	completions = {
--- 		lsp = { enabled = true },
--- 		blink = { enabled = true }
--- 	},
--- 	link = {
--- 		render_mode = true
--- 	},
--- 	latex = {
--- 		converter = { 'utftex', 'latex2text' },
--- 	},
--- 	only_render_image_at_cursor = true,
--- })
+require("telescope").load_extension("ui-select")
+-- require('telescope').load_extension('fzy_native')
 
 vim.lsp.enable({
 	"emmylua_ls",
@@ -166,3 +175,37 @@ vim.keymap.set({ "i", "s" }, "<C-p>", function()
 		return '<C-p>'
 	end
 end, { expr = true, silent = true })
+
+
+vim.api.nvim_set_hl(0, "BlinkCmpMenu", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "BlinkCmpKind", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "BlinkCmpMenuBorder", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "BlinkCmpMenuSelection", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "BlinkCmpLabel", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "BlinkCmpLabelDescription", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "BlinkCmpLabelDetail", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "BlinkCmpScrollBarThumb", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "BlinkCmpScrollBarGutter", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "BlinkCmpDocBorder", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "BlinkCmpDocSeparator", { bg = "NONE" })
+
+vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "NormalBorder", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "FloatBorder", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "TabLine", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "TabLineSel", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "TabLineFill", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "StatusLine", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "StatusLinePart", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "StatusLinePartNC", { bg = "NONE" })
+
+
+if vim.opt.relativenumber then -- doesn't work btw
+	vim.api.nvim_set_hl(0, "LineNr", { fg = "#c678dd" })
+	vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#5c6370" })
+	vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#5c6370" })
+else
+	vim.api.nvim_set_hl(0, "LineNr", { fg = "#5c6370" })
+end
